@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const {i18n} = require('./next-i18next.config');
 
-module.exports = nextConfig
+const nextConfig = {
+    reactStrictMode: false,
+    i18n,
+    optimizeFonts: false,
+    images: {
+        domains: ['thumbs2.imgbox.com'],
+    },
+};
+
+module.exports = nextConfig;
