@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import '../styles/globals.css';
 import type {AppProps} from 'next/app';
 import {appWithTranslation} from 'next-i18next';
+import Layout from '@/components/layout/Layout';
 
 const App = ({Component, pageProps}: AppProps) => {
     useEffect(() => {
@@ -11,7 +12,12 @@ const App = ({Component, pageProps}: AppProps) => {
             jssStyles?.parentElement?.removeChild(jssStyles);
         }
     }, []);
-    return <Component {...pageProps} />;
+
+    return (
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
+    );
 };
 
 export default appWithTranslation(App);
