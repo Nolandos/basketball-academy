@@ -2,9 +2,12 @@ import {createTheme} from '@mui/material';
 
 const theme = createTheme({
     palette: {
-        footballAcademy: {
-            black: '#373A3C',
+        basketballAcademy: {
+            black: '#000000',
             white: '#FFFFFF',
+            borderGray: '#eaeaea',
+            fontGray: '#9b9a9a',
+            primaryGreen: '#336a53',
             transparent: 'transparent',
             backgroundColor: '#FFFFFF',
         },
@@ -14,21 +17,24 @@ const theme = createTheme({
         fontSize: 16,
         allVariants: {
             fontSize: 16,
-            color: '#373A3C',
+            color: '#000000',
         },
     },
 });
 
-type FootballAcademyPalette = {
+type BasketballAcademyPalette = {
     black: string;
     white: string;
     transparent: string;
     backgroundColor: string;
+    primaryGreen: string;
+    borderGray: string;
+    fontGray: string;
 };
 
 declare module '@mui/material/styles/createPalette' {
     interface PaletteOptions {
-        footballAcademy?: FootballAcademyPalette;
+        basketballAcademy?: BasketballAcademyPalette;
     }
 }
 
