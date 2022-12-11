@@ -3,6 +3,7 @@ import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import {ThemeProvider} from 'styled-components';
 import theme from 'styles/theme';
+import Header from '@/components/layout/Header/Header';
 import * as Styled from './Layout.styles';
 
 type LayoutProps = {
@@ -15,6 +16,7 @@ const Layout: FC<LayoutProps> = ({children}) => (
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
             <Styled.Layout>
+                <Header />
                 <main>{children}</main>
             </Styled.Layout>
         </ThemeProvider>
