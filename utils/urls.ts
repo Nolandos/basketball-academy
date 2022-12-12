@@ -24,4 +24,11 @@ export default {
     openingOfANewLocation: '/otwarcie-nowej-lokalizacji',
     pyraPoznan: '/pyra-poznan',
     simpleHelp: '/prosta-pomoc',
+    news: '/aktualnosci',
+    shop: '/sklep',
+    contact: '/kontakt',
+
+    // External urls
+    facebook: 'https://www.facebook.com/akademiakoszykowkipoznan',
+    instagram: 'https://www.instagram.com/akademiakoszykowki/',
 };
