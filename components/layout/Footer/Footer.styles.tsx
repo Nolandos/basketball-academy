@@ -26,6 +26,11 @@ export const FooterBottom = styled.div`
     background-color: #131313;
     display: flex;
     justify-content: center;
+
+    @media ${mobileMicro} {
+        height: 120px;
+        align-items: center;
+    }
 `;
 export const UpperColumn = styled.div`
     height: 100%;
@@ -240,6 +245,14 @@ export const BottomWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     font-size: ${({theme}) => theme.typography.fontSize * 0.875}px;
+    padding: 0 15px;
+
+    @media ${mobileMicro} {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        max-height: 120px;
+    }
 `;
 
 export const Copyright = styled.p`
