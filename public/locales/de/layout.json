@@ -1,5 +1,5 @@
 {
-  "menu": {
+  "links": {
     "academy": "Akademia",
     "workouts": "Treningi",
     "records": "Zapisy",
@@ -32,5 +32,11 @@
     "openingOfANewLocation": "Otwarcie nowej lokalizacji",
     "pyraPoznan": "Pyra Poznan",
     "simpleHelp": "Prosta pomoc"
+  },
+  "footer": {
+    "news": "Aktualności",
+    "links": "Linki",
+    "followUs": "Obserwuj nas",
+    "callUs": "Zadzwoń do nas"
   }
 }

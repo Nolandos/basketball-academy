@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import {ThemeProvider} from 'styled-components';
 import theme from 'styles/theme';
 import Header from '@/components/layout/Header/Header';
+import Footer from '@/components/layout/Footer/Footer';
 import * as Styled from './Layout.styles';
 
 type LayoutProps = {
@@ -18,6 +19,7 @@ const Layout: FC<LayoutProps> = ({children}) => (
             <Styled.Layout>
                 <Header />
                 <main>{children}</main>
+                <Footer />
             </Styled.Layout>
         </ThemeProvider>
     </MuiThemeProvider>

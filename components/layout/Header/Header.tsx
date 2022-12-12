@@ -50,180 +50,182 @@ const Header: FC = () => {
         openingOfANewLocation,
         pyraPoznan,
         simpleHelp,
+        shop,
+        contact,
     } = urls;
-    const {t} = useTranslation('header');
+    const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const router = useRouter();
 
     const [menuItems] = useState<MenuItemsType | []>([
         {
             id: 'academy',
-            title: t<string>('menu.academy'),
+            title: t<string>('links.academy'),
             items: [
                 {
                     id: 'aboutUs',
-                    title: t<string>('menu.aboutUs'),
+                    title: t<string>('links.aboutUs'),
                     url: aboutUs,
                 },
                 {
                     id: 'offer',
-                    title: t<string>('menu.offer'),
+                    title: t<string>('links.offer'),
                     url: offer,
                 },
                 {
                     id: 'trainers',
-                    title: t<string>('menu.trainers'),
+                    title: t<string>('links.trainers'),
                     url: trainers,
                 },
             ],
         },
         {
             id: 'workouts',
-            title: t<string>('menu.workouts'),
+            title: t<string>('links.workouts'),
             items: [
                 {
                     id: 'localizations',
-                    title: t<string>('menu.localizations'),
+                    title: t<string>('links.localizations'),
                     url: aboutUs,
                 },
                 {
                     id: 'groupWorkouts',
-                    title: t<string>('menu.groupWorkouts'),
+                    title: t<string>('links.groupWorkouts'),
                     url: groupWorkouts,
                 },
                 {
                     id: '3x3Workouts',
-                    title: t<string>('menu.3x3Workouts'),
+                    title: t<string>('links.3x3Workouts'),
                     url: multiWorkouts,
                 },
                 {
                     id: 'individualTrainings',
-                    title: t<string>('menu.individualTrainings'),
+                    title: t<string>('links.individualTrainings'),
                     url: individualTrainings,
                 },
             ],
         },
         {
             id: 'records',
-            title: t<string>('menu.records'),
+            title: t<string>('links.records'),
             items: [
                 {
                     id: 'applicationForm',
-                    title: t<string>('menu.applicationForm'),
+                    title: t<string>('links.applicationForm'),
                     url: aboutUs,
                 },
                 {
                     id: 'frequentlyAskedQuestions',
-                    title: t<string>('menu.frequentlyAskedQuestions'),
+                    title: t<string>('links.frequentlyAskedQuestions'),
                     url: frequentlyAskedQuestions,
                 },
                 {
                     id: 'resignations',
-                    title: t<string>('menu.resignations'),
+                    title: t<string>('links.resignations'),
                     url: resignations,
                 },
                 {
                     id: 'leagueRecruitment',
-                    title: t<string>('menu.leagueRecruitment'),
+                    title: t<string>('links.leagueRecruitment'),
                     url: leagueRecruitment,
                 },
             ],
         },
         {
             id: 'campsAndSummercamp',
-            title: t<string>('menu.campsAndSummercamp'),
+            title: t<string>('links.campsAndSummercamp'),
             items: [
                 {
                     id: 'sportsCamps',
-                    title: t<string>('menu.sportsCamps'),
+                    title: t<string>('links.sportsCamps'),
                     url: sportsCamps,
                 },
                 {
                     id: 'recreationalDayCamps',
-                    title: t<string>('menu.recreationalDayCamps'),
+                    title: t<string>('links.recreationalDayCamps'),
                     url: recreationalDayCamps,
                 },
             ],
         },
         {
             id: 'documents',
-            title: t<string>('menu.documents'),
+            title: t<string>('links.documents'),
             items: [
                 {
                     id: 'membershipDeclaration',
-                    title: t<string>('menu.membershipDeclaration'),
+                    title: t<string>('links.membershipDeclaration'),
                     url: membershipDeclaration,
                 },
                 {
                     id: 'clubRegulations',
-                    title: t<string>('menu.clubRegulations'),
+                    title: t<string>('links.clubRegulations'),
                     url: clubRegulations,
                 },
                 {
                     id: 'individualTrainingContract',
-                    title: t<string>('menu.individualTrainingContract'),
+                    title: t<string>('links.individualTrainingContract'),
                     url: individualTrainingContract,
                 },
                 {
                     id: 'participantCard',
-                    title: t<string>('menu.participantCard'),
+                    title: t<string>('links.participantCard'),
                     url: participantCard,
                 },
             ],
         },
         {
             id: 'gallery',
-            title: t<string>('menu.gallery'),
+            title: t<string>('links.gallery'),
             items: [
                 {
                     id: 'photos',
-                    title: t<string>('menu.photos'),
+                    title: t<string>('links.photos'),
                     url: photos,
                 },
                 {
                     id: 'movies',
-                    title: t<string>('menu.movies'),
+                    title: t<string>('links.movies'),
                     url: movies,
                 },
             ],
         },
         {
             id: 'cooperation',
-            title: t<string>('menu.cooperation'),
+            title: t<string>('links.cooperation'),
             items: [
                 {
                     id: 'sponsorship',
-                    title: t<string>('menu.sponsorship'),
+                    title: t<string>('links.sponsorship'),
                     url: sponsorship,
                 },
                 {
                     id: 'openingOfANewLocation',
-                    title: t<string>('menu.openingOfANewLocation'),
+                    title: t<string>('links.openingOfANewLocation'),
                     url: openingOfANewLocation,
                 },
                 {
                     id: 'pyraPoznan',
-                    title: t<string>('menu.pyraPoznan'),
+                    title: t<string>('links.pyraPoznan'),
                     url: pyraPoznan,
                 },
                 {
                     id: 'simpleHelp',
-                    title: t<string>('menu.simpleHelp'),
+                    title: t<string>('links.simpleHelp'),
                     url: simpleHelp,
                 },
             ],
         },
         {
             id: 'shop',
-            title: t<string>('menu.shop'),
+            title: t<string>('links.shop'),
             items: null,
-            url: '/sklep',
+            url: shop,
         },
         {
             id: 'contact',
-            title: t<string>('menu.contact'),
+            title: t<string>('links.contact'),
             items: null,
-            url: 'kontakt',
+            url: contact,
         },
     ]);
 
