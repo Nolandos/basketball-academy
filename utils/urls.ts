@@ -1,3 +1,5 @@
+import supremeProdukcja from '@/assets/partnersBar/supreme-produkcja.png';
+
 export default {
     // Simple routes
     home: '/',
@@ -27,8 +29,16 @@ export default {
     news: '/aktualnosci',
     shop: '/sklep',
     contact: '/kontakt',
+    recommendUs: '/polecaja-nas',
 
     // External urls
     facebook: 'https://www.facebook.com/akademiakoszykowkipoznan',
     instagram: 'https://www.instagram.com/akademiakoszykowki/',
+    poznan: 'https://www.poznan.pl/',
+    pyraBar: 'http://www.pyrabar.pl/',
+    wzkosz: 'http://www.wzkosz.pl/',
+    supremeProdukcja: 'https://www.supremeprodukcja.pl/',
+    eneaAzs: 'http://azs.poznan.pl/',
+    pyraPoznanExternal: 'http://www.pyra.com.pl/',
+    siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',
 };

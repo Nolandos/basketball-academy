@@ -7,7 +7,6 @@ const {hd, widescreenOnly, touchSec, touch, mobile, mobileSmall, mobileMicro} =
 export const Footer = styled.footer`
     width: 100%;
     min-height: 100px;
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
 `;

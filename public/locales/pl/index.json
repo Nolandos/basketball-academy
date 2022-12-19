@@ -1,3 +1,9 @@
 {
-  "title": "TITLE"
+  "title": "TITLE",
+  "partnersSection": {
+    "title": "Partnerzy"
+  },
+  "recommendUsSection": {
+    "title": "Polecają nas"
+  }
 }
