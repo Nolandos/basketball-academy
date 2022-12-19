@@ -39,3 +39,29 @@ export const List = styled.ul`
     display: flex;
     flex-direction: column;
 `;
+
+export const Section = styled.section`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const SectionSubtitle = styled.h2`
+    font-size: ${({theme}) => theme.typography.fontSize * 2.25}px;
+    font-weight: 700;
+    display: inline-flex;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: ${({theme}) =>
+            theme.palette.basketballAcademy.primaryGreen};
+        bottom: -17px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+`;
