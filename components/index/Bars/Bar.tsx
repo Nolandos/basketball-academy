@@ -6,7 +6,7 @@ import {BarListItemType} from '@/utils/commonTypes';
 
 type BarPropsType = {
     itemsList: Array<BarListItemType>;
-    settings: {[k: string]: boolean | string | number};
+    settings: {[k: string]: boolean | string | number | Array<object>};
 };
 const Bar: FC<BarPropsType> = ({itemsList, settings}) => (
     <StyledBars.Bar>

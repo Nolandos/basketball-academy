@@ -29,4 +29,5 @@ export const SlickItem = styled.div`
 export const SlickImage = styled(Image)`
     display: inline-flex;
     max-height: 100px;
+    max-width: 235px;
 `;
