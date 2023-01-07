@@ -26,6 +26,26 @@ const PartnersBar: FC = () => {
         speed: 700,
         autoplaySpeed: 3500,
         cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
     };
 
     const partnersList: Array<BarListItemType> = [
@@ -40,7 +60,6 @@ const PartnersBar: FC = () => {
             id: 'pyraBar',
             src: pyraBar,
             height: 100,
-            width: 255,
             url: pyraBarUrl,
             urlExternal: true,
         },
