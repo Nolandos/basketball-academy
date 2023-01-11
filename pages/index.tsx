@@ -21,13 +21,13 @@ const Home = () => {
             </Head>
             <Styled.IndexPage>
                 <Styled.RecommendUsSection>
-                    <CommonStyled.SectionSubtitle>
+                    <CommonStyled.SectionSubtitle belt>
                         {t<string>('index:recommendUsSection.title')}
                     </CommonStyled.SectionSubtitle>
                     <RecommendUsBar />
                 </Styled.RecommendUsSection>
                 <Styled.PartnersSection>
-                    <CommonStyled.SectionSubtitle>
+                    <CommonStyled.SectionSubtitle belt>
                         {t<string>('index:partnersSection.title')}
                     </CommonStyled.SectionSubtitle>
                     <PartnersBar />

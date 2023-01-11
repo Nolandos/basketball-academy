@@ -3,21 +3,23 @@ import {createTheme} from '@mui/material';
 const theme = createTheme({
     palette: {
         basketballAcademy: {
-            black: '#000000',
+            black: '#221f1b',
             white: '#FFFFFF',
             borderGray: '#eaeaea',
             fontGray: '#9b9a9a',
+            fontGraySecond: '#929191',
+            backgroundSectionGray: '#f4f5f5',
             primaryGreen: '#336a53',
             transparent: 'transparent',
             backgroundColor: '#FFFFFF',
         },
     },
     typography: {
-        fontFamily: 'Ubuntu',
+        fontFamily: 'Titillium Web',
         fontSize: 16,
         allVariants: {
             fontSize: 16,
-            color: '#000000',
+            color: '#221f1b',
         },
     },
 });
@@ -30,6 +32,8 @@ type BasketballAcademyPalette = {
     primaryGreen: string;
     borderGray: string;
     fontGray: string;
+    backgroundSectionGray: string;
+    fontGraySecond: string;
 };
 
 declare module '@mui/material/styles/createPalette' {
