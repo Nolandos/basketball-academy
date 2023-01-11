@@ -124,7 +124,7 @@ export const MenuItem = styled.li<{hasItems: boolean; isExpand: boolean}>`
     min-width: 80px;
     text-transform: uppercase;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 0 10px;
     border-bottom: ${({theme}) =>
         `4px solid ${theme.palette.basketballAcademy.transparent}`};
@@ -295,7 +295,7 @@ export const DropdownMenuItem = styled.li`
 
         @media ${touch} {
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 700;
             min-height: 44px;
             padding: 0;
             border-bottom: ${({theme}) =>
