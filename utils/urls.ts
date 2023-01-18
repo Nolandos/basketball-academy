@@ -1,11 +1,11 @@
 import supremeProdukcja from '@/assets/partnersBar/supreme-produkcja.png';
+import {include} from 'named-urls';
 
 export default {
     // Simple routes
     home: '/',
     aboutUs: '/o-nas',
     offer: '/oferta',
-    trainers: '/trenerzy',
     localizations: '/lokalizacje',
     groupWorkouts: '/treningi-grupowe',
     multiWorkouts: '/treningi-3x3',
@@ -41,4 +41,11 @@ export default {
     eneaAzs: 'http://azs.poznan.pl/',
     pyraPoznanExternal: 'http://www.pyra.com.pl/',
     siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',
+
+    trainers: include('/trenerzy', {
+        base: '',
+        detail: include(':slug/', {
+            show: '',
+        }),
+    }),
 };

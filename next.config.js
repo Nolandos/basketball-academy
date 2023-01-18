@@ -6,7 +6,11 @@ const nextConfig = {
     i18n,
     optimizeFonts: false,
     images: {
-        domains: ['thumbs2.imgbox.com', 'scontent-waw1-1.cdninstagram.com'],
+        domains: [
+            'localhost',
+            'thumbs2.imgbox.com',
+            'scontent-waw1-1.cdninstagram.com',
+        ],
     },
 };
 
