@@ -31,7 +31,7 @@ const Header: FC = () => {
         home,
         aboutUs,
         offer,
-        trainers,
+        trainers: {base: trainersBase},
         groupWorkouts,
         multiWorkouts,
         individualTrainings,
@@ -75,7 +75,7 @@ const Header: FC = () => {
                 {
                     id: 'trainers',
                     title: t<string>('links.trainers'),
-                    url: trainers,
+                    url: trainersBase,
                 },
             ],
         },
