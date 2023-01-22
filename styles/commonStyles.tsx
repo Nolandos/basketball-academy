@@ -95,6 +95,10 @@ export const SectionSubtitle = styled.h2<{belt: boolean}>`
         left: 50%;
         transform: translate(-50%, 0);
     }
+
+    @media ${touch} {
+        text-align: center;
+    }
 `;
 
 export const HeroImage = styled.div<{image: any; description?: boolean}>`

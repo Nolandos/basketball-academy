@@ -79,5 +79,23 @@
     "holidaySubtitle": "Obozy sportowe",
     "holidaySubtitlePartTwo": "Półkolonie rekreacyjne",
     "holidayPartOne": "W okresie wakacji i ferii zimowych przygotowaliśmy także specjalną ofertę obozów sportowych oraz półkolonii rekreacyjnych."
+  },
+  "groupWorkouts": {
+    "siteTitle": "Treningi grupowe/lokalizacyjne",
+    "generalInfoPartOne": "Treningi odbywają się <strong>w tygodniu w godzinach popołudniowych (pozalekcyjnych) </strong>, trwają <strong>od 45 min dla grup przedszkolnych do 60 minut dla grup starszych </strong> i prowadzone są doświadczoną kadrę trenerską.",
+    "generalInfoPartTwo": "Tłumaczymy zasady, uczymy poprzez zabawę, jesteśmy przyjaźnie nastawieni, pobudzamy wyobraźnię dzieci i zaszczepiamy pasję do sportu.",
+    "generalInfoPartThree": "Stawiamy na rozwój zawodników!",
+    "generalInfoPartFour": "Używamy własnego profesjonalnego sprzętu sportowego dostosowanego do wieku i rozwoju dziecka.",
+    "generalInfoPartFive": "Koszt zajęć w Akademii to tylko <strong>120 zł miesięcznie</strong>! Składka członkowska jest stała i niezmienna w każdym miesiącu.",
+    "generalInfoPartSix": "Zawodnik ma prawo do korzystania ze wszystkich treningów na terenie Poznania oznaczonych opisem treningu lokalizacyjnego – jest tylko jedna zasada wiek dziecka musi zgadzać się oznaczeniem wiekoym grupy.",
+    "ageCategories": "Grupy wiekowe",
+    "preschoolersSubtitle": "<strong>Przedszkolaki</strong> - dla dzieci od 3 do 6 roku życia, zajęcia trwają 45 min.",
+    "preschoolersPartOne": "Zajęcia dla najmłodszych dzieci prowadzone są przez trenerów z odpowiednim przygotowaniem pedagogicznym i sportowym. Obejmują głównie gry i zabawy ruchowe, elementy gimnastyczne oraz podstawy koszykówki oparte na zapoznaniu się z piłką i koszem. Podczas zajęć wykorzystujemy odpowiednio dostosowanego sprzętu do wieku dziecka bazującego na mniejszych i niższych koszach oraz mniejszych i lżejszych rozmiarach piłek.",
+    "mediocreSubtitle": "<strong>Średniaki</strong> - dla dzieci od 7 do 9 roku życia zajęcia trwają 60 min.",
+    "mediocrePartOne": " Na zajęciach w tej grupie dalej kładziemy nacisk na aktywne zabawy, lecz jednocześnie budujemy zespół i uświadamiamy dzieciom czym jest współpraca. Do treningów stopniowo i powoli wprowadzane są dalsze elementy minikoszykówki wraz z objaśnieniem jej zasad.",
+    "elderlySubtitle": "<strong>Starsi</strong> - dla dzieci od 10 do 14 lat zajęcia trwają 60 min.",
+    "elderlyPartOne": "Dla starszych dzieci prowadzimy treningi udoskanalające, utrwalające i poprawiające wcześniej poznane elementy przy jednoczesnym wprowadzeniu nowych czynności koszykarskich. W tym wieku rozpoczynamy także prawdziwe mecze, podwyższamy poziom kosza i dostosowujemy sprzęt do wyższej kategorii wiekowej",
+    "theOldestSubtitle": "<strong>Najstarsi</strong> - dla dzieci od 14 do 17 roku życia zajęcia trwają od 60 min do 120 min.",
+    "theOldestPartOne": " Grupa ukierunkowana dla najstarszych dzieci chcących kontynuować treningi koszykarskie i swoją pasję szkolną do tej dyscypliny. Na tym etapie odbywa się dalsze szkolenie zawodnika oraz poprawa błędów technicznych."
   }
 }

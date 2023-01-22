@@ -299,6 +299,11 @@ const Header: FC = () => {
                                                 }) => (
                                                     <Styled.DropdownMenuItem
                                                         key={dropdownItemId}
+                                                        onClick={() =>
+                                                            setOpenMobileMenu(
+                                                                false
+                                                            )
+                                                        }
                                                     >
                                                         <Link
                                                             href={
