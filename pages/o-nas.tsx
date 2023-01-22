@@ -89,16 +89,16 @@ const AboutUs = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Styled.AboutUsPage>
-                <Styled.HeroImage image={heroBackgroundImg}>
-                    <Styled.HeroContent>
+                <CommonStyled.HeroImage image={heroBackgroundImg} description>
+                    <CommonStyled.HeroContent>
                         <CommonStyled.Title>
                             {t('common:aboutUs.siteTitle')}
                         </CommonStyled.Title>
-                        <Styled.HeroDescription>
+                        <CommonStyled.HeroDescription>
                             {t('common:aboutUs.partOne')}
-                        </Styled.HeroDescription>
-                    </Styled.HeroContent>
-                </Styled.HeroImage>
+                        </CommonStyled.HeroDescription>
+                    </CommonStyled.HeroContent>
+                </CommonStyled.HeroImage>
                 <Styled.Wrapper even={false}>
                     <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>

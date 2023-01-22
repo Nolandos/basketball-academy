@@ -30,7 +30,7 @@ const TrainerInfo: FC<TrainerInfoType> = ({trainer}) => {
 
     return (
         <Styled.TrainerPage>
-            <CommonStyled.Container>
+            <Styled.Container>
                 <Styled.TrainerContainer>
                     <Styled.TrainerName>
                         {firstName} {surname}
@@ -39,7 +39,7 @@ const TrainerInfo: FC<TrainerInfoType> = ({trainer}) => {
                         {positions?.map((position: string, index: number) =>
                             index === positions.length - 1
                                 ? `${position}`
-                                : `${position} /`
+                                : `${position} / `
                         )}
                     </Styled.Positions>
                     <HtmlBox>{description || ''}</HtmlBox>
@@ -68,7 +68,7 @@ const TrainerInfo: FC<TrainerInfoType> = ({trainer}) => {
                         />
                     </Styled.TrainerImage>
                 </Styled.TrainerContainer>
-            </CommonStyled.Container>
+            </Styled.Container>
         </Styled.TrainerPage>
     );
 };

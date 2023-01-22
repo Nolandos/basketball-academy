@@ -14,40 +14,6 @@ export const AboutUsPage = styled.div`
     align-items: center;
 `;
 
-export const HeroImage = styled.div<{image: any}>`
-    width: 100%;
-    height: 366px;
-    background: ${({image}) =>
-        ` no-repeat center rgba(0, 0, 0, 0.45) url(${image?.src})`};
-    background-size: cover;
-    background-blend-mode: darken;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-export const HeroContent = styled.div`
-    height: 100%;
-    width: 100%;
-    max-width: 820px;
-    display: flex;
-    flex-direction: column;
-    color: ${({theme}) => theme.palette.basketballAcademy.white};
-    justify-content: center;
-    align-items: center;
-`;
-
-export const HeroDescription = styled.p`
-    text-align: center;
-    font-size: ${({theme}) => theme.typography.fontSize * 1.25}px;
-    line-height: 1.68em;
-    font-weight: 400;
-    @media ${mobileSmall} {
-        padding: 0 15px;
-        font-size: ${({theme}) => theme.typography.fontSize * 0.9375}px;
-    }
-`;
-
 export const Wrapper = styled.div<{even: boolean}>`
     width: 100%;
     padding: 48px 0 80px 0;

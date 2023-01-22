@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import device from '@/styles/breakpoints';
 
-const {mobileSmall, touch} = device;
+const {mobileSmall} = device;
 export const TrainersPage = styled.div`
     max-width: 100vw;
     min-height: 100vh;
@@ -11,40 +11,6 @@ export const TrainersPage = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-`;
-
-export const HeroImage = styled.div<{image: any}>`
-    width: 100%;
-    height: 366px;
-    background: ${({image}) =>
-        ` no-repeat center rgba(0, 0, 0, 0.45) url(${image?.src})`};
-    background-size: cover;
-    background-blend-mode: darken;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-export const HeroContent = styled.div`
-    height: 100%;
-    width: 100%;
-    max-width: 820px;
-    display: flex;
-    flex-direction: column;
-    color: ${({theme}) => theme.palette.basketballAcademy.white};
-    justify-content: center;
-    align-items: center;
-`;
-
-export const HeroDescription = styled.p`
-    text-align: center;
-    font-size: ${({theme}) => theme.typography.fontSize * 1.25}px;
-    line-height: 1.68em;
-    font-weight: 400;
-    @media ${mobileSmall} {
-        padding: 0 15px;
-        font-size: ${({theme}) => theme.typography.fontSize * 0.9375}px;
-    }
 `;
 
 export const TrainersTiles = styled.div`
