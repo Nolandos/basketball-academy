@@ -30,16 +30,16 @@ const Trainers: FC<TrainersProps> = ({trainers}) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Styled.TrainersPage>
-                <Styled.HeroImage image={heroBackgroundImg}>
-                    <Styled.HeroContent>
+                <CommonStyled.HeroImage
+                    image={heroBackgroundImg}
+                    description={false}
+                >
+                    <CommonStyled.HeroContent>
                         <CommonStyled.Title>
                             {t('trainers:title')}
                         </CommonStyled.Title>
-                        {/* <Styled.HeroDescription> */}
-                        {/*    {t('trainers:title')} */}
-                        {/* </Styled.HeroDescription> */}
-                    </Styled.HeroContent>
-                </Styled.HeroImage>
+                    </CommonStyled.HeroContent>
+                </CommonStyled.HeroImage>
                 <CommonStyled.Container>
                     <Styled.TrainersTiles>
                         {trainers.map(

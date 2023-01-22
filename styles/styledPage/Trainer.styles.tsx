@@ -1,5 +1,8 @@
 import styled from 'styled-components';
+import device from '@/styles/breakpoints';
+import * as CommonStyled from '@/styles/commonStyles';
 
+const {touch} = device;
 export const TrainerPage = styled.div`
     max-width: 100vw;
     min-height: 100vh;
@@ -12,6 +15,12 @@ export const TrainerPage = styled.div`
     background-color: ${({theme}) =>
         theme.palette.basketballAcademy.primaryGreen};
     color: white;
+`;
+
+export const Container = styled(CommonStyled.Container)`
+    @media ${touch} {
+        flex-direction: column-reverse;
+    }
 `;
 
 export const TrainerContainer = styled.div`
@@ -28,6 +37,11 @@ export const TrainerContainer = styled.div`
 
     ul {
         margin-top: 0;
+    }
+
+    @media ${touch} {
+        width: 100%;
+        padding: 20px;
     }
 `;
 
@@ -54,6 +68,7 @@ export const ClubsList = styled.ul`
 export const Positions = styled.p`
     margin: 0;
     width: 100%;
+    font-weight: 600;
 `;
 
 export const ClubsInfo = styled.p`
