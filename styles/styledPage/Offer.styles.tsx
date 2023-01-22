@@ -75,18 +75,6 @@ export const HowWorksTile = styled.div`
     }
 `;
 
-export const HowWorksText = styled.p`
-    width: 50%;
-    text-align: center;
-    color: ${({
-        theme: {
-            palette: {
-                basketballAcademy: {white},
-            },
-        },
-    }) => white};
-`;
-
 export const OffersContent = styled.div`
     width: 100%;
     max-width: 820px;

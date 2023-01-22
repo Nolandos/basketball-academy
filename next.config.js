@@ -8,6 +8,7 @@ const nextConfig = {
     images: {
         domains: [
             'localhost',
+            'www.instagram.com',
             'thumbs2.imgbox.com',
             'scontent-waw1-1.cdninstagram.com',
         ],
