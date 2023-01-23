@@ -36,6 +36,7 @@
   },
   "and": "i",
   "signUp": "Zapisz się",
+  "contactForm": "formularz kontaktowy",
   "offer": {
     "siteTitle": "Oferta",
     "arrangement": "Umowa",
@@ -114,5 +115,26 @@
     "partOne": "Treningi 3x3 to treningi halowe i zewnętrzne dla zawodników od 13 roku życia interesujących się nową formą gry w koszykówkę. Treningi trwają od 60 do 120 minut.",
     "partTwo": "W okresie letnim zapewmniamy możliwość udania się wraz z zespołem na turnieje dedykowane grze ulicznej i 3x3.",
     "partThree": "Koszt zajęć to <strong>120 zł miesięcznie</strong>. Składka jest stała i niezmienna w każdym miesiącu."
+  },
+  "individualWorkouts": {
+    "siteTitle": "Treningi Indywidualne",
+    "siteSubtitle": "Informacje",
+    "partOne": "Treningi indywidualne to oferta skierowana do zawodników chcących dalej się rozwijać oraz poprawiać swoje błedy technicze a także swoją siłę, motorykę i ogólną sprawność fizyczną.",
+    "partTwo": "Treningi ukierunkowane są na zwodników w wieku: 10 – 19 lat.",
+    "benefitsSiteSubtitle": "Jakie korzyści płyną z dodatkowych treningów indywidualnych?",
+    "benefitsPartOne": "Szkolenie zawodników opiera się na specjalnie przygotowanym programie nauczania i doskonalenia umiejętności. Indywidualne treningi są doskonałym uzupełnieniem  treningów grupowych lub drużynowych. Pozwalają w <strong>szybszy</strong> sposób osiągnąć <strong>wyższy poziom umiejętności</strong> koszykarskich. Wpływają one na <strong>kompleksowy i harmonijny rozwój</strong> zawodnika w czterech aspektach: <strong>motoryka, technika, taktyka oraz psychika</strong>.",
+    "benefitsPartTwo": "Zajęcia organizowane są na dwa sposoby:",
+    "benefitsPartTwoPointOne": "Trening sam na sam z trenerem.",
+    "benefitsPartTwoPointTwo": "Minigrupa chętnych/znajomych maksymalnie licząca 4 osoby",
+    "benefitsPartThree": "Trening obejmuje, wywiad z zawodnikiem, test sparwnościowy, omówienie planu pracy, motywację i sam właściwy trening trwający 60 minut.",
+    "benefitsPartFour": "Z oferty treningowej mogą korzystać wszyscy zawodnicy także ci nie będący członkami naszego klubu czynnie uprawiający koszykówkę.",
+    "benefitsPartFive": "Koszt zajęć w Akademii to <strong>100 zł</strong> za każdy trening. Ilość treningów w tygodniu jest prywatnym wyborem uczestnika.",
+    "localizationsAndTermsSubtitle": "Lokalizacje i terminy",
+    "localizationsAndTermsListSubtitle": "Lokalizacje oraz dni i godziny treningów indywidualnych dostępne są po wcześniejszym kontakcie i konsultacji z biurem Akademii:",
+    "localizationsAndTermsListItemOne": "tel. <strong>605-222-613</strong>",
+    "localizationsAndTermsListItemTwo": "e-mail:",
+    "localizationsAndTermsListItemThree": "lub przez",
+    "localizationsAndTermsPartOne": "Zachęcamy do udziału i zapraszamy do kontaktu w celu ustalenia lokalizacji i terminów zajęć! Istnieje możliwość prowadzenia treningów w weekendy.",
+    "localizationsAndTermsPartTwo": "Umowa na treningi indywidualne jest podpisywana na okres conajmniej 3 miesięcy - po wcześniejszych konsultacjach, dopasowujących trening indywidualny do potrzeb Waszego dziecka."
   }
 }
