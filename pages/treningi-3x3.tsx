@@ -1,18 +1,18 @@
 import {Trans, useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import React from 'react';
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
-import * as Styled from '@/styles/styledPage/LeagueWorkouts.styles';
+import * as Styled from '@/styles/styledPage/MultiWorkouts.styles';
 import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as CommonStyled from '@/styles/commonStyles';
-import photoOne from '@/assets/pages/league-workouts/league-workouts-photo-one.jpg';
-import photoTwo from '@/assets/pages/league-workouts/league-workouts-photo-two.jpg';
-import photoThree from '@/assets/pages/league-workouts/league-workouts-photo-three.jpg';
-import photoFour from '@/assets/pages/league-workouts/league-workouts-photo-four.jpg';
-import Image, {StaticImageData} from 'next/image';
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
+import Image, {StaticImageData} from 'next/image';
+import photoOne from '@/assets/pages/multi-workouts/multi-workouts-one.jpg';
+import photoTwo from '@/assets/pages/multi-workouts/multi-workouts-two.jpg';
+import photoThree from '@/assets/pages/multi-workouts/multi-workouts-three.jpg';
+import photoFour from '@/assets/pages/multi-workouts/multi-workouts-four.jpg';
 
-const LeagueWorkouts = () => {
+const MultiWorkouts = () => {
     const {t} = useTranslation();
 
     const photosArray: Array<{id: string; url: StaticImageData}> = [
@@ -37,60 +37,51 @@ const LeagueWorkouts = () => {
     return (
         <div>
             <Head>
-                <title>{t('common:leagueWorkouts.siteTitle')}</title>
+                <title>{t('common:multiWorkouts.siteTitle')}</title>
                 <meta
                     name="description"
-                    content={t('common:leagueWorkouts.siteTitle')}
+                    content={t('common:multiWorkouts.siteTitle')}
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Styled.LeagueWorkouts>
+            <Styled.MultiWorkouts>
                 <CommonStyled.HeroImage
                     image={heroBackgroundImg}
                     description={false}
                 >
                     <CommonStyled.HeroContent>
                         <CommonStyled.Title>
-                            {t('common:leagueWorkouts.siteTitle')}
+                            {t('common:multiWorkouts.siteTitle')}
                         </CommonStyled.Title>
                     </CommonStyled.HeroContent>
                 </CommonStyled.HeroImage>
                 <Styled.Container>
-                    <Styled.LeagueWorkoutsContainer>
+                    <Styled.MultiWorkoutsList>
                         <CommonStyled.SectionSubtitle belt={false}>
-                            {t('common:leagueWorkouts.siteSubtitle')}
+                            {t('common:multiWorkouts.siteSubtitle')}
                         </CommonStyled.SectionSubtitle>
                         <li>
                             <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:leagueWorkouts.partOne')}</p>
+                            <p>{t('common:multiWorkouts.partOne')}</p>
                         </li>
                         <li>
                             <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:leagueWorkouts.partTwo')}</p>
-                        </li>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:leagueWorkouts.partThree')}</p>
+                            <p>{t('common:multiWorkouts.partTwo')}</p>
                         </li>
                         <li>
                             <Styled.LeagueWorkoutsArrowForward />
                             <p>
                                 <Trans
                                     i18nKey={t(
-                                        'common:leagueWorkouts.partFour'
+                                        'common:multiWorkouts.partThree'
                                     )}
                                 />
                             </p>
                         </li>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:leagueWorkouts.partFive')}</p>
-                        </li>
-                    </Styled.LeagueWorkoutsContainer>
+                    </Styled.MultiWorkoutsList>
                     <Styled.ButtonWrapper>
                         <SignUpButton />
                     </Styled.ButtonWrapper>
-
                     <Styled.Photos>
                         {photosArray.map(({id, url}) => (
                             <Styled.ContentImage key={id}>
@@ -99,12 +90,12 @@ const LeagueWorkouts = () => {
                         ))}
                     </Styled.Photos>
                 </Styled.Container>
-            </Styled.LeagueWorkouts>
+            </Styled.MultiWorkouts>
         </div>
     );
 };
 
-export default LeagueWorkouts;
+export default MultiWorkouts;
 
 export const getStaticProps = async ({locale}: {locale: string}) => ({
     props: {
