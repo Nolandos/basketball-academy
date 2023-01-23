@@ -1,17 +1,11 @@
-import {
-    fetchTrainer,
-    fetchTrainers,
-    fetchTrainersSlugs,
-} from '@/lib/fetchStrapi';
+import {fetchTrainer, fetchTrainersSlugs} from '@/lib/fetchStrapi';
 import React, {FC} from 'react';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {useTranslation} from 'next-i18next';
 import {TrainerType} from '@/utils/commonTypes';
 import * as Styled from '@/styles/styledPage/Trainer.styles';
-import ReactHtmlParser from 'react-html-parser';
 import HtmlBox from '@/components/common/HtmlBox/HtmlBox';
 import Image from 'next/image';
-import * as CommonStyled from '@/styles/commonStyles';
 
 type TrainerInfoType = {
     trainer: TrainerType;

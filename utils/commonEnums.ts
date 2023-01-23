@@ -10,3 +10,9 @@ export enum FloatOptions {
     LEFT = 'LEFT',
     RIGHT = 'RIGHT',
 }
+
+// eslint-disable-next-line no-shadow
+export enum ButtonVariantsEnum {
+    CONTAINED = 'CONTAINED',
+    OUTLINED = 'OUTLINED',
+}

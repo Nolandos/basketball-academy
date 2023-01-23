@@ -11,6 +11,7 @@ import elderly from '@/assets/pages/group-workouts/10-13.png';
 import Image from 'next/image';
 import groupWorkoutsDesc from '@/assets/pages/group-workouts/group-workouts-desc.jpg';
 import {FloatOptions} from '@/utils/commonEnums';
+import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
 
 const GroupWorkouts = () => {
     const {t} = useTranslation();
@@ -147,6 +148,9 @@ const GroupWorkouts = () => {
                             <p>{t('common:groupWorkouts.theOldestPartOne')}</p>
                         </Styled.AgeCategoryTile>
                     </Styled.AgeCategory>
+                    <Styled.ButtonWrapper>
+                        <SignUpButton />
+                    </Styled.ButtonWrapper>
                 </Styled.AgeCategories>
             </Styled.GroupWorkouts>
         </div>

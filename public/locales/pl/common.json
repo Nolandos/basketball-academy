@@ -35,6 +35,7 @@
     "cooperationPartOne": "Współpracujemy z czołowoymi klubami sportowymi w Poznaniu jak i w Polsce."
   },
   "and": "i",
+  "signUp": "Zapisz się",
   "offer": {
     "siteTitle": "Oferta",
     "arrangement": "Umowa",
@@ -97,5 +98,14 @@
     "elderlyPartOne": "Dla starszych dzieci prowadzimy treningi udoskanalające, utrwalające i poprawiające wcześniej poznane elementy przy jednoczesnym wprowadzeniu nowych czynności koszykarskich. W tym wieku rozpoczynamy także prawdziwe mecze, podwyższamy poziom kosza i dostosowujemy sprzęt do wyższej kategorii wiekowej",
     "theOldestSubtitle": "<strong>Najstarsi</strong> - dla dzieci od 14 do 17 roku życia zajęcia trwają od 60 min do 120 min.",
     "theOldestPartOne": " Grupa ukierunkowana dla najstarszych dzieci chcących kontynuować treningi koszykarskie i swoją pasję szkolną do tej dyscypliny. Na tym etapie odbywa się dalsze szkolenie zawodnika oraz poprawa błędów technicznych."
+  },
+  "leagueWorkouts": {
+    "siteTitle": "Treningi ligowe",
+    "siteSubtitle": "Informacje",
+    "partOne": "Treningi dedykowane są dla zawodników po min. rocznym szkoleniu w Akademii i wyróżniających się w swoich grupach lokalizacyjnych. Dołączenie do zespołu ligowego wiąże się z reprezentowaniem barw klubowych na arenie wojewódzkiej oraz ogólnopolskiej, biorąc udział w meczach ligowych, sparingach oraz turniejach.",
+    "partTwo": "Na treningi można zakwalfikować się poprzez testy sprawnościowe prowadzone przez klub na obozach sportowych oraz na początku sezonu a także przez pracę na treningach lokalizacyjcnyh po rekomendacji trenera prowadzącego.",
+    "partThree": "Zawodnik po zakwalfikowaniu się do drużyny ma wyrabianą licencję zawodnika Polskiego Związku Koszykówki umożliwiającą udział w rozgrywkach na terenie całego kraju.",
+    "partFour": "Koszt zajęć w Akademii to 200 zł miesięcznie. Składka ligowa jest stała i niezmienna w każdym miesiącu.",
+    "partFive": "Wymagany zakup stroju ligowego."
   }
 }

@@ -8,6 +8,7 @@ export default {
     offer: '/oferta',
     localizations: '/lokalizacje',
     groupWorkouts: '/treningi-grupowe',
+    leagueWorkouts: '/treningi-ligowe',
     multiWorkouts: '/treningi-3x3',
     individualTrainings: '/treningi-indywidulane',
     applicationForm: '/formularz-zgloszeniowy',

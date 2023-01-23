@@ -211,3 +211,11 @@ export const AgeCategoryTile = styled.div<{
         width: 100%;
     }
 `;
+
+export const ButtonWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+`;

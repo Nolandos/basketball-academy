@@ -6,7 +6,6 @@ import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as Styled from '@/styles/styledPage/Offer.styles';
 import * as CommonStyled from '@/styles/commonStyles';
 import {
-    ArrowForward,
     Savings,
     Schedule,
     SportsBasketball,
@@ -20,6 +19,7 @@ const Offer = () => {
     const {
         multiWorkouts,
         groupWorkouts,
+        leagueWorkouts,
         individualTrainings,
         sportsCamps,
         recreationalDayCamps,
@@ -105,7 +105,7 @@ const Offer = () => {
         {
             id: 'leagueTrainingSubtitle',
             title: (
-                <Link href={groupWorkouts}>
+                <Link href={leagueWorkouts}>
                     {t('common:offer.leagueTrainingSubtitle')}
                 </Link>
             ),

@@ -52,6 +52,7 @@ const Header: FC = () => {
         simpleHelp,
         shop,
         contact,
+        leagueWorkouts,
     } = urls;
     const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -92,6 +93,11 @@ const Header: FC = () => {
                     id: 'groupWorkouts',
                     title: t<string>('links.groupWorkouts'),
                     url: groupWorkouts,
+                },
+                {
+                    id: 'leagueWorkouts',
+                    title: t<string>('links.leagueWorkouts'),
+                    url: leagueWorkouts,
                 },
                 {
                     id: '3x3Workouts',
