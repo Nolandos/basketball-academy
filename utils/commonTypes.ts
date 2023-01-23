@@ -27,3 +27,5 @@ export type TrainerType = {
         };
     };
 };
+
+export type ButtonVariantsTypes = 'OUTLINED' | 'CONTAINED';
