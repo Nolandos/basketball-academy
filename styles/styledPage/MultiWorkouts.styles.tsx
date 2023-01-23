@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import * as CommonStyled from '@/styles/commonStyles';
-import device from '@/styles/breakpoints';
 import {ArrowForward} from '@mui/icons-material';
+import device from '@/styles/breakpoints';
 
 const {touch} = device;
 
-export const LeagueWorkouts = styled(CommonStyled.Page)``;
+export const MultiWorkouts = styled(CommonStyled.Page)``;
 
 export const Container = styled(CommonStyled.Container)`
     @media ${touch} {
@@ -13,7 +13,7 @@ export const Container = styled(CommonStyled.Container)`
     }
 `;
 
-export const LeagueWorkoutsContainer = styled.ul`
+export const MultiWorkoutsList = styled.ul`
     width: 100%;
     list-style-type: none;
     display: flex;
@@ -26,29 +26,6 @@ export const LeagueWorkoutsContainer = styled.ul`
         > svg {
             margin-top: 16px;
         }
-    }
-`;
-
-export const Photos = styled.div`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-
-    padding: 48px 0;
-`;
-
-export const ContentImage = styled.div`
-    width: calc(25% - 4px);
-    margin: 2px;
-    overflow: hidden;
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
-
-    @media ${touch} {
-        width: 100%;
     }
 `;
 
@@ -69,4 +46,27 @@ export const ButtonWrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin: 35px 0;
+`;
+
+export const Photos = styled.div`
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-top: 48px;
+`;
+
+export const ContentImage = styled.div`
+    width: calc(25% - 4px);
+    margin: 2px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media ${touch} {
+        width: 100%;
+    }
 `;

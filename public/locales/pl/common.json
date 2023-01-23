@@ -105,7 +105,14 @@
     "partOne": "Treningi dedykowane są dla zawodników po min. rocznym szkoleniu w Akademii i wyróżniających się w swoich grupach lokalizacyjnych. Dołączenie do zespołu ligowego wiąże się z reprezentowaniem barw klubowych na arenie wojewódzkiej oraz ogólnopolskiej, biorąc udział w meczach ligowych, sparingach oraz turniejach.",
     "partTwo": "Na treningi można zakwalfikować się poprzez testy sprawnościowe prowadzone przez klub na obozach sportowych oraz na początku sezonu a także przez pracę na treningach lokalizacyjcnyh po rekomendacji trenera prowadzącego.",
     "partThree": "Zawodnik po zakwalfikowaniu się do drużyny ma wyrabianą licencję zawodnika Polskiego Związku Koszykówki umożliwiającą udział w rozgrywkach na terenie całego kraju.",
-    "partFour": "Koszt zajęć w Akademii to 200 zł miesięcznie. Składka ligowa jest stała i niezmienna w każdym miesiącu.",
+    "partFour": "Koszt zajęć w Akademii to <strong> 200 zł miesięcznie.</strong> Składka ligowa jest stała i niezmienna w każdym miesiącu.",
     "partFive": "Wymagany zakup stroju ligowego."
+  },
+  "multiWorkouts": {
+    "siteTitle": "Treningi 3x3",
+    "siteSubtitle": "Informacje",
+    "partOne": "Treningi 3x3 to treningi halowe i zewnętrzne dla zawodników od 13 roku życia interesujących się nową formą gry w koszykówkę. Treningi trwają od 60 do 120 minut.",
+    "partTwo": "W okresie letnim zapewmniamy możliwość udania się wraz z zespołem na turnieje dedykowane grze ulicznej i 3x3.",
+    "partThree": "Koszt zajęć to <strong>120 zł miesięcznie</strong>. Składka jest stała i niezmienna w każdym miesiącu."
   }
 }
