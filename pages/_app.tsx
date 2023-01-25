@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import type {AppProps} from 'next/app';
 import {appWithTranslation} from 'next-i18next';
 import Layout from '@/components/layout/Layout';
+import {AppProvider} from '@/context/AppContext';
 
 const App = ({Component, pageProps}: AppProps) => {
     useEffect(() => {
@@ -14,9 +15,11 @@ const App = ({Component, pageProps}: AppProps) => {
     }, []);
 
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <AppProvider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </AppProvider>
     );
 };
 

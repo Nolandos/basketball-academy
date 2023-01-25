@@ -63,6 +63,7 @@ export const Title = styled.h1`
     color: ${({theme}) => theme.palette.basketballAcademy.white};
     font-weight: 700;
     position: relative;
+    text-align: center;
 
     &:after {
         content: '';

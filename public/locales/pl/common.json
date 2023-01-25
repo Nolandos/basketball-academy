@@ -37,6 +37,13 @@
   "and": "i",
   "signUp": "Zapisz się",
   "contactForm": "formularz kontaktowy",
+  "news": "Aktualności",
+  "pagination": {
+    "next": "Następna",
+    "previous": "Poprzednia",
+    "from": "z",
+    "pageSizeSelect": "Aktualności na stronie"
+  },
   "offer": {
     "siteTitle": "Oferta",
     "arrangement": "Umowa",
@@ -136,5 +143,11 @@
     "localizationsAndTermsListItemThree": "lub przez",
     "localizationsAndTermsPartOne": "Zachęcamy do udziału i zapraszamy do kontaktu w celu ustalenia lokalizacji i terminów zajęć! Istnieje możliwość prowadzenia treningów w weekendy.",
     "localizationsAndTermsPartTwo": "Umowa na treningi indywidualne jest podpisywana na okres conajmniej 3 miesięcy - po wcześniejszych konsultacjach, dopasowujących trening indywidualny do potrzeb Waszego dziecka."
+  },
+  "singleNewsDetails": {
+    "gallery": "Galeria"
+  },
+  "newsPage": {
+    "noNewsText": "Brak aktualności"
   }
 }

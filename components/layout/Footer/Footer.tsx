@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useContext} from 'react';
 import * as CommonStyled from '@/styles/commonStyles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import Link from 'next/link';
@@ -10,32 +10,22 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Image from 'next/image';
 import constants from '@/utils/constants';
+import {AppContext} from '@/context/AppContext';
+import {getFormatDate} from '@/utils/utils';
 import * as Styled from './Footer.styles';
 
 const Footer: FC = () => {
     const {t} = useTranslation(['layout', 'common']);
     const router = useRouter();
+    const {
+        app: {
+            lastNews: {loading: lastNewsLoading, data: lastNewsData},
+        },
+    } = useContext(AppContext);
+
     const {aboutUs, contact, shop, sponsorship, facebook, instagram, news} =
         urls;
     const {phoneNumber} = constants;
-
-    const lastPostsMocks = [
-        {
-            id: '1',
-            title: 'Basics First',
-            date: '21.10.2022',
-        },
-        {
-            id: '2',
-            title: 'Becoming Great',
-            date: '27.10.2022',
-        },
-        {
-            id: '3',
-            title: 'Better Results',
-            date: '30.10.2022',
-        },
-    ];
 
     const links = [
         {
@@ -113,14 +103,28 @@ const Footer: FC = () => {
                     </Styled.UpperColumn>
                     <Styled.UpperColumn>
                         <h5>{t<string>('footer.news')}</h5>
-                        <Styled.NewsList>
-                            {lastPostsMocks.map(({id, title, date}) => (
-                                <Styled.NewsListItem key={id}>
-                                    <Link href={`${news}/${id}`}>{title}</Link>
-                                    <span>{date}</span>
-                                </Styled.NewsListItem>
-                            ))}
-                        </Styled.NewsList>
+                        {lastNewsLoading && <Styled.LastNewsLoader />}
+                        {!lastNewsLoading && lastNewsData?.length > 0 && (
+                            <Styled.NewsList>
+                                {lastNewsData.map(
+                                    ({id, attributes: {date, title, slug}}) => (
+                                        <Styled.NewsListItem key={id}>
+                                            <Link href={`${news}/${slug}`}>
+                                                <Styled.ListItemTitle>
+                                                    {title}
+                                                </Styled.ListItemTitle>
+                                            </Link>
+                                            <span>{getFormatDate(date)}</span>
+                                        </Styled.NewsListItem>
+                                    )
+                                )}
+                            </Styled.NewsList>
+                        )}
+                        {!lastNewsLoading && lastNewsData?.length === 0 && (
+                            <Styled.NoNewsInfo>
+                                {t<string>('footer.noNewsInfo')}
+                            </Styled.NoNewsInfo>
+                        )}
                     </Styled.UpperColumn>
                     <Styled.UpperColumn>
                         <h5>{t<string>('footer.links')}</h5>

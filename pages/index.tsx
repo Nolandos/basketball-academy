@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Head from 'next/head';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import PartnersBar from '@/components/index/Bars/PartnersBar/PartnersBar';
@@ -6,9 +6,17 @@ import * as CommonStyled from '@/styles/commonStyles';
 import * as Styled from '@/styles/styledPage/IndexPage';
 import {useTranslation} from 'next-i18next';
 import RecommendUsBar from '@/components/index/Bars/RecommendUsBar/RecommendUsBar';
+import {AppContext} from '@/context/AppContext';
+import LastNewsGallery from '@/components/index/LastNewsGallery/LastNewsGallery';
 
 const Home = () => {
     const {t} = useTranslation();
+    const {
+        app: {
+            lastNews: {loading: lastNewsLoading, data: lastNewsData},
+        },
+    } = useContext(AppContext);
+
     return (
         <div>
             <Head>
@@ -20,6 +28,12 @@ const Home = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Styled.IndexPage>
+                <Styled.NewsGallery>
+                    <LastNewsGallery
+                        lastNewsLoading={lastNewsLoading}
+                        lastNews={lastNewsData}
+                    />
+                </Styled.NewsGallery>
                 <Styled.RecommendUsSection>
                     <CommonStyled.SectionSubtitle belt>
                         {t<string>('index:recommendUsSection.title')}

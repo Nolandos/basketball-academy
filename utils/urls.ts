@@ -27,11 +27,9 @@ export default {
     openingOfANewLocation: '/otwarcie-nowej-lokalizacji',
     pyraPoznan: '/pyra-poznan',
     simpleHelp: '/prosta-pomoc',
-    news: '/aktualnosci',
     shop: '/sklep',
     contact: '/kontakt',
     recommendUs: '/polecaja-nas',
-
     // External urls
     facebook: 'https://www.facebook.com/akademiakoszykowkipoznan',
     instagram: 'https://www.instagram.com/akademiakoszykowki/',
@@ -43,6 +41,14 @@ export default {
     pyraPoznanExternal: 'http://www.pyra.com.pl/',
     siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',
     emailBiuro: 'biuro@akademiakoszykówki.poznan.pl',
+
+    news: include('/aktualnosci', {
+        base: '/aktualnosci',
+        all: '/aktualnosci?page=1&pageSize=25',
+        detail: include(':slug/', {
+            show: '',
+        }),
+    }),
 
     trainers: include('/trenerzy', {
         base: '',
