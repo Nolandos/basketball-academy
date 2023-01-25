@@ -14,7 +14,7 @@ export const ScrollTopButton = styled(Button)`
 
     &.MuiButtonBase-root {
         position: fixed;
-        z-index: 9999;
+        z-index: 1199;
         bottom: 64px;
         right: 32px;
         height: 64px;

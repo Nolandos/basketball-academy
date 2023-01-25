@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useContext, useEffect, useState} from 'react';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import {ThemeProvider} from 'styled-components';
@@ -6,6 +6,8 @@ import theme from 'styles/theme';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
 import ScrollTopButton from '@/components/common/Buttons/ScrollTopButton/ScrollTopButton';
+import {AppContext} from '@/context/AppContext';
+import {fetchLastNews} from '@/lib/fetchStrapi';
 import * as Styled from './Layout.styles';
 
 type LayoutProps = {
@@ -16,8 +18,16 @@ const Layout: FC<LayoutProps> = ({children}) => {
     const [showScrollTopButton, setShowScrollTopButton] = useState(false);
     const onScrollListener = () => window.scrollY > 150;
 
+    const {handleSetLastNews} = useContext(AppContext);
+
+    const handleGetNews = async () => {
+        const res = await fetchLastNews();
+        handleSetLastNews(false, res?.data || []);
+    };
+
     useEffect(() => {
         setShowScrollTopButton(onScrollListener());
+        handleGetNews();
 
         window.addEventListener('scroll', () => {
             setShowScrollTopButton(onScrollListener());

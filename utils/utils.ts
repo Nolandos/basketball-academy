@@ -1,7 +1,11 @@
 import {FetchDataMethods} from '@/utils/commonEnums';
+import {PhotoTypes} from '@/utils/commonTypes';
 
 export const checkIsMobile = (resolution: number) =>
     window.innerWidth < resolution;
+
+export const getFormatDate = (date: string) =>
+    date.split('-').reverse().join('.');
 
 export const fetchData = async (
     url: string,
@@ -75,3 +79,31 @@ export const fetchData = async (
         return false;
     }
 };
+
+export const preparePhotosFromBackendToGallery = (photos: PhotoTypes[]) =>
+    photos.map(({attributes}) => {
+        const {url} = attributes;
+        return {
+            src: `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${url || ''}`,
+            width: 4,
+            height: 3,
+        };
+    });
+
+export const cutText = (text: string, maxLength: number) => {
+    const lastWord = text.slice(0, maxLength).lastIndexOf(' ');
+
+    if (maxLength < 1) return 'Error';
+    if (text.length > maxLength) return text.slice(0, lastWord).concat('...');
+    return text.slice(0, maxLength);
+};
+
+export const removeTags = (str: string) => {
+    if (str.trim() === '') return str;
+    return str.replace(/(<([^>]+)>)/gi, '');
+};
+//    const convertestr = str.toString();
+//
+// // Regular expression to identify HTML tags in
+// // the input string. Replacing the identified
+// // HTML tag with a null string.

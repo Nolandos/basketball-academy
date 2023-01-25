@@ -13,6 +13,10 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
                     />
+                    <link
+                        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                        rel="stylesheet"
+                    />
                 </Head>
                 <body>
                     <Main />

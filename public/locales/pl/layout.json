@@ -36,6 +36,7 @@
   },
   "footer": {
     "news": "Aktualności",
+    "noNewsInfo": "Brak aktualności",
     "links": "Linki",
     "followUs": "Obserwuj nas",
     "callUs": "Zadzwoń do nas"

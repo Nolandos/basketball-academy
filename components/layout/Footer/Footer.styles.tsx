@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import * as CommonStyled from '@/styles/commonStyles';
 import device from '@/styles/breakpoints';
+import Loader from '@/components/common/Loader/Loader';
 
 const {hd, widescreenOnly, touchSec, touch, mobile, mobileSmall, mobileMicro} =
     device;
@@ -46,7 +47,13 @@ export const UpperColumn = styled.div`
     }
 
     .about-academy {
-        color: #a9a6a6;
+        color: ${({
+            theme: {
+                palette: {
+                    basketballAcademy: {fontGrayThird},
+                },
+            },
+        }) => fontGrayThird};
         font-size: ${({theme}) => theme.typography.fontSize * 0.9375}px;
         margin-top: 0;
         margin-bottom: 14px;
@@ -279,4 +286,39 @@ export const FollowUsBottom = styled.div`
             color: ${({theme}) => theme.palette.basketballAcademy.primaryGreen};
         }
     }
+`;
+
+export const LastNewsLoader = styled(Loader)`
+    align-items: flex-start;
+    padding-left: 25px;
+
+    .MuiCircularProgress-root {
+        color: ${({
+            theme: {
+                palette: {
+                    basketballAcademy: {white},
+                },
+            },
+        }) => white};
+    }
+`;
+
+export const NoNewsInfo = styled.p`
+    margin: 0;
+    font-style: italic;
+    color: ${({
+        theme: {
+            palette: {
+                basketballAcademy: {fontGrayThird},
+            },
+        },
+    }) => fontGrayThird};
+`;
+
+export const ListItemTitle = styled.p`
+    margin: 0;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 `;

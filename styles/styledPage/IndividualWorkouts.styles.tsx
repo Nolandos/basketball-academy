@@ -2,9 +2,15 @@ import styled from 'styled-components';
 import * as CommonStyled from '@/styles/commonStyles';
 import {ArrowForward} from '@mui/icons-material';
 import Link from 'next/link';
+import device from '@/styles/breakpoints';
 
+const {touch} = device;
 export const IndividualWorkouts = styled(CommonStyled.Page)``;
-export const Container = styled(CommonStyled.Container)``;
+export const Container = styled(CommonStyled.Container)`
+    @media ${touch} {
+        padding: 0 15px;
+    }
+`;
 
 export const IndividualWorkoutsList = styled.ul`
     width: 100%;
@@ -12,6 +18,7 @@ export const IndividualWorkoutsList = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0;
 
     > li {
         display: flex;

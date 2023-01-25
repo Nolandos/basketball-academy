@@ -19,3 +19,21 @@ export const fetchTrainer = (slug: string) =>
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/trainer-info/${slug}?populate=*`,
         GET
     );
+
+export const fetchNews = (page: string, pageSize: string) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/news?pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=date:DESC&populate=*`,
+        GET
+    );
+
+export const fetchLastNews = () =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/news?pagination[start]=0&pagination[limit]=3&sort=date:DESC&populate=*`,
+        GET
+    );
+
+export const fetchSingleNews = (slug: string) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/single-news-info/${slug}?populate=*`,
+        GET
+    );

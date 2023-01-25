@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Section} from '@/styles/commonStyles';
+import * as CommonStyled from '@/styles/commonStyles';
 
 export const IndexPage = styled.div`
     max-width: 100vw;
@@ -11,6 +11,10 @@ export const IndexPage = styled.div`
     justify-content: flex-end;
 `;
 
-export const RecommendUsSection = styled(Section)``;
+export const RecommendUsSection = styled(CommonStyled.Section)``;
 
-export const PartnersSection = styled(Section)``;
+export const PartnersSection = styled(CommonStyled.Section)``;
+
+export const NewsGallery = styled(CommonStyled.Section)`
+    height: 660px;
+`;

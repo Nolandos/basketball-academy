@@ -19,6 +19,7 @@ export const MultiWorkoutsList = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0;
 
     > li {
         display: flex;

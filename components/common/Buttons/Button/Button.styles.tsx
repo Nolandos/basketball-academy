@@ -26,13 +26,14 @@ export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
     }) => {
         if (variant === ButtonVariantsEnum.CONTAINED) return white;
         if (variant === ButtonVariantsEnum.OUTLINED) return black;
+        if (variant === ButtonVariantsEnum.LINK) return black;
         return white;
     }};
 
     border: ${({
         theme: {
             palette: {
-                basketballAcademy: {primaryGreen, black},
+                basketballAcademy: {primaryGreen, black, transparent},
             },
         },
         variant,
@@ -41,6 +42,8 @@ export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
             return `2px solid ${primaryGreen}`;
         if (variant === ButtonVariantsEnum.OUTLINED)
             return `2px solid ${black}`;
+        if (variant === ButtonVariantsEnum.LINK)
+            return `2px solid ${transparent}`;
         return `2px solid ${primaryGreen}`;
     }};
 
@@ -54,6 +57,7 @@ export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
     }) => {
         if (variant === ButtonVariantsEnum.CONTAINED) return primaryGreen;
         if (variant === ButtonVariantsEnum.OUTLINED) return transparent;
+        if (variant === ButtonVariantsEnum.LINK) return transparent;
         return primaryGreen;
     }};
     transition: all 0.35s cubic-bezier(0.48, 1.42, 0.48, 1.45);

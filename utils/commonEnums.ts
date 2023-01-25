@@ -15,4 +15,10 @@ export enum FloatOptions {
 export enum ButtonVariantsEnum {
     CONTAINED = 'CONTAINED',
     OUTLINED = 'OUTLINED',
+    LINK = 'LINK',
+}
+
+// eslint-disable-next-line no-shadow
+export enum KeyboardCodesEnum {
+    ENTER = 'Enter',
 }
