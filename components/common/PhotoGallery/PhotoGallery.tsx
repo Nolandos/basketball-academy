@@ -2,11 +2,29 @@ import React, {FC, useCallback, useState} from 'react';
 import {PhotoGalleryType} from '@/utils/commonTypes';
 import Gallery from 'react-photo-gallery';
 import Carousel, {Modal, ModalGateway} from 'react-images';
+import Image from 'next/image';
+import {v4 as uuid} from 'uuid';
 import * as Styled from './PhotoGallery.styles';
 
 type PhotoGalleryProps = {
     photos: PhotoGalleryType[];
 };
+
+type CustomPhotoProps = {
+    onClickHandler: (e: React.MouseEvent) => void;
+    photo: PhotoGalleryType;
+};
+
+const CustomPhoto: FC<CustomPhotoProps> = ({photo, onClickHandler}) => (
+    <Styled.CustomPhoto onClick={onClickHandler}>
+        <Image
+            alt={photo?.title || uuid()}
+            src={photo.src}
+            width={photo.width}
+            height={photo.height}
+        />
+    </Styled.CustomPhoto>
+);
 
 const PhotoGallery: FC<PhotoGalleryProps> = ({photos}) => {
     const [currentImage, setCurrentImage] = useState<number>(0);
@@ -26,7 +44,19 @@ const PhotoGallery: FC<PhotoGalleryProps> = ({photos}) => {
 
     return (
         <Styled.Container>
-            <Gallery photos={photos} onClick={openLightbox} />
+            <Gallery
+                photos={photos}
+                // onClick={openLightbox}
+                renderImage={({index, photo}) => (
+                    <CustomPhoto
+                        key={uuid()}
+                        photo={photo}
+                        onClickHandler={(e: React.MouseEvent) =>
+                            openLightbox(e, {index})
+                        }
+                    />
+                )}
+            />
             {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
             {/* @ts-ignore */}
             <ModalGateway>

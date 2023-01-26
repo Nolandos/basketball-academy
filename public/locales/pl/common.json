@@ -149,5 +149,10 @@
   },
   "newsPage": {
     "noNewsText": "Brak aktualności"
+  },
+  "photosCollections": {
+    "siteTitle": "Galerie zdjęć",
+    "seeGallery": "Zobacz galerię",
+    "backToGalleryCollections": "Wróć do galerii"
   }
 }

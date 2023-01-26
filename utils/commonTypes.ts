@@ -29,6 +29,21 @@ export type TrainerType = {
     };
 };
 
+export type PhotosCollectionType = {
+    id: number;
+    attributes: {
+        slug: string;
+        title: string;
+        date: string;
+        mainPhoto: {
+            data: PhotoTypes;
+        };
+        photos: {
+            data: Array<PhotoTypes>;
+        };
+    };
+};
+
 export type PhotoTypes = {
     id: number;
     attributes: {

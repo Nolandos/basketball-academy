@@ -33,7 +33,7 @@ const NewsDetail: FC<NewsDetailProps> = ({singleNewsInfo}) => {
     } = singleNewsInfo;
 
     useEffect(() => {
-        setPhotosGallery(preparePhotosFromBackendToGallery(photosData));
+        setPhotosGallery(preparePhotosFromBackendToGallery(photosData, 4, 3));
     }, [photosData]);
 
     return (

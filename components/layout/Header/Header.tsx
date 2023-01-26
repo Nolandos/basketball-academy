@@ -44,8 +44,7 @@ const Header: FC = () => {
         clubRegulations,
         individualTrainingContract,
         participantCard,
-        photos,
-        movies,
+        gallery: {photos, movies},
         sponsorship,
         openingOfANewLocation,
         pyraPoznan,
@@ -186,7 +185,7 @@ const Header: FC = () => {
                 {
                     id: 'photos',
                     title: t<string>('links.photos'),
-                    url: photos,
+                    url: photos.all,
                 },
                 {
                     id: 'movies',
