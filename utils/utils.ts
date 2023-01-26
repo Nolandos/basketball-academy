@@ -80,13 +80,17 @@ export const fetchData = async (
     }
 };
 
-export const preparePhotosFromBackendToGallery = (photos: PhotoTypes[]) =>
+export const preparePhotosFromBackendToGallery = (
+    photos: PhotoTypes[],
+    width: number,
+    height: number
+) =>
     photos.map(({attributes}) => {
         const {url} = attributes;
         return {
             src: `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${url || ''}`,
-            width: 4,
-            height: 3,
+            width,
+            height,
         };
     });
 
@@ -102,8 +106,3 @@ export const removeTags = (str: string) => {
     if (str.trim() === '') return str;
     return str.replace(/(<([^>]+)>)/gi, '');
 };
-//    const convertestr = str.toString();
-//
-// // Regular expression to identify HTML tags in
-// // the input string. Replacing the identified
-// // HTML tag with a null string.

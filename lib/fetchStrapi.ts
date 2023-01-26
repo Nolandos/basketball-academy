@@ -37,3 +37,15 @@ export const fetchSingleNews = (slug: string) =>
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/single-news-info/${slug}?populate=*`,
         GET
     );
+
+export const fetchPhotosCollections = (page: string, pageSize: string) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/photos?pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=date:DESC&populate=*`,
+        GET
+    );
+
+export const fetchPhotosCollection = (slug: string) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/photos-collection-info/${slug}?populate=*`,
+        GET
+    );

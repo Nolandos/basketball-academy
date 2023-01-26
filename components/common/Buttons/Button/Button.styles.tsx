@@ -62,6 +62,12 @@ export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
     }};
     transition: all 0.35s cubic-bezier(0.48, 1.42, 0.48, 1.45);
 
+    .icon-end,
+    .icon-start {
+        width: 24px;
+        height: 24px;
+    }
+
     svg {
         transition: all 0.35s cubic-bezier(0.48, 1.42, 0.48, 1.45);
         width: 24px;
@@ -71,9 +77,18 @@ export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
     &:hover {
         transition: all 0.35s cubic-bezier(0.48, 1.42, 0.48, 1.45);
 
-        svg {
-            transition: all 0.35s cubic-bezier(0.48, 1.42, 0.48, 1.45);
-            transform: translateX(7px);
+        .icon-end {
+            svg {
+                transition: all 0.35s cubic-bezier(0.48, 1.42, 0.48, 1.45);
+                transform: translateX(7px);
+            }
+        }
+
+        .icon-start {
+            svg {
+                transition: all 0.35s cubic-bezier(0.48, 1.42, 0.48, 1.45);
+                transform: translateX(-7px);
+            }
         }
 
         &:after {

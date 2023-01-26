@@ -33,9 +33,9 @@ const Button: FC<ButtonProps> = ({
         type="button"
         {...props}
     >
-        {iconStart && iconStart}
+        <span className="icon-start">{iconStart && iconStart}</span>
         {children}
-        {iconEnd && iconEnd}
+        <span className="icon-end">{iconEnd && iconEnd}</span>
     </Styled.Button>
 );
 

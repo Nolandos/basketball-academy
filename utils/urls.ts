@@ -21,8 +21,6 @@ export default {
     clubRegulations: '/regulamin-klubu',
     individualTrainingContract: '/umowa-treningi-indywidualne',
     participantCard: '/karta-uczestnika-oboz-polkolinia',
-    photos: '/zdjecia',
-    movies: '/filmy',
     sponsorship: '/sponsoring',
     openingOfANewLocation: '/otwarcie-nowej-lokalizacji',
     pyraPoznan: '/pyra-poznan',
@@ -54,6 +52,18 @@ export default {
         base: '',
         detail: include(':slug/', {
             show: '',
+        }),
+    }),
+
+    gallery: include('/galeria', {
+        base: '',
+        movies: '/filmy',
+        photos: include('zdjecia', {
+            base: '',
+            all: '?page=1&pageSize=25',
+            detail: include(':slug/', {
+                show: '',
+            }),
         }),
     }),
 };

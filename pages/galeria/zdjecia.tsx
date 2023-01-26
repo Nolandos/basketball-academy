@@ -1,42 +1,46 @@
-import React, {FC, useEffect, useState} from 'react';
 import {useTranslation} from 'next-i18next';
-import Head from 'next/head';
-import * as Styled from '@/styles/styledPage/News.styles';
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
-import * as CommonStyled from '@/styles/commonStyles';
-import {fetchNews} from '@/lib/fetchStrapi';
-import Pagination from '@/components/common/Pagination/Pagination';
-import {checkIsMobile, cutText, removeTags} from '@/utils/utils';
 import {useRouter} from 'next/router';
-import {reverse} from 'named-urls';
 import urls from '@/utils/urls';
+import constants from '@/utils/constants';
+import React, {FC, useEffect, useState} from 'react';
+import {BackendPaginationMeta, PhotosCollectionType} from '@/utils/commonTypes';
+import {checkIsMobile, getFormatDate} from '@/utils/utils';
+import Head from 'next/head';
+import * as Styled from '@/styles/styledPage/Photos.styled';
+import * as CommonStyled from '@/styles/commonStyles';
+import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import PaginationInput from '@/components/common/Pagination/PaginationInput/PaginationInput';
-import {BackendPaginationMeta, NewsType} from '@/utils/commonTypes';
+import Pagination from '@/components/common/Pagination/Pagination';
+import {fetchPhotosCollections} from '@/lib/fetchStrapi';
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
+import {reverse} from 'named-urls';
 import Image from 'next/image';
 import Link from 'next/link';
-import constants from '@/utils/constants';
 
-type NewsProps = {
-    news: NewsType[];
+type PhotosProps = {
+    photosCollections: PhotosCollectionType[];
     paginationInfo: BackendPaginationMeta;
 };
 
-const News: FC<NewsProps> = ({news, paginationInfo}) => {
+const PhotosCollections: FC<PhotosProps> = ({
+    photosCollections,
+    paginationInfo,
+}) => {
     const {t} = useTranslation();
     const router = useRouter();
-    const {news: newsUrl} = urls;
-    const {pageSizeValues} = constants;
+    const {
+        gallery: {photos: photosUrl},
+    } = urls;
 
+    const {pageSizeValues} = constants;
     const {
         pagination: {page, pageSize, pageCount},
     } = paginationInfo;
     const [isMobile, setIsMobile] = useState<boolean>(false);
-    const handleCheckIsMobile = () => setIsMobile(checkIsMobile(1080));
 
     const handleChangePage = (selectedPge: string | number) => {
         router.push({
-            pathname: newsUrl.base,
+            pathname: photosUrl.base,
             query: {
                 ...router.query,
                 page: selectedPge,
@@ -46,7 +50,7 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
 
     const handleChangePageSize = (selectedPageSize: number | string) => {
         router.push({
-            pathname: newsUrl.base,
+            pathname: photosUrl.base,
             query: {
                 ...router.query,
                 page: 1,
@@ -55,6 +59,7 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
         });
     };
 
+    const handleCheckIsMobile = () => setIsMobile(checkIsMobile(1080));
     useEffect(() => {
         if (checkIsMobile(1080)) setIsMobile(true);
 
@@ -65,18 +70,21 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
     return (
         <div>
             <Head>
-                <title>{t('common:news')}</title>
-                <meta name="description" content={t('common:news')} />
+                <title>{t('common:photosCollections.siteTitle')}</title>
+                <meta
+                    name="description"
+                    content={t('common:photosCollections.siteTitle')}
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Styled.NewsPage>
+            <Styled.PhotosPage>
                 <CommonStyled.HeroImage
                     image={heroBackgroundImg}
                     description={false}
                 >
                     <CommonStyled.HeroContent>
                         <CommonStyled.Title>
-                            {t('common:news')}
+                            {t('common:photosCollections.siteTitle')}
                         </CommonStyled.Title>
                     </CommonStyled.HeroContent>
                 </CommonStyled.HeroImage>
@@ -100,28 +108,24 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
                             onChangePageHandler={handleChangePage}
                         />
                     </Styled.PaginationWrapper>
-                    <Styled.NewsList>
-                        {!news ||
-                            (news.length === 0 && (
-                                <Styled.NoNewsText>
-                                    {t<string>('common:newsPage.noNewsText')}
-                                </Styled.NoNewsText>
+                    <Styled.PhotosList>
+                        {!photosCollections ||
+                            (photosCollections.length === 0 && (
+                                <Styled.NoPhotosText>
+                                    {t<string>('common:newsPage.noPhotosText')}
+                                </Styled.NoPhotosText>
                             ))}
-                        {news?.map(
-                            ({
-                                attributes: {
-                                    mainPhoto,
-                                    slug,
-                                    title,
-                                    description,
-                                },
-                            }) => (
-                                <Styled.NewsListItem>
+                        {photosCollections?.map(
+                            ({attributes: {slug, title, date, mainPhoto}}) => (
+                                <Styled.PhotosListItem>
                                     <Styled.Content>
-                                        <Styled.SingleNewsImage
-                                            href={reverse(newsUrl.detail.show, {
-                                                slug,
-                                            })}
+                                        <Styled.SinglePhotosImage
+                                            href={reverse(
+                                                photosUrl.detail.show,
+                                                {
+                                                    slug,
+                                                }
+                                            )}
                                         >
                                             <Image
                                                 width={350}
@@ -132,42 +136,24 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
                                                 }
                                                 alt={slug}
                                             />
-                                        </Styled.SingleNewsImage>
+                                        </Styled.SinglePhotosImage>
                                         <h2>
                                             <Link
                                                 href={reverse(
-                                                    newsUrl.detail.show,
+                                                    photosUrl.detail.show,
                                                     {
                                                         slug,
                                                     }
                                                 )}
                                             >
-                                                {title}
+                                                {title} ({getFormatDate(date)})
                                             </Link>
                                         </h2>
-                                        <p>
-                                            {cutText(
-                                                removeTags(description),
-                                                120
-                                            )}
-                                        </p>
-                                        <Styled.ButtonWrapper>
-                                            <Link
-                                                href={reverse(
-                                                    newsUrl.detail.show,
-                                                    {
-                                                        slug,
-                                                    }
-                                                )}
-                                            >
-                                                {t('common:more')}
-                                            </Link>
-                                        </Styled.ButtonWrapper>
                                     </Styled.Content>
-                                </Styled.NewsListItem>
+                                </Styled.PhotosListItem>
                             )
                         )}
-                    </Styled.NewsList>
+                    </Styled.PhotosList>
                     <Styled.PaginationWrapper>
                         <Pagination
                             isMobile={isMobile}
@@ -178,12 +164,12 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
                         />
                     </Styled.PaginationWrapper>
                 </Styled.Container>
-            </Styled.NewsPage>
+            </Styled.PhotosPage>
         </div>
     );
 };
 
-export default News;
+export default PhotosCollections;
 
 export async function getServerSideProps({
     locale,
@@ -194,7 +180,7 @@ export async function getServerSideProps({
 }) {
     const {page, pageSize} = query;
 
-    const {data, meta, errno} = await fetchNews(page, pageSize);
+    const {data, meta, errno} = await fetchPhotosCollections(page, pageSize);
 
     if (errno) {
         return {
@@ -204,7 +190,7 @@ export async function getServerSideProps({
 
     return {
         props: {
-            news: data,
+            photosCollections: data,
             paginationInfo: meta,
             ...(await serverSideTranslations(locale, ['common', 'layout'])),
         },
