@@ -59,7 +59,7 @@ const PartnersBar: FC = () => {
         {
             id: 'pyraBar',
             src: pyraBar,
-            height: 100,
+            height: 60,
             url: pyraBarUrl,
             urlExternal: true,
         },
