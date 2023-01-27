@@ -6,7 +6,7 @@ import * as Styled from '@/styles/styledPage/Trainers.styles';
 import * as CommonStyled from '@/styles/commonStyles';
 import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import Image from 'next/image';
-import {fetchTrainers} from '@/lib/fetchStrapi';
+import {fetchPhotosCollections, fetchTrainers} from '@/lib/fetchStrapi';
 import urls from '@/utils/urls';
 import Link from 'next/link';
 import {reverse} from 'named-urls';
@@ -88,11 +88,23 @@ const Trainers: FC<TrainersProps> = ({trainers}) => {
     );
 };
 
-export const getStaticProps = async ({locale}: {locale: string}) => {
-    const trainers = await fetchTrainers();
+export async function getServerSideProps({
+    locale,
+}: {
+    locale: string;
+    query: {page: string; pageSize: string};
+}) {
+    const {data, errno} = await fetchTrainers();
+
+    if (errno) {
+        return {
+            notFound: true,
+        };
+    }
+
     return {
         props: {
-            trainers: trainers.data,
+            trainers: data,
             ...(await serverSideTranslations(locale, [
                 'common',
                 'trainers',
@@ -100,6 +112,6 @@ export const getStaticProps = async ({locale}: {locale: string}) => {
             ])),
         },
     };
-};
+}
 
 export default Trainers;

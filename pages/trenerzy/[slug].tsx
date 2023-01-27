@@ -1,4 +1,8 @@
-import {fetchTrainer, fetchTrainersSlugs} from '@/lib/fetchStrapi';
+import {
+    fetchTrainer,
+    fetchTrainers,
+    fetchTrainersSlugs,
+} from '@/lib/fetchStrapi';
 import React, {FC} from 'react';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {useTranslation} from 'next-i18next';
@@ -69,27 +73,24 @@ const TrainerInfo: FC<TrainerInfoType> = ({trainer}) => {
 
 export default TrainerInfo;
 
-export async function getStaticPaths() {
-    const res = await fetchTrainersSlugs();
-
-    const paths = res?.data?.map((trainer: TrainerType) => ({
-        params: {slug: trainer.attributes.slug},
-    }));
-    return {paths, fallback: false};
-}
-
-export async function getStaticProps({
+export async function getServerSideProps({
     params: {slug},
     locale,
 }: {
-    params: {slug: string};
     locale: string;
+    params: {slug: string};
 }) {
-    const res = await fetchTrainer(slug);
+    const {data, errno} = await fetchTrainer(slug);
+
+    if (errno) {
+        return {
+            notFound: true,
+        };
+    }
 
     return {
         props: {
-            trainer: res?.data,
+            trainer: data,
             ...(await serverSideTranslations(locale, [
                 'common',
                 'trainers',
