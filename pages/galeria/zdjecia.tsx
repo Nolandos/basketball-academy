@@ -112,7 +112,9 @@ const PhotosCollections: FC<PhotosProps> = ({
                         {!photosCollections ||
                             (photosCollections.length === 0 && (
                                 <Styled.NoPhotosText>
-                                    {t<string>('common:newsPage.noPhotosText')}
+                                    {t<string>(
+                                        'common:photosCollections.noPhotosText'
+                                    )}
                                 </Styled.NoPhotosText>
                             ))}
                         {photosCollections?.map(

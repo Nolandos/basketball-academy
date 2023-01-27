@@ -153,6 +153,7 @@
   "photosCollections": {
     "siteTitle": "Galerie zdjęć",
     "seeGallery": "Zobacz galerię",
-    "backToGalleryCollections": "Wróć do galerii"
+    "backToGalleryCollections": "Wróć do galerii",
+    "noPhotosText": "Brak zdjęć"
   }
 }
