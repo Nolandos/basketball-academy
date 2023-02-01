@@ -12,6 +12,13 @@ import Image from 'next/image';
 import constants from '@/utils/constants';
 import {AppContext} from '@/context/AppContext';
 import {getFormatDate} from '@/utils/utils';
+import {
+    AccountBalance,
+    AccountBalanceWallet,
+    Call,
+    MailOutline,
+    YouTube,
+} from '@mui/icons-material';
 import * as Styled from './Footer.styles';
 
 const Footer: FC = () => {
@@ -23,9 +30,17 @@ const Footer: FC = () => {
         },
     } = useContext(AppContext);
 
-    const {aboutUs, contact, shop, sponsorship, facebook, instagram, news} =
-        urls;
-    const {phoneNumber} = constants;
+    const {
+        aboutUs,
+        contact,
+        shop,
+        sponsorship,
+        facebook,
+        instagram,
+        youtube,
+        news,
+    } = urls;
+    const {phoneNumber, email, bankAccountNumber} = constants;
 
     const links = [
         {
@@ -96,11 +111,21 @@ const Footer: FC = () => {
                         <p className="about-academy">
                             {t<string>('common:aboutUs.partTwo')}
                         </p>
-                        <p className="call-us">
-                            <HeadsetMicIcon />
-                            {t<string>('footer.callUs')} {phoneNumber}
-                        </p>
                     </Styled.UpperColumn>
+                    <Styled.ContactWrapper className="mobile">
+                        <p className="call-us">
+                            <Call />
+                            {phoneNumber}
+                        </p>
+                        <p className="email">
+                            <MailOutline />
+                            {email}
+                        </p>
+                        <p className="account-number">
+                            <AccountBalanceWallet />
+                            {bankAccountNumber}
+                        </p>
+                    </Styled.ContactWrapper>
                     <Styled.UpperColumn>
                         <h5>{t<string>('footer.news')}</h5>
                         {lastNewsLoading && <Styled.LastNewsLoader />}
@@ -161,6 +186,20 @@ const Footer: FC = () => {
                             ))}
                         </Styled.FollowUsList>
                     </Styled.UpperColumn>
+                    <Styled.ContactWrapper>
+                        <p className="call-us">
+                            <Call />
+                            {phoneNumber}
+                        </p>
+                        <p className="email">
+                            <MailOutline />
+                            {email}
+                        </p>
+                        <p className="account-number">
+                            <AccountBalanceWallet />
+                            {bankAccountNumber}
+                        </p>
+                    </Styled.ContactWrapper>
                 </CommonStyled.Container>
             </Styled.FooterUpper>
             <Styled.FooterBottom>
@@ -181,6 +220,9 @@ const Footer: FC = () => {
                                 rel="noreferrer"
                             >
                                 <InstagramIcon />
+                            </a>
+                            <a href={youtube} target="_blank" rel="noreferrer">
+                                <YouTube fontSize="large" />
                             </a>
                         </Styled.FollowUsBottom>
                     </Styled.BottomWrapper>

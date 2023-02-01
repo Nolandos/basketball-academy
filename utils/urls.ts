@@ -31,6 +31,7 @@ export default {
     // External urls
     facebook: 'https://www.facebook.com/akademiakoszykowkipoznan',
     instagram: 'https://www.instagram.com/akademiakoszykowki/',
+    youtube: 'https://www.youtube.com/channel/UC-bjnl8_ggB3NcCRcu1-fMA',
     poznan: 'https://www.poznan.pl/',
     pyraBar: 'http://www.pyrabar.pl/',
     wzkosz: 'http://www.wzkosz.pl/',
