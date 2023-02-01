@@ -7,15 +7,13 @@ import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as CommonStyled from '@/styles/commonStyles';
 import {fetchNews} from '@/lib/fetchStrapi';
 import Pagination from '@/components/common/Pagination/Pagination';
-import {checkIsMobile, cutText, removeTags} from '@/utils/utils';
+import {checkIsMobile} from '@/utils/utils';
 import {useRouter} from 'next/router';
-import {reverse} from 'named-urls';
 import urls from '@/utils/urls';
 import PaginationInput from '@/components/common/Pagination/PaginationInput/PaginationInput';
 import {BackendPaginationMeta, NewsType} from '@/utils/commonTypes';
-import Image from 'next/image';
-import Link from 'next/link';
 import constants from '@/utils/constants';
+import SingleNewsTile from '@/components/common/SingleNewsTile/SingleNewsTile';
 
 type NewsProps = {
     news: NewsType[];
@@ -25,7 +23,12 @@ type NewsProps = {
 const News: FC<NewsProps> = ({news, paginationInfo}) => {
     const {t} = useTranslation();
     const router = useRouter();
-    const {news: newsUrl} = urls;
+    const {
+        news: {
+            base: newsUrlBase,
+            detail: {show: newsDetailShow},
+        },
+    } = urls;
     const {pageSizeValues} = constants;
 
     const {
@@ -36,7 +39,7 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
 
     const handleChangePage = (selectedPge: string | number) => {
         router.push({
-            pathname: newsUrl.base,
+            pathname: newsUrlBase,
             query: {
                 ...router.query,
                 page: selectedPge,
@@ -46,7 +49,7 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
 
     const handleChangePageSize = (selectedPageSize: number | string) => {
         router.push({
-            pathname: newsUrl.base,
+            pathname: newsUrlBase,
             query: {
                 ...router.query,
                 page: 1,
@@ -116,55 +119,16 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
                                     description,
                                 },
                             }) => (
-                                <Styled.NewsListItem>
-                                    <Styled.Content>
-                                        <Styled.SingleNewsImage
-                                            href={reverse(newsUrl.detail.show, {
-                                                slug,
-                                            })}
-                                        >
-                                            <Image
-                                                width={350}
-                                                height={215}
-                                                src={
-                                                    `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${mainPhoto?.data?.attributes?.url}` ||
-                                                    ''
-                                                }
-                                                alt={slug}
-                                            />
-                                        </Styled.SingleNewsImage>
-                                        <h2>
-                                            <Link
-                                                href={reverse(
-                                                    newsUrl.detail.show,
-                                                    {
-                                                        slug,
-                                                    }
-                                                )}
-                                            >
-                                                {title}
-                                            </Link>
-                                        </h2>
-                                        <p>
-                                            {cutText(
-                                                removeTags(description),
-                                                120
-                                            )}
-                                        </p>
-                                        <Styled.ButtonWrapper>
-                                            <Link
-                                                href={reverse(
-                                                    newsUrl.detail.show,
-                                                    {
-                                                        slug,
-                                                    }
-                                                )}
-                                            >
-                                                {t('common:more')}
-                                            </Link>
-                                        </Styled.ButtonWrapper>
-                                    </Styled.Content>
-                                </Styled.NewsListItem>
+                                <li key={slug}>
+                                    <SingleNewsTile
+                                        mainPhoto={mainPhoto}
+                                        slug={slug}
+                                        title={title}
+                                        description={description}
+                                        url={newsDetailShow}
+                                        t={t}
+                                    />
+                                </li>
                             )
                         )}
                     </Styled.NewsList>

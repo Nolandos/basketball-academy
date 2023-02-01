@@ -1,8 +1,4 @@
-import {
-    fetchTrainer,
-    fetchTrainers,
-    fetchTrainersSlugs,
-} from '@/lib/fetchStrapi';
+import {fetchTrainer} from '@/lib/fetchStrapi';
 import React, {FC} from 'react';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {useTranslation} from 'next-i18next';

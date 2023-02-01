@@ -6,16 +6,31 @@ import * as CommonStyled from '@/styles/commonStyles';
 import * as Styled from '@/styles/styledPage/IndexPage';
 import {useTranslation} from 'next-i18next';
 import RecommendUsBar from '@/components/index/Bars/RecommendUsBar/RecommendUsBar';
+import mainHeroBackground from '@/assets/index/index-main-hero.jpg';
+import mainHeroLogo from '@/assets/index/index-main-hero-logo.png';
+import Image from 'next/image';
+import {ChevronRight} from '@mui/icons-material';
+import {useRouter} from 'next/router';
+import urls from '@/utils/urls';
+import Button from '@/components/common/Buttons/Button/Button';
 import {AppContext} from '@/context/AppContext';
-import LastNewsGallery from '@/components/index/LastNewsGallery/LastNewsGallery';
+import SingleNewsTile from '@/components/common/SingleNewsTile/SingleNewsTile';
+import Loader from '@/components/common/Loader/Loader';
 
 const Home = () => {
     const {t} = useTranslation();
+    const router = useRouter();
     const {
         app: {
             lastNews: {loading: lastNewsLoading, data: lastNewsData},
         },
     } = useContext(AppContext);
+    const {
+        news: {
+            all: newsAll,
+            detail: {show: newsDetailShow},
+        },
+    } = urls;
 
     return (
         <div>
@@ -25,12 +40,68 @@ const Home = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Styled.IndexPage>
-                <Styled.NewsGallery>
-                    <LastNewsGallery
-                        lastNewsLoading={lastNewsLoading}
-                        lastNews={lastNewsData}
+                <Styled.MainHero>
+                    <Styled.MainHeroImage
+                        backgroundImage={mainHeroBackground?.src || ''}
                     />
-                </Styled.NewsGallery>
+                    <Styled.MainHeroContent>
+                        <Image
+                            src={mainHeroLogo}
+                            width={400}
+                            height={400}
+                            alt="index-main-hero-logo"
+                            className="main-hero-logo"
+                        />
+                        <Styled.ButtonWrapper>
+                            <Button
+                                variant="CONTAINED"
+                                iconEnd={<ChevronRight />}
+                                onClickHandler={() => router.push(newsAll)}
+                            >
+                                {t('common:news')}
+                            </Button>
+                            <Styled.NewsButton
+                                variant="OUTLINED"
+                                iconEnd={<ChevronRight />}
+                                onClickHandler={() => router.push(newsAll)}
+                            >
+                                {t<string>('common:signUp')}
+                            </Styled.NewsButton>
+                        </Styled.ButtonWrapper>
+                    </Styled.MainHeroContent>
+                </Styled.MainHero>
+                <Styled.LastNewsSection>
+                    <CommonStyled.SectionSubtitle belt>
+                        {t<string>('common:lastEntries')}
+                    </CommonStyled.SectionSubtitle>
+                    {lastNewsLoading ? (
+                        <Loader />
+                    ) : (
+                        <Styled.LastNewsList>
+                            {lastNewsData?.map(
+                                ({
+                                    attributes: {
+                                        mainPhoto,
+                                        slug,
+                                        title,
+                                        description,
+                                    },
+                                }) => (
+                                    <li key={slug}>
+                                        <SingleNewsTile
+                                            mainPhoto={mainPhoto}
+                                            slug={slug}
+                                            title={title}
+                                            description={description}
+                                            url={newsDetailShow}
+                                            t={t}
+                                        />
+                                    </li>
+                                )
+                            )}
+                        </Styled.LastNewsList>
+                    )}
+                </Styled.LastNewsSection>
                 <Styled.RecommendUsSection>
                     <CommonStyled.SectionSubtitle belt>
                         {t<string>('index:recommendUsSection.title')}
