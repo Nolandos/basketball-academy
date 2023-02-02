@@ -1,5 +1,5 @@
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
-import {useTranslation} from 'next-i18next';
+import {Trans, useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import React, {ReactNode} from 'react';
 import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
@@ -98,7 +98,9 @@ const Offer = () => {
                         <b>{t('common:offer.price')}: </b>
                         {t('common:offer.locationTrainingPartTen')}
                     </p>
-                    <p>{t('common:offer.locationTrainingPartEleven')}</p>
+                    <Trans
+                        i18nKey={t('common:offer.locationTrainingPartEleven')}
+                    />
                 </>
             ),
         },

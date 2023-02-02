@@ -107,7 +107,7 @@ export const Segment = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 0 25px;
+    padding: 0 25px 16px 25px;
 
     &:first-child {
         margin-top: 0;
