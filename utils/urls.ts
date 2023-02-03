@@ -1,5 +1,6 @@
 import supremeProdukcja from '@/assets/partnersBar/supreme-produkcja.png';
 import {include} from 'named-urls';
+import ministerstwoSportuITurystyki from '@/assets/partnersBar/ministerstwo-sportu-i-turystyki.png';
 
 export default {
     // Simple routes
@@ -36,6 +37,7 @@ export default {
     pyraBar: 'http://www.pyrabar.pl/',
     wzkosz: 'http://www.wzkosz.pl/',
     supremeProdukcja: 'https://www.supremeprodukcja.pl/',
+    ministerstwoSportuITurystyki: 'https://www.gov.pl/web/sport',
     eneaAzs: 'http://azs.poznan.pl/',
     pyraPoznanExternal: 'http://www.pyra.com.pl/',
     siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',

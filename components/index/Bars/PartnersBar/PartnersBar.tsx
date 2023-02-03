@@ -3,6 +3,7 @@ import poznan from '@/assets/partnersBar/miasto-poznan.png';
 import pyraBar from '@/assets/partnersBar/pyra-bar.png';
 import wzkosz from '@/assets/partnersBar/wzkosz.png';
 import supremeProdukcja from '@/assets/partnersBar/supreme-produkcja.png';
+import ministerstwoSportuITurystyki from '@/assets/partnersBar/ministerstwo-sportu-i-turystyki.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import urls from '@/utils/urls';
@@ -15,12 +16,13 @@ const PartnersBar: FC = () => {
         pyraBar: pyraBarUrl,
         wzkosz: wzkoszUrl,
         supremeProdukcja: supremeProdukcjaUrl,
+        ministerstwoSportuITurystyki: ministerstwoSportuITurystykiUrl,
     } = urls;
 
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         speed: 700,
@@ -30,13 +32,13 @@ const PartnersBar: FC = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                 },
             },
             {
                 breakpoint: 800,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                 },
             },
             {
@@ -52,29 +54,36 @@ const PartnersBar: FC = () => {
         {
             id: 'poznan',
             src: poznan,
-            height: 100,
+            height: 50,
             url: poznanUrl,
-            urlExternal: true,
-        },
-        {
-            id: 'pyraBar',
-            src: pyraBar,
-            height: 60,
-            url: pyraBarUrl,
             urlExternal: true,
         },
         {
             id: 'wzkosz',
             src: wzkosz,
-            height: 100,
+            height: 65,
             url: wzkoszUrl,
+            urlExternal: true,
+        },
+        {
+            id: 'ministerstwoSportuITurystyki',
+            src: ministerstwoSportuITurystyki,
+            height: 50,
+            url: ministerstwoSportuITurystykiUrl,
             urlExternal: true,
         },
         {
             id: 'supremeProdukcja',
             src: supremeProdukcja,
-            height: 100,
+            height: 75,
             url: supremeProdukcjaUrl,
+            urlExternal: true,
+        },
+        {
+            id: 'pyraBar',
+            src: pyraBar,
+            height: 50,
+            url: pyraBarUrl,
             urlExternal: true,
         },
     ];

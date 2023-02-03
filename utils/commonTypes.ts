@@ -4,7 +4,7 @@ import {ReactNode} from 'react';
 export type BarListItemType = {
     id: string;
     src: string | StaticImageData;
-    height: number;
+    height?: number;
     width?: number;
     url?: string;
     urlExternal?: boolean;
