@@ -1,6 +1,15 @@
 import {StaticImageData} from 'next/image';
 import {ReactNode} from 'react';
 
+export type sendSignUpEmailTypes = {
+    name: string;
+    yearOfBirth: string;
+    phoneNumber: string;
+    email: string;
+    additionalInfo: string;
+    localization: string;
+};
+
 export type BarListItemType = {
     id: string;
     src: string | StaticImageData;

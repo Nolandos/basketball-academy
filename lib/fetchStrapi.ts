@@ -1,7 +1,8 @@
 import {fetchData} from '@/utils/utils';
 import {FetchDataMethods} from '@/utils/commonEnums';
+import {sendSignUpEmailTypes} from '@/utils/commonTypes';
 
-const {GET} = FetchDataMethods;
+const {GET, POST} = FetchDataMethods;
 export const fetchTrainers = () =>
     fetchData(
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/trainers?populate=*`,
@@ -48,4 +49,18 @@ export const fetchPhotosCollection = (slug: string) =>
     fetchData(
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/photos-collection-info/${slug}?populate=*`,
         GET
+    );
+
+export const sendSignUpEmail = ({
+    name,
+    yearOfBirth,
+    phoneNumber,
+    email,
+    additionalInfo,
+    localization,
+}: sendSignUpEmailTypes) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/email/sign-up-mail?name=${name}&yearOfBirth=${yearOfBirth}&phoneNumber=${phoneNumber}&email=
+        ${email}&additionalInfo=${additionalInfo}&localization=${localization}`,
+        POST
     );

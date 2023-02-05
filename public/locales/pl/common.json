@@ -1,6 +1,10 @@
 {
   "title": "Akademia koszykówki",
   "more": "Więcej",
+  "alerts": {
+    "sendEmailOk": "Wysłano wiadomość!",
+    "sendEmailError": "Nie wysłano wiadomości"
+  },
   "aboutUs": {
     "siteTitle": "O nas",
     "partOne": "Akademia Koszykówki została założona w maju 2014 roku przez zawodniczkę i jednocześnie trenerkę Paulinę Babij.",

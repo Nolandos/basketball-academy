@@ -10,6 +10,7 @@ import * as Yup from 'yup';
 import {phoneRegExp} from '@/utils/utils';
 import {AppContext} from '@/context/AppContext';
 import {AlertMessagesTypes} from '@/utils/commonEnums';
+import {sendSignUpEmail} from '@/lib/fetchStrapi';
 import * as Styled from './SignUpForm.styles';
 
 type SignUpFormValues = {
@@ -141,7 +142,7 @@ const SingUpForm = () => {
 
     const watchShowOtherLocalization = watch('localization', '');
 
-    const handleSendEmail = (values: SignUpFormValues) => {
+    const handleSendEmail = async (values: SignUpFormValues) => {
         const {
             email,
             phoneNumber,
@@ -163,17 +164,22 @@ const SingUpForm = () => {
             additionalInfo,
         };
 
-        return new Promise<void>((resolve) => {
-            setTimeout(() => {
-                handleSetMessageBox({
-                    id: 'sentMail',
-                    text: 'Wysłano wiadomość!',
-                    type: AlertMessagesTypes.SUCCESS,
-                });
-                reset(defaultValues);
-                resolve();
-            }, 2000);
-        });
+        const res = await sendSignUpEmail(preparedData);
+        if (res.ok || res.status === 200) {
+            handleSetMessageBox({
+                id: 'sentMail',
+                text: t('alerts.sendEmailOk'),
+                type: AlertMessagesTypes.SUCCESS,
+            });
+        } else {
+            handleSetMessageBox({
+                id: 'sentMail',
+                text: t('alerts.sendEmailError'),
+                type: AlertMessagesTypes.ERROR,
+            });
+        }
+
+        reset();
     };
 
     return (
@@ -374,6 +380,7 @@ const SingUpForm = () => {
             <Styled.SubmitButton
                 variant="OUTLINED"
                 loading={isSubmitting}
+                disabled={isSubmitting}
                 iconEnd={<ChevronRight />}
                 type="submit"
             >
