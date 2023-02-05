@@ -17,6 +17,8 @@ export const IndexPage = styled.div`
 
 export const RecommendUsSection = styled(CommonStyled.Section)``;
 
+export const TargetsSection = styled(CommonStyled.Section)``;
+
 export const PartnersSection = styled(CommonStyled.Section)``;
 
 export const SignUpSection = styled(CommonStyled.Section)``;

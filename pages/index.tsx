@@ -17,6 +17,7 @@ import {AppContext} from '@/context/AppContext';
 import SingleNewsTile from '@/components/common/SingleNewsTile/SingleNewsTile';
 import Loader from '@/components/common/Loader/Loader';
 import SingUpForm from '@/components/common/SingUpForm/SingUpForm';
+import Targets from '@/components/index/Targets/Targets';
 
 const Home = () => {
     const {t} = useTranslation();
@@ -106,6 +107,12 @@ const Home = () => {
                         </Styled.LastNewsList>
                     )}
                 </Styled.LastNewsSection>
+                <Styled.TargetsSection>
+                    <CommonStyled.SectionSubtitle belt>
+                        {t<string>('index:targets.title')}
+                    </CommonStyled.SectionSubtitle>
+                    <Targets />
+                </Styled.TargetsSection>
                 <Styled.RecommendUsSection>
                     <CommonStyled.SectionSubtitle belt>
                         {t<string>('index:recommendUsSection.title')}

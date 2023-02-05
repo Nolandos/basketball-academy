@@ -8,5 +8,16 @@
   },
   "signUpSection": {
     "title": "Zapisz się"
+  },
+  "targets": {
+    "title": "Co nas wyróżnia?",
+    "preparationTitle": "Przygotowanie",
+    "trainingTitle": "Trening",
+    "motivationTitle": "Motywacja",
+    "realizationTitle": "Realizacja",
+    "preparationContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac tincidunt massa. Phasellus vel sem eu.",
+    "trainingContent": "Donec laoreet ante sit amet velit dignitas pellentesque, ut dignissim porta , a auctor dui orci id lorem ipsum.",
+    "motivationContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac tincidunt massa. Phasellus vel sem eu.",
+    "realizationContent": "Donec laoreet ante sit amet velit dignitas pellentesque, ut dignissim porta , a auctor dui orci id lorem ipsum."
   }
 }
