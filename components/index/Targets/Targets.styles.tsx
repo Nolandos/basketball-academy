@@ -53,13 +53,7 @@ export const TargetImageContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${({
-        theme: {
-            palette: {
-                basketballAcademy: {primaryGreen},
-            },
-        },
-    }) => primaryGreen};
+    background-color: #e1e1e1;
 
     &:after {
         content: '';
@@ -105,9 +99,23 @@ export const TargetImage = styled.div<{backgroundImg: string}>`
 export const TargetTitle = styled.h2`
     margin: 12px 0;
     font-size: 1.3rem;
+    color: ${({
+        theme: {
+            palette: {
+                basketballAcademy: {white},
+            },
+        },
+    }) => white};
 `;
 
 export const TargetContent = styled.p`
     text-align: center;
     margin-top: 7px;
+    color: ${({
+        theme: {
+            palette: {
+                basketballAcademy: {white},
+            },
+        },
+    }) => white};
 `;

@@ -17,7 +17,35 @@ export const IndexPage = styled.div`
 
 export const RecommendUsSection = styled(CommonStyled.Section)``;
 
-export const TargetsSection = styled(CommonStyled.Section)``;
+export const TargetsSection = styled(CommonStyled.Section)`
+    background-color: ${({
+        theme: {
+            palette: {
+                basketballAcademy: {primaryGreen},
+            },
+        },
+    }) => primaryGreen};
+
+    > h2 {
+        color: ${({
+            theme: {
+                palette: {
+                    basketballAcademy: {white},
+                },
+            },
+        }) => white};
+
+        &:after {
+            background-color: ${({
+                theme: {
+                    palette: {
+                        basketballAcademy: {white},
+                    },
+                },
+            }) => white};
+        }
+    }
+`;
 
 export const PartnersSection = styled(CommonStyled.Section)``;
 
