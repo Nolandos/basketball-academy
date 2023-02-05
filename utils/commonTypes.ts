@@ -16,8 +16,8 @@ export type TrainerType = {
         firstName: string | null;
         surname: string | null;
         description: string | null;
-        clubs: string[] | null;
-        positions: string[] | null;
+        clubs: string | null;
+        positions: string | null;
         slug: string | null;
         photo: {
             data: {
