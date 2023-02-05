@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-import {useTranslation} from 'next-i18next';
+import {Trans, useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import * as Styled from '@/styles/styledPage/AboutUsPage.styles';
 import * as CommonStyled from '@/styles/commonStyles';
@@ -10,6 +10,8 @@ import funImg from '@/assets/pages/about-us-fun.jpg';
 import trainingStaffImg from '@/assets/pages/about-us-training-staff.jpg';
 import cooperationImg from '@/assets/pages/about-us-cooperation.jpg';
 import mainTargetImg from '@/assets/pages/about-us-main-target.jpg';
+import pyraPoznan from '@/assets/recommendUsBar/pyra-poznan.png';
+import uksSiekierki from '@/assets/recommendUsBar/siekierki.png';
 import Image from 'next/image';
 import {
     Accessibility,
@@ -112,7 +114,11 @@ const AboutUs = () => {
                                 />
                             </Styled.ContentImage>
                             <Styled.SectionDescription even={false}>
-                                {t('common:aboutUs.mainTargetPartOne')}
+                                <Trans
+                                    i18nKey={t(
+                                        'common:aboutUs.mainTargetPartOne'
+                                    )}
+                                />
                             </Styled.SectionDescription>
                         </Styled.SectionContent>
                     </CommonStyled.Container>
@@ -203,9 +209,30 @@ const AboutUs = () => {
                             {t('common:aboutUs.cooperationSubtitle')}
                         </CommonStyled.SectionSubtitle>
                         <Styled.SectionContent>
-                            <Styled.SectionDescription even>
-                                {t('common:aboutUs.cooperationPartOne')}
-                            </Styled.SectionDescription>
+                            <div className="cooperation-content">
+                                <Styled.SectionDescription
+                                    className="cooperation-text"
+                                    even
+                                >
+                                    {t('common:aboutUs.cooperationPartOne')}
+                                </Styled.SectionDescription>
+                                <div className="cooperation-container">
+                                    <Image
+                                        src={pyraPoznan}
+                                        width={213}
+                                        height={150}
+                                        className="pyra-poznan"
+                                        alt="pyra-poznan"
+                                    />
+                                    <Image
+                                        src={uksSiekierki}
+                                        width={150}
+                                        height={150}
+                                        className="uks-siekierki"
+                                        alt="uks-siekierki"
+                                    />
+                                </div>
+                            </div>
                             <Styled.ContentImage>
                                 <Image
                                     src={cooperationImg}

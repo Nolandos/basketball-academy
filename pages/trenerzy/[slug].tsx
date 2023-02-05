@@ -1,8 +1,4 @@
-import {
-    fetchTrainer,
-    fetchTrainers,
-    fetchTrainersSlugs,
-} from '@/lib/fetchStrapi';
+import {fetchTrainer} from '@/lib/fetchStrapi';
 import React, {FC} from 'react';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {useTranslation} from 'next-i18next';
@@ -33,21 +29,15 @@ const TrainerInfo: FC<TrainerInfoType> = ({trainer}) => {
                     <Styled.TrainerName>
                         {firstName} {surname}
                     </Styled.TrainerName>
-                    <Styled.Positions>
-                        {positions?.map((position: string, index: number) =>
-                            index === positions.length - 1
-                                ? `${position}`
-                                : `${position} / `
-                        )}
-                    </Styled.Positions>
+                    <Styled.Positions>{positions}</Styled.Positions>
                     <HtmlBox>{description || ''}</HtmlBox>
-                    {clubs && clubs.length > 0 && (
+                    {clubs && clubs.trim() !== '' && (
                         <Styled.ClubsInfo>
                             {t<string>('trainers:clubs')}
                         </Styled.ClubsInfo>
                     )}
                     <Styled.ClubsList>
-                        {clubs?.map((club: string) => (
+                        {clubs?.split('/')?.map((club: string) => (
                             <li key={club}>{club}</li>
                         ))}
                     </Styled.ClubsList>

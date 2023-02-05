@@ -154,12 +154,12 @@ export const MenuItem = styled.li<{hasItems: boolean; isExpand: boolean}>`
     }
 
     @media ${widescreenOnly} {
-        max-width: 110px;
+        max-width: 190px;
     }
 
     @media ${desktopOnly} {
-        max-width: 100px;
-        margin-right: 5px;
+        max-width: 190px;
+        padding: 0 5px;
     }
     @media ${touch} {
         height: ${({isExpand, hasItems}) =>

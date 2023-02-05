@@ -4,26 +4,32 @@ import DropdownSelect from '@/components/common/DropdownSelect/DropdownSelect';
 import device from '@/styles/breakpoints';
 import Link from 'next/link';
 
-const {touch, touchSec, mobileMicro, mobile} = device;
+const {touch, desktopOnly} = device;
 export const NewsPage = styled(CommonStyled.Page)``;
 
 export const NewsList = styled.ul`
-    width: 100%;
     min-height: 350px;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     justify-content: flex-start;
-    @media ${touchSec} {
-        justify-content: center;
+    list-style-type: none;
+
+    > li {
+        margin: 0 15px;
+    }
+
+    @media ${desktopOnly} {
+        width: 760px;
     }
 
     @media ${touch} {
-        justify-content: center;
-    }
-    @media ${mobileMicro} {
+        width: 100%;
         padding: 0 15px;
         justify-content: center;
+        > li {
+            margin: 15px 0;
+        }
     }
 `;
 
@@ -64,6 +70,7 @@ export const PageSizeDropdownSelect = styled(DropdownSelect)`
 
 export const Container = styled(CommonStyled.Container)`
     padding: 55px 0;
+    justify-content: center;
 `;
 
 export const NoNewsText = styled.p`
@@ -73,54 +80,6 @@ export const NoNewsText = styled.p`
     margin-top: 15%;
     font-size: 1.25rem;
     font-style: italic;
-`;
-
-export const NewsListItem = styled.div`
-    width: 33%;
-    margin: 20px 0;
-    min-height: 470px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media ${touchSec} {
-        width: 37%;
-    }
-
-    @media ${touch} {
-        width: 50%;
-    }
-
-    @media ${mobile} {
-        width: 100%;
-    }
-`;
-
-export const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 350px;
-
-    > h2 {
-        max-width: 350px;
-        margin: 3px 0;
-        font-size: 1.3rem;
-
-        &:hover {
-            color: ${({
-                theme: {
-                    palette: {
-                        basketballAcademy: {primaryGreen},
-                    },
-                },
-            }) => primaryGreen};
-        }
-    }
-
-    > p {
-        margin-top: 12px;
-    }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -140,39 +99,6 @@ export const ButtonWrapper = styled.div`
                     },
                 },
             }) => primaryGreen};
-        }
-    }
-`;
-
-export const SingleNewsImage = styled(Link)`
-    position: relative;
-    width: 100%;
-    height: 215px;
-    max-width: 350px;
-
-    img {
-        width: 100%;
-        max-width: 350px;
-        height: 100%;
-        max-height: 215px;
-    }
-
-    &:after {
-        content: '';
-        width: 100%;
-        max-width: 350px;
-        height: 215px;
-        position: absolute;
-        background: rgba(0, 0, 0, 0.25);
-        left: 0;
-        top: 0;
-        opacity: 0;
-    }
-
-    &:hover {
-        &:after {
-            opacity: 1;
-            transition: opacity 0.6s;
         }
     }
 `;

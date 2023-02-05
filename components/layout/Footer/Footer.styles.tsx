@@ -59,16 +59,6 @@ export const UpperColumn = styled.div`
         margin-bottom: 14px;
     }
 
-    .call-us {
-        display: flex;
-        align-items: flex-end;
-        margin-top: 21px;
-
-        .MuiSvgIcon-root {
-            margin-right: 15px;
-        }
-    }
-
     @media ${touch} {
         width: 100%;
         margin-bottom: 40px;
@@ -321,4 +311,65 @@ export const ListItemTitle = styled.p`
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+`;
+
+export const ContactWrapper = styled.div`
+    padding: 0 15px;
+    color: ${({
+        theme: {
+            palette: {
+                basketballAcademy: {white},
+            },
+        },
+    }) => white};
+
+    &.mobile {
+        display: none;
+    }
+
+    .call-us,
+    .email,
+    .account-number {
+        display: flex;
+        align-items: flex-end;
+        margin: 15px 0 13px 0;
+        font-size: 15px;
+
+        .MuiSvgIcon-root {
+            margin-right: 7px;
+        }
+    }
+
+    .email,
+    .account-number {
+        margin: 13px 0;
+    }
+
+    @media ${touch} {
+        display: none;
+        &.mobile {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media ${mobileMicro} {
+        &.mobile {
+            width: 100%;
+            align-items: center;
+        }
+
+        .call-us,
+        .email,
+        .account-number {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .MuiSvgIcon-root {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+        }
+    }
 `;

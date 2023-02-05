@@ -9,6 +9,9 @@ type ButtonProps = {
     iconStart?: ReactNode;
     iconEnd?: ReactNode;
     onClickHandler?: () => void;
+    type?: 'button' | 'submit' | 'reset' | undefined;
+    loading?: boolean;
+    disabled?: boolean;
 };
 
 const defaultProps = {
@@ -16,6 +19,9 @@ const defaultProps = {
     iconStart: undefined,
     iconEnd: undefined,
     onClickHandler: undefined,
+    type: undefined,
+    loading: undefined,
+    disabled: undefined,
 };
 const Button: FC<ButtonProps> = ({
     children,
@@ -23,6 +29,9 @@ const Button: FC<ButtonProps> = ({
     iconStart,
     iconEnd,
     onClickHandler,
+    type,
+    loading,
+    disabled,
     ...props
 }) => (
     <Styled.Button
@@ -30,12 +39,16 @@ const Button: FC<ButtonProps> = ({
             if (onClickHandler) onClickHandler();
         }}
         variant={variant}
-        type="button"
+        type={type}
+        disabled={disabled}
         {...props}
     >
-        {iconStart && <span className="icon-start">{iconStart}</span>}
-        {children}
-        {iconEnd && <span className="icon-end">{iconEnd}</span>}
+        {!loading && iconStart && (
+            <span className="icon-start">{iconStart}</span>
+        )}
+        {!loading && children}
+        {!loading && iconEnd && <span className="icon-end">{iconEnd}</span>}
+        {loading && <Styled.ButtonLoader size={32} />}
     </Styled.Button>
 );
 

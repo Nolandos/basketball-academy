@@ -1,10 +1,19 @@
 import {StaticImageData} from 'next/image';
 import {ReactNode} from 'react';
 
+export type sendSignUpEmailTypes = {
+    name: string;
+    yearOfBirth: string;
+    phoneNumber: string;
+    email: string;
+    additionalInfo: string;
+    localization: string;
+};
+
 export type BarListItemType = {
     id: string;
     src: string | StaticImageData;
-    height: number;
+    height?: number;
     width?: number;
     url?: string;
     urlExternal?: boolean;
@@ -16,8 +25,8 @@ export type TrainerType = {
         firstName: string | null;
         surname: string | null;
         description: string | null;
-        clubs: string[] | null;
-        positions: string[] | null;
+        clubs: string | null;
+        positions: string | null;
         slug: string | null;
         photo: {
             data: {

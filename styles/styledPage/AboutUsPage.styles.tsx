@@ -141,6 +141,10 @@ export const SectionDescription = styled.p<{even: boolean}>`
     }) => (even ? black : white)};
     font-weight: 400;
 
+    &.cooperation-text {
+        width: 100%;
+    }
+
     @media ${touch} {
         width: 100%;
         text-align: center;
@@ -151,8 +155,57 @@ export const SectionDescription = styled.p<{even: boolean}>`
 
 export const SectionContent = styled.div`
     display: flex;
+
+    .cooperation-content {
+        width: 50%;
+    }
+
+    .cooperation-container {
+        margin-top: 55px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+
+        img {
+            margin: 0 30px;
+        }
+    }
+
     @media ${touch} {
         flex-direction: column;
+        .cooperation-content {
+            width: 100%;
+        }
+
+        .cooperation-container {
+            justify-content: center;
+            margin-bottom: 25px;
+
+            img {
+                margin: 25px 30px;
+            }
+        }
+    }
+
+    @media ${mobileSmall} {
+        .cooperation-container {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin: 25px 0;
+
+                &.pyra-poznan {
+                    width: 158px;
+                    height: 100px;
+                }
+
+                &.uks-siekierki {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
     }
 `;
 
