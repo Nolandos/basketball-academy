@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {ButtonVariantsTypes} from '@/utils/commonTypes';
 import {ButtonVariantsEnum} from '@/utils/commonEnums';
+import {CircularProgress} from '@mui/material';
 
 export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
     display: flex;
@@ -101,5 +102,21 @@ export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
             background: rgba(255, 255, 255, 0.15);
             display: block;
         }
+    }
+`;
+
+export const ButtonLoader = styled(CircularProgress)`
+    position: absolute;
+    color: ${({
+        theme: {
+            palette: {
+                basketballAcademy: {primaryGreen},
+            },
+        },
+    }) => primaryGreen};
+
+    svg {
+        width: 32px;
+        height: 32px;
     }
 `;

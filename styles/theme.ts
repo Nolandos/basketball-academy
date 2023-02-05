@@ -13,6 +13,7 @@ const theme = createTheme({
             primaryGreen: '#336a53',
             transparent: 'transparent',
             backgroundColor: '#FFFFFF',
+            error: '#ff3333',
         },
     },
     typography: {
@@ -36,6 +37,7 @@ type BasketballAcademyPalette = {
     backgroundSectionGray: string;
     fontGraySecond: string;
     fontGrayThird: string;
+    error: string;
 };
 
 declare module '@mui/material/styles/createPalette' {

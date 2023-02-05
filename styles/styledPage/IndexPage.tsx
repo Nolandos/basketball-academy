@@ -19,6 +19,8 @@ export const RecommendUsSection = styled(CommonStyled.Section)``;
 
 export const PartnersSection = styled(CommonStyled.Section)``;
 
+export const SignUpSection = styled(CommonStyled.Section)``;
+
 export const MainHero = styled(CommonStyled.Section)`
     height: 660px;
     position: relative;

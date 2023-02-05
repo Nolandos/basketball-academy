@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 import device from '@/styles/breakpoints';
 
-const {hd, widescreenOnly, touchSec, touch, mobile, mobileSmall} = device;
+const {
+    fullHd,
+    hd,
+    widescreenOnly,
+    touchSec,
+    touch,
+    mobile,
+    mobileSmall,
+    mobileMicro,
+} = device;
 
 export const Page = styled.div`
     max-width: 100vw;
@@ -133,5 +142,38 @@ export const HeroDescription = styled.p`
     @media ${mobileSmall} {
         padding: 0 15px;
         font-size: ${({theme}) => theme.typography.fontSize * 0.9375}px;
+    }
+`;
+
+export const InfoBox = styled.div`
+    display: flex;
+    align-items: center;
+    height: 65px;
+    min-width: 450px;
+    border: 1px solid #4a4a4a;
+    background-color: #f6f6f6;
+    z-index: 1500;
+    position: absolute;
+    top: 150px;
+    padding-left: 24px;
+    padding-right: 6px;
+
+    > p {
+        margin: 0 92px 0 0;
+        font-size: ${({theme}) => theme.typography.fontSize * 1.15}px;
+    }
+
+    @media ${fullHd} {
+        top: 85px;
+    }
+
+    @media ${touch} {
+        min-width: 300px;
+    }
+
+    @media ${mobileMicro} {
+        > p {
+            font-size: ${({theme}) => theme.typography.fontSize * 0.9375}px;
+        }
     }
 `;

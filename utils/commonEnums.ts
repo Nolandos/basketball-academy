@@ -22,3 +22,9 @@ export enum ButtonVariantsEnum {
 export enum KeyboardCodesEnum {
     ENTER = 'Enter',
 }
+
+// eslint-disable-next-line no-shadow
+export enum AlertMessagesTypes {
+    SUCCESS = 'success',
+    ERROR = 'error',
+}

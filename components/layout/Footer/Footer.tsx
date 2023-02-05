@@ -1,6 +1,5 @@
 import React, {FC, useContext} from 'react';
 import * as CommonStyled from '@/styles/commonStyles';
-import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import Link from 'next/link';
 import {useTranslation} from 'next-i18next';
 import urls from '@/utils/urls';
@@ -13,7 +12,6 @@ import constants from '@/utils/constants';
 import {AppContext} from '@/context/AppContext';
 import {getFormatDate} from '@/utils/utils';
 import {
-    AccountBalance,
     AccountBalanceWallet,
     Call,
     MailOutline,

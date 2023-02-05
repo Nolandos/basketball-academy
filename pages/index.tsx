@@ -16,6 +16,7 @@ import Button from '@/components/common/Buttons/Button/Button';
 import {AppContext} from '@/context/AppContext';
 import SingleNewsTile from '@/components/common/SingleNewsTile/SingleNewsTile';
 import Loader from '@/components/common/Loader/Loader';
+import SingUpForm from '@/components/common/SingUpForm/SingUpForm';
 
 const Home = () => {
     const {t} = useTranslation();
@@ -30,6 +31,7 @@ const Home = () => {
             all: newsAll,
             detail: {show: newsDetailShow},
         },
+        applicationForm,
     } = urls;
 
     return (
@@ -63,7 +65,9 @@ const Home = () => {
                             <Styled.NewsButton
                                 variant="OUTLINED"
                                 iconEnd={<ChevronRight />}
-                                onClickHandler={() => router.push(newsAll)}
+                                onClickHandler={() =>
+                                    router.push(applicationForm)
+                                }
                             >
                                 {t<string>('common:signUp')}
                             </Styled.NewsButton>
@@ -114,6 +118,14 @@ const Home = () => {
                     </CommonStyled.SectionSubtitle>
                     <PartnersBar />
                 </Styled.PartnersSection>
+                <Styled.SignUpSection>
+                    <CommonStyled.SectionSubtitle belt>
+                        {t<string>('index:signUpSection.title')}
+                    </CommonStyled.SectionSubtitle>
+                    <CommonStyled.Container>
+                        <SingUpForm />
+                    </CommonStyled.Container>
+                </Styled.SignUpSection>
             </Styled.IndexPage>
         </div>
     );
