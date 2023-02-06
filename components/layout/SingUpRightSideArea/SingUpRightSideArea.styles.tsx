@@ -20,6 +20,7 @@ export const SingUpRightSideArea = styled.div<{isOpen: boolean}>`
     flex-direction: column;
     align-items: center;
     padding-top: 55px;
+
     @media ${touch} {
         width: 100%;
     }
@@ -67,4 +68,12 @@ export const SingUpRightSideAreaMobileButton = styled(Button)`
     min-width: 0;
     min-height: 0;
     padding: 15px;
+`;
+
+export const ScrollContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    margin-bottom: 55px;
 `;

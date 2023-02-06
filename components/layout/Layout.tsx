@@ -64,8 +64,18 @@ const Layout: FC<LayoutProps> = ({children}) => {
 
                     <SingUpRightSideArea
                         isOpen={showRightSideArea}
-                        onCloseHandler={() => setRightSideArea(false)}
-                        onOpenHandler={() => setRightSideArea(true)}
+                        onCloseHandler={() => {
+                            const body =
+                                document.getElementsByTagName('body')[0];
+                            if (body) body.style.overflowY = 'auto';
+                            setRightSideArea(false);
+                        }}
+                        onOpenHandler={() => {
+                            const body =
+                                document.getElementsByTagName('body')[0];
+                            if (body) body.style.overflowY = 'hidden';
+                            setRightSideArea(true);
+                        }}
                     />
                     <Header />
                     <main>{children}</main>

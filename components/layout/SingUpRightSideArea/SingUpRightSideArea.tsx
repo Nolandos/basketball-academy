@@ -63,10 +63,12 @@ const SingUpRightSideArea: FC<SignUpRightSideAreaProps> = ({
                         <Close />
                     </Styled.SingUpRightSideAreaMobileButton>
                 )}
-                <CommonStyled.SectionSubtitle belt>
-                    {t<string>('signUp')}
-                </CommonStyled.SectionSubtitle>
-                <SingUpForm />
+                <Styled.ScrollContent>
+                    <CommonStyled.SectionSubtitle belt>
+                        {t<string>('signUp')}
+                    </CommonStyled.SectionSubtitle>
+                    <SingUpForm />
+                </Styled.ScrollContent>
             </Styled.SingUpRightSideArea>
         </ClickAwayListener>
     );
