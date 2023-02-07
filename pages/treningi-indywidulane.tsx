@@ -3,10 +3,10 @@ import Head from 'next/head';
 import React from 'react';
 import * as Styled from '@/styles/styledPage/IndividualWorkouts.styles';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as CommonStyled from '@/styles/commonStyles';
 import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
 import urls from '@/utils/urls';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 const IndividualWorkouts = () => {
     const {t} = useTranslation();

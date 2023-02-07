@@ -17,12 +17,6 @@ const Targets = () => {
     const {t} = useTranslation();
     const targetsArray: TargetItem[] = [
         {
-            id: 'preparation',
-            title: t<string>('index:targets.preparationTitle'),
-            content: t<string>('index:targets.preparationContent'),
-            image: preparation?.src || '',
-        },
-        {
             id: 'training',
             title: t<string>('index:targets.trainingTitle'),
             content: t<string>('index:targets.trainingContent'),
@@ -35,9 +29,16 @@ const Targets = () => {
             image: motivation?.src || '',
         },
         {
-            id: 'realization',
-            title: t<string>('index:targets.realizationTitle'),
-            content: t<string>('index:targets.realizationContent'),
+            id: 'approach',
+            title: t<string>('index:targets.approachTitle'),
+            content: t<string>('index:targets.approachContent'),
+            image: preparation?.src || '',
+        },
+
+        {
+            id: 'continuity',
+            title: t<string>('index:targets.continuityTitle'),
+            content: t<string>('index:targets.continuityContent'),
             image: realization?.src || '',
         },
     ];

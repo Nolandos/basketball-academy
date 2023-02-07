@@ -1,11 +1,11 @@
 import {Trans, useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import * as CommonStyled from '@/styles/commonStyles';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import React, {ReactNode} from 'react';
 import * as Styled from '@/styles/styledPage/FAQ.styles';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import urls from '@/utils/urls';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 const FAQ = () => {
     const {t} = useTranslation();

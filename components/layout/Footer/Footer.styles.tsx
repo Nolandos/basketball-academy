@@ -34,11 +34,15 @@ export const FooterBottom = styled.div`
 `;
 export const UpperColumn = styled.div`
     height: 100%;
-    width: 25%;
+    width: 30%;
     color: #ffffff;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
+
+    &.call-us-upper {
+        width: 40%;
+    }
 
     > h5 {
         font-size: ${({theme}) => theme.typography.fontSize * 1.25}px;
@@ -62,32 +66,12 @@ export const UpperColumn = styled.div`
     @media ${touch} {
         width: 100%;
         margin-bottom: 40px;
-    }
-`;
-export const NewsList = styled(CommonStyled.List)``;
-export const NewsListItem = styled.li`
-    display: flex;
-    flex-direction: column;
-    margin: 11px 0;
-
-    > a {
-        font-weight: 700;
-        color: #bdbcbc;
-
-        &:hover {
-            color: ${({theme}) => theme.palette.basketballAcademy.primaryGreen};
+        &.call-us-upper {
+            width: 100%;
         }
     }
-
-    > span {
-        margin-top: 3px;
-        font-weight: 700;
-    }
-
-    &:first-child {
-        margin-top: 0;
-    }
 `;
+
 export const LinksList = styled(CommonStyled.List)``;
 export const LinksListItem = styled.li`
     padding-bottom: 26px;
@@ -314,7 +298,7 @@ export const ListItemTitle = styled.p`
 `;
 
 export const ContactWrapper = styled.div`
-    padding: 0 15px;
+    padding: 0;
     color: ${({
         theme: {
             palette: {
@@ -322,10 +306,6 @@ export const ContactWrapper = styled.div`
             },
         },
     }) => white};
-
-    &.mobile {
-        display: none;
-    }
 
     .call-us,
     .email,
@@ -346,11 +326,8 @@ export const ContactWrapper = styled.div`
     }
 
     @media ${touch} {
-        display: none;
-        &.mobile {
-            display: flex;
-            flex-direction: column;
-        }
+        display: flex;
+        flex-direction: column;
     }
 
     @media ${mobileMicro} {

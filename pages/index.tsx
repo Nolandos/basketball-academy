@@ -9,7 +9,13 @@ import RecommendUsBar from '@/components/index/Bars/RecommendUsBar/RecommendUsBa
 import mainHeroBackground from '@/assets/index/index-main-hero.jpg';
 import mainHeroLogo from '@/assets/index/index-main-hero-logo.png';
 import Image from 'next/image';
-import {ChevronRight} from '@mui/icons-material';
+import {
+    ChevronRight,
+    EventAvailable,
+    Groups,
+    Room,
+    Sports,
+} from '@mui/icons-material';
 import {useRouter} from 'next/router';
 import urls from '@/utils/urls';
 import Button from '@/components/common/Buttons/Button/Button';
@@ -50,8 +56,8 @@ const Home = () => {
                     <Styled.MainHeroContent>
                         <Image
                             src={mainHeroLogo}
-                            width={400}
-                            height={400}
+                            width={330}
+                            height={330}
                             alt="index-main-hero-logo"
                             className="main-hero-logo"
                         />
@@ -77,7 +83,7 @@ const Home = () => {
                 </Styled.MainHero>
                 <Styled.LastNewsSection>
                     <CommonStyled.SectionSubtitle belt>
-                        {t<string>('common:lastEntries')}
+                        {t<string>('common:news')}
                     </CommonStyled.SectionSubtitle>
                     {lastNewsLoading ? (
                         <Loader />
@@ -113,6 +119,45 @@ const Home = () => {
                     </CommonStyled.SectionSubtitle>
                     <Targets />
                 </Styled.TargetsSection>
+                <Styled.SignUpSection>
+                    <CommonStyled.SectionSubtitle belt>
+                        {t<string>('index:signUpSection.title')}
+                    </CommonStyled.SectionSubtitle>
+                    <CommonStyled.Container>
+                        <SingUpForm />
+                    </CommonStyled.Container>
+                </Styled.SignUpSection>
+                <Styled.NumbersSection>
+                    <CommonStyled.SectionSubtitle belt>
+                        Akademia w liczbach {/* TODO */}
+                    </CommonStyled.SectionSubtitle>
+                    <CommonStyled.Container>
+                        <Styled.NumberContainer>
+                            <Groups />
+                            {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
+                            <h3 />
+                            <p>Członków</p>
+                        </Styled.NumberContainer>
+                        <Styled.NumberContainer>
+                            <Room />
+                            {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
+                            <h3 />
+                            <p>Placówki</p>
+                        </Styled.NumberContainer>
+                        <Styled.NumberContainer>
+                            <EventAvailable />
+                            {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
+                            <h3 />
+                            <p>Lat na rynku</p>
+                        </Styled.NumberContainer>
+                        <Styled.NumberContainer>
+                            <Sports />
+                            {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
+                            <h3 />
+                            <p>Trenerów</p>
+                        </Styled.NumberContainer>
+                    </CommonStyled.Container>
+                </Styled.NumbersSection>
                 <Styled.RecommendUsSection>
                     <CommonStyled.SectionSubtitle belt>
                         {t<string>('index:recommendUsSection.title')}
@@ -125,14 +170,6 @@ const Home = () => {
                     </CommonStyled.SectionSubtitle>
                     <PartnersBar />
                 </Styled.PartnersSection>
-                <Styled.SignUpSection>
-                    <CommonStyled.SectionSubtitle belt>
-                        {t<string>('index:signUpSection.title')}
-                    </CommonStyled.SectionSubtitle>
-                    <CommonStyled.Container>
-                        <SingUpForm />
-                    </CommonStyled.Container>
-                </Styled.SignUpSection>
             </Styled.IndexPage>
         </div>
     );

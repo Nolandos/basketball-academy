@@ -50,9 +50,103 @@ export const TargetsSection = styled(CommonStyled.Section)`
 export const PartnersSection = styled(CommonStyled.Section)``;
 
 export const SignUpSection = styled(CommonStyled.Section)``;
+export const NumbersSection = styled(CommonStyled.Section)`
+    min-height: 400px;
+    background-color: ${({
+        theme: {
+            palette: {
+                basketballAcademy: {primaryGreen},
+            },
+        },
+    }) => primaryGreen};
+
+    > h2 {
+        color: ${({
+            theme: {
+                palette: {
+                    basketballAcademy: {white},
+                },
+            },
+        }) => white};
+
+        &:after {
+            background-color: ${({
+                theme: {
+                    palette: {
+                        basketballAcademy: {white},
+                    },
+                },
+            }) => white};
+        }
+    }
+`;
+
+export const NumberContainer = styled.div`
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+
+    > svg {
+        width: 60px;
+        height: 60px;
+        color: white;
+    }
+
+    > p,
+    > h3 {
+        color: white;
+    }
+
+    > p {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    > h3 {
+        @property --num {
+            syntax: '<integer>';
+            initial-value: 0;
+            inherits: false;
+        }
+        font-size: 53px;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 35px;
+        animation: counter 5s infinite alternate ease-in-out;
+        counter-reset: num var(--num);
+
+        @keyframes counter {
+            from {
+                --num: 0;
+            }
+            to {
+                --num: 100;
+            }
+        }
+
+        &:before {
+            content: counter(num);
+        }
+
+        &:after {
+            content: '';
+            height: 5px;
+            width: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: -16px;
+            background-color: white;
+        }
+    }
+`;
 
 export const MainHero = styled(CommonStyled.Section)`
-    height: 660px;
+    height: 500px;
     position: relative;
 `;
 
@@ -79,10 +173,10 @@ export const MainHeroContent = styled.div`
     filter: blur(0);
     position: absolute;
 
-    @media ${mobileSmall} {
+    @media ${touch} {
         .main-hero-logo {
-            width: 300px;
-            height: 300px;
+            width: 280px;
+            height: 280px;
         }
     }
 `;

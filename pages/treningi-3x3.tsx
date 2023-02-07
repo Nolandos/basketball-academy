@@ -2,7 +2,6 @@ import {Trans, useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import React from 'react';
 import * as Styled from '@/styles/styledPage/MultiWorkouts.styles';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as CommonStyled from '@/styles/commonStyles';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
@@ -11,6 +10,7 @@ import photoOne from '@/assets/pages/multi-workouts/multi-workouts-one.jpg';
 import photoTwo from '@/assets/pages/multi-workouts/multi-workouts-two.jpg';
 import photoThree from '@/assets/pages/multi-workouts/multi-workouts-three.jpg';
 import photoFour from '@/assets/pages/multi-workouts/multi-workouts-four.jpg';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 const MultiWorkouts = () => {
     const {t} = useTranslation();

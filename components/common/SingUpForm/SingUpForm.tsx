@@ -74,6 +74,22 @@ const SingUpForm = () => {
             value: 'grunwald',
         },
         {
+            id: 'plewiska',
+            label: t('signUpForm.localizationsOptions.plewiska'),
+            value: 'plewiska',
+        },
+        {
+            id: 'komorniki',
+            label: t('signUpForm.localizationsOptions.komorniki'),
+            value: 'komorniki',
+        },
+        {
+            id: 'mosina',
+            label: t('signUpForm.localizationsOptions.mosina'),
+            value: 'mosina',
+        },
+
+        {
             id: 'wronki',
             label: t('signUpForm.localizationsOptions.wronki'),
             value: 'wronki',

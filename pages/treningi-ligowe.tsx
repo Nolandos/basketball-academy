@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React from 'react';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import * as Styled from '@/styles/styledPage/LeagueWorkouts.styles';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as CommonStyled from '@/styles/commonStyles';
 import photoOne from '@/assets/pages/league-workouts/league-workouts-photo-one.jpg';
 import photoTwo from '@/assets/pages/league-workouts/league-workouts-photo-two.jpg';
@@ -11,6 +10,7 @@ import photoThree from '@/assets/pages/league-workouts/league-workouts-photo-thr
 import photoFour from '@/assets/pages/league-workouts/league-workouts-photo-four.jpg';
 import Image, {StaticImageData} from 'next/image';
 import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 const LeagueWorkouts = () => {
     const {t} = useTranslation();
