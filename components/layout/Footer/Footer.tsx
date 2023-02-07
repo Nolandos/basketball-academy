@@ -22,22 +22,9 @@ import * as Styled from './Footer.styles';
 const Footer: FC = () => {
     const {t} = useTranslation(['layout', 'common']);
     const router = useRouter();
-    const {
-        app: {
-            lastNews: {loading: lastNewsLoading, data: lastNewsData},
-        },
-    } = useContext(AppContext);
 
-    const {
-        aboutUs,
-        contact,
-        shop,
-        sponsorship,
-        facebook,
-        instagram,
-        youtube,
-        news,
-    } = urls;
+    const {aboutUs, contact, shop, sponsorship, facebook, instagram, youtube} =
+        urls;
     const {phoneNumber, email, bankAccountNumber} = constants;
 
     const links = [
@@ -101,53 +88,22 @@ const Footer: FC = () => {
         <Styled.Footer>
             <Styled.FooterUpper>
                 <CommonStyled.Container>
-                    <Styled.UpperColumn>
-                        <h5>{t<string>('links.aboutUs')}</h5>
-                        <p className="about-academy">
-                            {t<string>('common:aboutUs.partOne')}
-                        </p>
-                        <p className="about-academy">
-                            {t<string>('common:aboutUs.partTwo')}
-                        </p>
-                    </Styled.UpperColumn>
-                    <Styled.ContactWrapper className="mobile">
-                        <p className="call-us">
-                            <Call />
-                            {phoneNumber}
-                        </p>
-                        <p className="email">
-                            <MailOutline />
-                            {email}
-                        </p>
-                        <p className="account-number">
-                            <AccountBalanceWallet />
-                            {bankAccountNumber}
-                        </p>
-                    </Styled.ContactWrapper>
-                    <Styled.UpperColumn>
-                        <h5>{t<string>('footer.news')}</h5>
-                        {lastNewsLoading && <Styled.LastNewsLoader />}
-                        {!lastNewsLoading && lastNewsData?.length > 0 && (
-                            <Styled.NewsList>
-                                {lastNewsData.map(
-                                    ({id, attributes: {date, title, slug}}) => (
-                                        <Styled.NewsListItem key={id}>
-                                            <Link href={`${news}/${slug}`}>
-                                                <Styled.ListItemTitle>
-                                                    {title}
-                                                </Styled.ListItemTitle>
-                                            </Link>
-                                            <span>{getFormatDate(date)}</span>
-                                        </Styled.NewsListItem>
-                                    )
-                                )}
-                            </Styled.NewsList>
-                        )}
-                        {!lastNewsLoading && lastNewsData?.length === 0 && (
-                            <Styled.NoNewsInfo>
-                                {t<string>('footer.noNewsInfo')}
-                            </Styled.NoNewsInfo>
-                        )}
+                    <Styled.UpperColumn className="call-us-upper">
+                        <h5>Kontakt</h5> {/* TODO */}
+                        <Styled.ContactWrapper>
+                            <p className="call-us">
+                                <Call />
+                                {phoneNumber}
+                            </p>
+                            <p className="email">
+                                <MailOutline />
+                                {email}
+                            </p>
+                            <p className="account-number">
+                                <AccountBalanceWallet />
+                                {bankAccountNumber}
+                            </p>
+                        </Styled.ContactWrapper>
                     </Styled.UpperColumn>
                     <Styled.UpperColumn>
                         <h5>{t<string>('footer.links')}</h5>
@@ -184,20 +140,6 @@ const Footer: FC = () => {
                             ))}
                         </Styled.FollowUsList>
                     </Styled.UpperColumn>
-                    <Styled.ContactWrapper>
-                        <p className="call-us">
-                            <Call />
-                            {phoneNumber}
-                        </p>
-                        <p className="email">
-                            <MailOutline />
-                            {email}
-                        </p>
-                        <p className="account-number">
-                            <AccountBalanceWallet />
-                            {bankAccountNumber}
-                        </p>
-                    </Styled.ContactWrapper>
                 </CommonStyled.Container>
             </Styled.FooterUpper>
             <Styled.FooterBottom>

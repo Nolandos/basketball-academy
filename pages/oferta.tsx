@@ -2,7 +2,6 @@ import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {Trans, useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import React, {ReactNode} from 'react';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as Styled from '@/styles/styledPage/Offer.styles';
 import * as CommonStyled from '@/styles/commonStyles';
 import {
@@ -13,6 +12,7 @@ import {
 } from '@mui/icons-material';
 import urls from '@/utils/urls';
 import Link from 'next/link';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 const Offer = () => {
     const {t} = useTranslation();

@@ -4,13 +4,13 @@ import {useTranslation} from 'next-i18next';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import * as Styled from '@/styles/styledPage/Trainers.styles';
 import * as CommonStyled from '@/styles/commonStyles';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import Image from 'next/image';
 import {fetchTrainers} from '@/lib/fetchStrapi';
 import urls from '@/utils/urls';
 import Link from 'next/link';
 import {reverse} from 'named-urls';
 import {TrainerType} from '@/utils/commonTypes';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 type TrainersProps = {
     trainers: Array<TrainerType>;

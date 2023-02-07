@@ -4,7 +4,6 @@ import Head from 'next/head';
 import * as Styled from '@/styles/styledPage/AboutUsPage.styles';
 import * as CommonStyled from '@/styles/commonStyles';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import passionImg from '@/assets/pages/about-us-passion.jpg';
 import funImg from '@/assets/pages/about-us-fun.jpg';
 import trainingStaffImg from '@/assets/pages/about-us-training-staff.jpg';
@@ -23,6 +22,7 @@ import {
     TagFaces,
     Verified,
 } from '@mui/icons-material';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 const AboutUs = () => {
     const {t} = useTranslation();

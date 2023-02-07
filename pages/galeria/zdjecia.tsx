@@ -8,7 +8,6 @@ import {checkIsMobile, getFormatDate} from '@/utils/utils';
 import Head from 'next/head';
 import * as Styled from '@/styles/styledPage/Photos.styled';
 import * as CommonStyled from '@/styles/commonStyles';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import PaginationInput from '@/components/common/Pagination/PaginationInput/PaginationInput';
 import Pagination from '@/components/common/Pagination/Pagination';
 import {fetchPhotosCollections} from '@/lib/fetchStrapi';
@@ -16,6 +15,7 @@ import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {reverse} from 'named-urls';
 import Image from 'next/image';
 import Link from 'next/link';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 type PhotosProps = {
     photosCollections: PhotosCollectionType[];

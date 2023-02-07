@@ -111,6 +111,7 @@ export const TargetTitle = styled.h2`
 export const TargetContent = styled.p`
     text-align: center;
     margin-top: 7px;
+    min-height: 75px;
     color: ${({
         theme: {
             palette: {

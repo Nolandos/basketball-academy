@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import device from '@/styles/breakpoints';
+import Link from 'next/link';
 
 const {
     fullHd,
@@ -175,5 +176,20 @@ export const InfoBox = styled.div`
         > p {
             font-size: ${({theme}) => theme.typography.fontSize * 0.9375}px;
         }
+    }
+`;
+
+export const InternalRegulationsLink = styled(Link)`
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:hover {
+        color: ${({
+            theme: {
+                palette: {
+                    basketballAcademy: {primaryGreen},
+                },
+            },
+        }) => primaryGreen};
     }
 `;

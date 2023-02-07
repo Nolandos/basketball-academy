@@ -3,15 +3,16 @@ import Head from 'next/head';
 import React from 'react';
 import * as Styled from '@/styles/styledPage/GroupWorkouts.styles';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as CommonStyled from '@/styles/commonStyles';
-import preschoolers from '@/assets/pages/group-workouts/3-5.png';
-import mediocre from '@/assets/pages/group-workouts/6-9.png';
-import elderly from '@/assets/pages/group-workouts/10-13.png';
+import preschoolers from '@/assets/pages/group-workouts/3-5.jpg';
+import mediocre from '@/assets/pages/group-workouts/6-9.jpg';
 import Image from 'next/image';
 import groupWorkoutsDesc from '@/assets/pages/group-workouts/group-workouts-desc.jpg';
 import {FloatOptions} from '@/utils/commonEnums';
 import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
+import elderly from '@/assets/pages/group-workouts/10-13.jpg';
+import oldest from '@/assets/pages/group-workouts/14-17.jpg';
 
 const GroupWorkouts = () => {
     const {t} = useTranslation();
@@ -92,8 +93,8 @@ const GroupWorkouts = () => {
                         <Styled.AgeCategoryTile image>
                             <Image
                                 src={preschoolers}
-                                width={150}
-                                height={150}
+                                width={164}
+                                height={200}
                                 alt={t(
                                     'common:groupWorkouts.preschoolersSubtitle'
                                 )}
@@ -104,8 +105,8 @@ const GroupWorkouts = () => {
                         <Styled.AgeCategoryTile image float={LEFT}>
                             <Image
                                 src={mediocre}
-                                width={150}
-                                height={150}
+                                width={244}
+                                height={200}
                                 alt={t('common:groupWorkouts.mediocreSubtitle')}
                             />
                         </Styled.AgeCategoryTile>
@@ -126,8 +127,8 @@ const GroupWorkouts = () => {
                         <Styled.AgeCategoryTile image>
                             <Image
                                 src={elderly}
-                                width={150}
-                                height={150}
+                                width={211}
+                                height={200}
                                 alt={t('common:groupWorkouts.elderlySubtitle')}
                             />
                         </Styled.AgeCategoryTile>
@@ -135,9 +136,9 @@ const GroupWorkouts = () => {
                     <Styled.AgeCategory>
                         <Styled.AgeCategoryTile image float={LEFT}>
                             <Image
-                                src={elderly}
-                                width={150}
-                                height={150}
+                                src={oldest}
+                                width={172}
+                                height={200}
                                 alt={t('common:groupWorkouts.elderlySubtitle')}
                             />
                         </Styled.AgeCategoryTile>

@@ -11,13 +11,13 @@
   },
   "targets": {
     "title": "Co nas wyróżnia?",
-    "preparationTitle": "Przygotowanie",
+    "approachTitle": "Podejście",
     "trainingTitle": "Trening",
     "motivationTitle": "Motywacja",
-    "realizationTitle": "Realizacja",
-    "preparationContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac tincidunt massa. Phasellus vel sem eu.",
-    "trainingContent": "Donec laoreet ante sit amet velit dignitas pellentesque, ut dignissim porta , a auctor dui orci id lorem ipsum.",
-    "motivationContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac tincidunt massa. Phasellus vel sem eu.",
-    "realizationContent": "Donec laoreet ante sit amet velit dignitas pellentesque, ut dignissim porta , a auctor dui orci id lorem ipsum."
+    "continuityTitle": "Ciągłość",
+    "trainingContent": "Profesjonalne, nowoczesne i atrakcyjne zajęcia dla zawodników w każdym wieku",
+    "motivationContent": "Przyjazna atmosfera na treningach i profesjonalne podejście doświadczonej i wykwalifikowanej kadry trenerskiej",
+    "approachContent": "Mimo gry zespołowej podchodzimy do każdego zawodnika indywidualnie z dbałością o jego rozwój i przyszłość",
+    "continuityContent": "Grupy treningowe od wieku przedszkolnego aż po drużyny seniorskie."
   }
 }

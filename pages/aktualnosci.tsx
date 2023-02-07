@@ -3,7 +3,6 @@ import {useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import * as Styled from '@/styles/styledPage/News.styles';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
-import heroBackgroundImg from '@/assets/pages/about-us-hero.jpg';
 import * as CommonStyled from '@/styles/commonStyles';
 import {fetchNews} from '@/lib/fetchStrapi';
 import Pagination from '@/components/common/Pagination/Pagination';
@@ -14,6 +13,7 @@ import PaginationInput from '@/components/common/Pagination/PaginationInput/Pagi
 import {BackendPaginationMeta, NewsType} from '@/utils/commonTypes';
 import constants from '@/utils/constants';
 import SingleNewsTile from '@/components/common/SingleNewsTile/SingleNewsTile';
+import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 type NewsProps = {
     news: NewsType[];
