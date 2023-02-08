@@ -1,10 +1,10 @@
 import {useTranslation} from 'next-i18next';
 import React from 'react';
 import * as CommonStyled from '@/styles/commonStyles';
-import preparation from '@/assets/index/index-targets-preparation.png';
-import training from '@/assets/index/index-targets-training.png';
-import motivation from '@/assets/index/index-targets-motivation.png';
-import realization from '@/assets/index/index-targets-realization.png';
+import approach from '@/assets/index/index-targets-approach.jpg';
+import training from '@/assets/index/index-targets-training.jpg';
+import motivation from '@/assets/index/index-targets-motivation.jpg';
+import continuity from '@/assets/index/index-targets-continuity.jpg';
 import * as Styled from './Targets.styles';
 
 type TargetItem = {
@@ -32,14 +32,14 @@ const Targets = () => {
             id: 'approach',
             title: t<string>('index:targets.approachTitle'),
             content: t<string>('index:targets.approachContent'),
-            image: preparation?.src || '',
+            image: approach?.src || '',
         },
 
         {
             id: 'continuity',
             title: t<string>('index:targets.continuityTitle'),
             content: t<string>('index:targets.continuityContent'),
-            image: realization?.src || '',
+            image: continuity?.src || '',
         },
     ];
     return (
