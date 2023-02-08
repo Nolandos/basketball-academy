@@ -9,8 +9,13 @@ import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 
 const FAQ = () => {
     const {t} = useTranslation();
-    const {applicationForm, emailBiuro, trainingSchedule, clubRegulations} =
-        urls;
+    const {
+        applicationForm,
+        emailBiuro,
+        trainingSchedule,
+        clubRegulations,
+        shop,
+    } = urls;
     const faqItems: {
         id: string;
         header: string;
@@ -59,13 +64,26 @@ const FAQ = () => {
                 <>
                     <p>{t('faq.faq4ContentPartOne')}</p>
                     <p>{t('faq.faq4ContentPartTwo')}</p>
+                    <p>
+                        {t('faq.faq4ContentPartThree')}{' '}
+                        <CommonStyled.InternalRegulationsLink href={shop}>
+                            {t('faq.faq4ContentPartFour')}
+                        </CommonStyled.InternalRegulationsLink>
+                    </p>
                 </>
             ),
         },
         {
             id: '5',
             header: t('faq.faq5Title'),
-            content: <p>{t('faq.faq5ContentPartOne')}</p>,
+            content: (
+                <p>
+                    {t('faq.faq5ContentPartOne')}{' '}
+                    <CommonStyled.InternalRegulationsLink href={shop}>
+                        {t('faq.faq5ContentPartTwo')}
+                    </CommonStyled.InternalRegulationsLink>
+                </p>
+            ),
         },
         {
             id: '6',

@@ -19,5 +19,12 @@
     "motivationContent": "Przyjazna atmosfera na treningach i profesjonalne podejście doświadczonej i wykwalifikowanej kadry trenerskiej",
     "approachContent": "Mimo gry zespołowej podchodzimy do każdego zawodnika indywidualnie z dbałością o jego rozwój i przyszłość",
     "continuityContent": "Grupy treningowe od wieku przedszkolnego aż po drużyny seniorskie."
+  },
+  "academyNumbers": {
+    "title": "Akademia w liczbach",
+    "players": "Zawodników",
+    "places": "Lokalizacje",
+    "years": "Lat na rynku",
+    "trainers": "Trenerów"
   }
 }

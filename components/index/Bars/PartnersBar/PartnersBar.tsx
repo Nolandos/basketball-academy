@@ -9,6 +9,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import urls from '@/utils/urls';
 import Bar from '@/components/index/Bars/Bar';
 import {BarListItemType} from '@/utils/commonTypes';
+import siekierki from '@/assets/partnersBar/siekierki.png';
+import pyraPoznan from '@/assets/partnersBar/pyra-poznan.png';
+import eneaAzs from '@/assets/partnersBar/enea-azs.png';
 
 const PartnersBar: FC = () => {
     const {
@@ -17,6 +20,9 @@ const PartnersBar: FC = () => {
         wzkosz: wzkoszUrl,
         supremeProdukcja: supremeProdukcjaUrl,
         ministerstwoSportuITurystyki: ministerstwoSportuITurystykiUrl,
+        pyraPoznanExternal: pyraPoznanExternalUrl,
+        siekierki: siekierkiUrl,
+        eneaAzs: eneaAzsUrl,
     } = urls;
 
     const settings = {
@@ -73,6 +79,13 @@ const PartnersBar: FC = () => {
             urlExternal: true,
         },
         {
+            id: 'pyraPoznan',
+            src: pyraPoznan,
+            height: 65,
+            url: pyraPoznanExternalUrl,
+            urlExternal: true,
+        },
+        {
             id: 'supremeProdukcja',
             src: supremeProdukcja,
             height: 75,
@@ -80,10 +93,24 @@ const PartnersBar: FC = () => {
             urlExternal: true,
         },
         {
+            id: 'siekierki',
+            src: siekierki,
+            height: 80,
+            url: siekierkiUrl,
+            urlExternal: true,
+        },
+        {
             id: 'pyraBar',
             src: pyraBar,
-            height: 50,
+            height: 40,
             url: pyraBarUrl,
+            urlExternal: true,
+        },
+        {
+            id: 'eneaAzs',
+            src: eneaAzs,
+            height: 70,
+            url: eneaAzsUrl,
             urlExternal: true,
         },
     ];

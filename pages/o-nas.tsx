@@ -219,15 +219,13 @@ const AboutUs = () => {
                                 <div className="cooperation-container">
                                     <Image
                                         src={pyraPoznan}
-                                        width={213}
-                                        height={150}
+                                        height={100}
                                         className="pyra-poznan"
                                         alt="pyra-poznan"
                                     />
                                     <Image
                                         src={uksSiekierki}
-                                        width={150}
-                                        height={150}
+                                        height={100}
                                         className="uks-siekierki"
                                         alt="uks-siekierki"
                                     />

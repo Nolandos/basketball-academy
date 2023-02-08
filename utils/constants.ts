@@ -8,4 +8,10 @@ export default {
         {id: '25', value: 25, label: '25'},
         {id: '50', value: 50, label: '50'},
     ],
+    academyNumbersFields: {
+        players: 520,
+        places: 23,
+        years: 9,
+        trainers: 15,
+    },
 };

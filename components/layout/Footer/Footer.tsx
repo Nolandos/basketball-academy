@@ -1,6 +1,5 @@
-import React, {FC, useContext} from 'react';
+import React, {FC} from 'react';
 import * as CommonStyled from '@/styles/commonStyles';
-import Link from 'next/link';
 import {useTranslation} from 'next-i18next';
 import urls from '@/utils/urls';
 import {useRouter} from 'next/router';
@@ -9,8 +8,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Image from 'next/image';
 import constants from '@/utils/constants';
-import {AppContext} from '@/context/AppContext';
-import {getFormatDate} from '@/utils/utils';
+
 import {
     AccountBalanceWallet,
     Call,
@@ -89,7 +87,7 @@ const Footer: FC = () => {
             <Styled.FooterUpper>
                 <CommonStyled.Container>
                     <Styled.UpperColumn className="call-us-upper">
-                        <h5>Kontakt</h5> {/* TODO */}
+                        <h5>{t<string>('links.contact')}</h5> {/* TODO */}
                         <Styled.ContactWrapper>
                             <p className="call-us">
                                 <Call />
