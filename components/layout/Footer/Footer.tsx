@@ -21,8 +21,15 @@ const Footer: FC = () => {
     const {t} = useTranslation(['layout', 'common']);
     const router = useRouter();
 
-    const {aboutUs, contact, shop, sponsorship, facebook, instagram, youtube} =
-        urls;
+    const {
+        aboutUs,
+        contact,
+        shop: {all: shopUrl},
+        sponsorship,
+        facebook,
+        instagram,
+        youtube,
+    } = urls;
     const {phoneNumber, email, bankAccountNumber} = constants;
 
     const links = [
@@ -40,7 +47,7 @@ const Footer: FC = () => {
             id: 'shop',
             title: t<string>('links.shop'),
             items: null,
-            url: shop,
+            url: shopUrl,
         },
         {
             id: 'sponsorship',

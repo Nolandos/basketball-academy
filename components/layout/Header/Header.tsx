@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useContext, useEffect, useState} from 'react';
 import logo from '@/assets/akademia-koszykowki-logo.png';
 import Link from 'next/link';
 import urls from '@/utils/urls';
@@ -8,6 +8,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowRightIconIcon from '@mui/icons-material/KeyboardArrowRight';
 import {checkIsMobile} from '@/utils/utils';
 import {useRouter} from 'next/router';
+import ShopCartButton from '@/components/common/Buttons/ShopCartButton/ShopCartButton';
+import {AppContext} from '@/context/AppContext';
 import * as Styled from './Header.styles';
 
 type MenuItemsType = Array<{
@@ -49,13 +51,16 @@ const Header: FC = () => {
         openingOfANewLocation,
         pyraPoznan,
         simpleHelp,
-        shop,
+        shop: {all: shopUrl},
         contact,
         leagueWorkouts,
     } = urls;
     const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const router = useRouter();
+    const {
+        app: {shopCartCounter},
+    } = useContext(AppContext);
 
     const [menuItems] = useState<MenuItemsType | []>([
         {
@@ -224,7 +229,7 @@ const Header: FC = () => {
             id: 'shop',
             title: t<string>('links.shop'),
             items: null,
-            url: shop,
+            url: shopUrl,
         },
         {
             id: 'contact',
@@ -325,9 +330,13 @@ const Header: FC = () => {
                                     )}
                             </Styled.MenuItem>
                         ))}
+                        {!isMobile && (
+                            <ShopCartButton shopCartCounter={shopCartCounter} />
+                        )}
                     </Styled.MenuList>
                 </Styled.Menu>
                 <Styled.Mobile>
+                    <ShopCartButton shopCartCounter={shopCartCounter} />
                     <Styled.HamburgerButton
                         onClick={() => {
                             setOpenMobileMenu(!openMobileMenu);

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import device from '@/styles/breakpoints';
 
-const {widescreenOnly, desktopOnly, desktop, touch, mobileSmall} = device;
+const {widescreenOnly, desktopOnly, desktop, touch, mobileSmall, mobileMicro} =
+    device;
 
 export const Header = styled.header`
     height: 100px;
@@ -329,6 +330,10 @@ export const Mobile = styled.div`
     }
     @media ${touch} {
         right: 61px;
+    }
+
+    @media ${mobileMicro} {
+        right: 20px;
     }
 `;
 export const HamburgerButton = styled.button<{isOpen: boolean}>`

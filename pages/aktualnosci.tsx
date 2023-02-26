@@ -87,7 +87,10 @@ const News: FC<NewsProps> = ({news, paginationInfo}) => {
                     <Styled.PaginationWrapper>
                         <Styled.PageSizeWrapper>
                             <p>
-                                {t<string>('common:pagination.pageSizeSelect')}:
+                                {t<string>(
+                                    'common:pagination.pageSizeSelect.newsPerPage'
+                                )}
+                                :
                             </p>
                             <Styled.PageSizeDropdownSelect
                                 defaultValue={pageSize}

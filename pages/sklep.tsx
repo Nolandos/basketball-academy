@@ -3,36 +3,36 @@ import {useRouter} from 'next/router';
 import urls from '@/utils/urls';
 import constants from '@/utils/constants';
 import React, {FC, useEffect, useState} from 'react';
-import {BackendPaginationMeta, PhotosCollectionType} from '@/utils/commonTypes';
-import {checkIsMobile, getFormatDate} from '@/utils/utils';
+import {BackendPaginationMeta, ProductsDetailsType} from '@/utils/commonTypes';
+import {checkIsMobile, formatPrice} from '@/utils/utils';
 import Head from 'next/head';
-import * as Styled from '@/styles/styledPage/Photos.styled';
 import * as CommonStyled from '@/styles/commonStyles';
 import PaginationInput from '@/components/common/Pagination/PaginationInput/PaginationInput';
 import Pagination from '@/components/common/Pagination/Pagination';
-import {fetchPhotosCollections} from '@/lib/fetchStrapi';
+import {fetchProducts} from '@/lib/fetchStrapi';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {reverse} from 'named-urls';
 import Image from 'next/image';
 import Link from 'next/link';
 import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
+import * as Styled from '@/styles/styledPage/Shop.styles';
 
-type PhotosProps = {
-    photosCollections: PhotosCollectionType[];
+type ShopProps = {
+    products: ProductsDetailsType[];
     paginationInfo: BackendPaginationMeta;
 };
 
-const PhotosCollections: FC<PhotosProps> = ({
-    photosCollections,
-    paginationInfo,
-}) => {
+const Shop: FC<ShopProps> = ({products, paginationInfo}) => {
     const {t} = useTranslation();
     const router = useRouter();
     const {
-        gallery: {photos: photosUrl},
+        shop: {
+            base: shopBaseUrl,
+            detail: {show: shopDetailsShow},
+        },
     } = urls;
 
-    const {pageSizeValues} = constants;
+    const {pageSizeValues, defaultPriceCurrency} = constants;
     const {
         pagination: {page, pageSize, pageCount},
     } = paginationInfo;
@@ -40,7 +40,7 @@ const PhotosCollections: FC<PhotosProps> = ({
 
     const handleChangePage = (selectedPge: string | number) => {
         router.push({
-            pathname: photosUrl.base,
+            pathname: shopBaseUrl,
             query: {
                 ...router.query,
                 page: selectedPge,
@@ -50,7 +50,7 @@ const PhotosCollections: FC<PhotosProps> = ({
 
     const handleChangePageSize = (selectedPageSize: number | string) => {
         router.push({
-            pathname: photosUrl.base,
+            pathname: shopBaseUrl,
             query: {
                 ...router.query,
                 page: 1,
@@ -70,21 +70,18 @@ const PhotosCollections: FC<PhotosProps> = ({
     return (
         <div>
             <Head>
-                <title>{t('common:photosCollections.siteTitle')}</title>
-                <meta
-                    name="description"
-                    content={t('common:photosCollections.siteTitle')}
-                />
+                <title>{t('common:shop.siteTitle')}</title>
+                <meta name="description" content={t('common:shop.siteTitle')} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Styled.PhotosPage>
+            <Styled.ShopPage>
                 <CommonStyled.HeroImage
                     image={heroBackgroundImg}
                     description={false}
                 >
                     <CommonStyled.HeroContent>
                         <CommonStyled.Title>
-                            {t('common:photosCollections.siteTitle')}
+                            {t('common:shop.siteTitle')}
                         </CommonStyled.Title>
                     </CommonStyled.HeroContent>
                 </CommonStyled.HeroImage>
@@ -93,7 +90,7 @@ const PhotosCollections: FC<PhotosProps> = ({
                         <Styled.PageSizeWrapper>
                             <p>
                                 {t<string>(
-                                    'common:pagination.pageSizeSelect.photosPerPage'
+                                    'common:pagination.pageSizeSelect.productsPerPage'
                                 )}
                                 :
                             </p>
@@ -111,54 +108,55 @@ const PhotosCollections: FC<PhotosProps> = ({
                             onChangePageHandler={handleChangePage}
                         />
                     </Styled.PaginationWrapper>
-                    <Styled.PhotosList>
-                        {!photosCollections ||
-                            (photosCollections.length === 0 && (
-                                <Styled.NoPhotosText>
-                                    {t<string>(
-                                        'common:photosCollections.noPhotosText'
-                                    )}
-                                </Styled.NoPhotosText>
+                    <Styled.ShopList>
+                        {!products ||
+                            (products.length === 0 && (
+                                <Styled.NoShopText>
+                                    {t<string>('common:shop.noShopText')}
+                                </Styled.NoShopText>
                             ))}
-                        {photosCollections?.map(
-                            ({attributes: {slug, title, date, mainPhoto}}) => (
-                                <Styled.PhotosListItem>
+                        {products?.map(
+                            ({attributes: {name, price, photo, slug}}) => (
+                                <Styled.ShopListItem>
                                     <Styled.Content>
-                                        <Styled.SinglePhotosImage
-                                            href={reverse(
-                                                photosUrl.detail.show,
-                                                {
-                                                    slug,
-                                                }
-                                            )}
+                                        <Styled.SingleShopImage
+                                            href={reverse(shopDetailsShow, {
+                                                slug,
+                                            })}
                                         >
                                             <Image
-                                                width={350}
-                                                height={215}
+                                                width={200}
+                                                height={200}
                                                 src={
-                                                    `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${mainPhoto?.data?.attributes?.url}` ||
+                                                    `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${photo?.data?.attributes?.url}` ||
                                                     ''
                                                 }
                                                 alt={slug}
                                             />
-                                        </Styled.SinglePhotosImage>
-                                        <h2>
+                                            <Styled.ShopListItemButton variant="OUTLINED">
+                                                Przejdź
+                                            </Styled.ShopListItemButton>
+                                        </Styled.SingleShopImage>
+                                        <h5>
                                             <Link
-                                                href={reverse(
-                                                    photosUrl.detail.show,
-                                                    {
-                                                        slug,
-                                                    }
-                                                )}
+                                                href={reverse(shopDetailsShow, {
+                                                    slug,
+                                                })}
                                             >
-                                                {title} ({getFormatDate(date)})
+                                                {name}
                                             </Link>
-                                        </h2>
+                                        </h5>
+                                        <p className="price">
+                                            {formatPrice(
+                                                price,
+                                                defaultPriceCurrency
+                                            )}
+                                        </p>
                                     </Styled.Content>
-                                </Styled.PhotosListItem>
+                                </Styled.ShopListItem>
                             )
                         )}
-                    </Styled.PhotosList>
+                    </Styled.ShopList>
                     <Styled.PaginationWrapper>
                         <Pagination
                             isMobile={isMobile}
@@ -169,12 +167,12 @@ const PhotosCollections: FC<PhotosProps> = ({
                         />
                     </Styled.PaginationWrapper>
                 </Styled.Container>
-            </Styled.PhotosPage>
+            </Styled.ShopPage>
         </div>
     );
 };
 
-export default PhotosCollections;
+export default Shop;
 
 export async function getServerSideProps({
     locale,
@@ -185,7 +183,7 @@ export async function getServerSideProps({
 }) {
     const {page, pageSize} = query;
 
-    const {data, meta, errno} = await fetchPhotosCollections(page, pageSize);
+    const {data, meta, errno} = await fetchProducts(page, pageSize);
 
     if (errno) {
         return {
@@ -195,7 +193,7 @@ export async function getServerSideProps({
 
     return {
         props: {
-            photosCollections: data,
+            products: data,
             paginationInfo: meta,
             ...(await serverSideTranslations(locale, ['common', 'layout'])),
         },

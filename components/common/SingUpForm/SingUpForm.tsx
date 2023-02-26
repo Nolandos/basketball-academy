@@ -11,6 +11,7 @@ import {phoneRegExp} from '@/utils/utils';
 import {AppContext} from '@/context/AppContext';
 import {AlertMessagesTypes} from '@/utils/commonEnums';
 import {sendSignUpEmail} from '@/lib/fetchStrapi';
+import * as CommonStyled from '@/styles/commonStyles';
 import * as Styled from './SignUpForm.styles';
 
 type SignUpFormValues = {
@@ -35,68 +36,68 @@ const SingUpForm = () => {
     const localizationsOptions = [
         {
             id: 'rataje',
-            label: t('signUpForm.localizationsOptions.rataje'),
+            label: t('forms.localizationsOptions.rataje'),
             value: 'rataje',
         },
         {
             id: 'lubon',
-            label: t('signUpForm.localizationsOptions.lubon'),
+            label: t('forms.localizationsOptions.lubon'),
             value: 'lubon',
         },
         {
             id: 'wiry',
-            label: t('signUpForm.localizationsOptions.wiry'),
+            label: t('forms.localizationsOptions.wiry'),
             value: 'wiry',
         },
         {
             id: 'debiec',
-            label: t('signUpForm.localizationsOptions.debiec'),
+            label: t('forms.localizationsOptions.debiec'),
             value: 'debiec',
         },
         {
             id: 'winogrady',
-            label: t('signUpForm.localizationsOptions.winogrady'),
+            label: t('forms.localizationsOptions.winogrady'),
             value: 'winogrady',
         },
         {
             id: 'piatkowo',
-            label: t('signUpForm.localizationsOptions.piatkowo'),
+            label: t('forms.localizationsOptions.piatkowo'),
             value: 'piatkowo',
         },
         {
             id: 'naramowice',
-            label: t('signUpForm.localizationsOptions.naramowice'),
+            label: t('forms.localizationsOptions.naramowice'),
             value: 'naramowice',
         },
         {
             id: 'grunwald',
-            label: t('signUpForm.localizationsOptions.grunwald'),
+            label: t('forms.localizationsOptions.grunwald'),
             value: 'grunwald',
         },
         {
             id: 'plewiska',
-            label: t('signUpForm.localizationsOptions.plewiska'),
+            label: t('forms.localizationsOptions.plewiska'),
             value: 'plewiska',
         },
         {
             id: 'komorniki',
-            label: t('signUpForm.localizationsOptions.komorniki'),
+            label: t('forms.localizationsOptions.komorniki'),
             value: 'komorniki',
         },
         {
             id: 'mosina',
-            label: t('signUpForm.localizationsOptions.mosina'),
+            label: t('forms.localizationsOptions.mosina'),
             value: 'mosina',
         },
 
         {
             id: 'wronki',
-            label: t('signUpForm.localizationsOptions.wronki'),
+            label: t('forms.localizationsOptions.wronki'),
             value: 'wronki',
         },
         {
             id: 'other',
-            label: t('signUpForm.localizationsOptions.other'),
+            label: t('forms.localizationsOptions.other'),
             value: 'other',
         },
     ];
@@ -115,32 +116,30 @@ const SingUpForm = () => {
     };
     const validationSchema = Yup.object({
         email: Yup.string()
-            .required(t<string>('signUpForm.emailIsRequiredError'))
-            .email(t<string>('signUpForm.emailIsNotCorrectError')),
+            .required(t<string>('forms.emailIsRequiredError'))
+            .email(t<string>('forms.emailIsNotCorrectError')),
         phoneNumber: Yup.string()
-            .required(t<string>('signUpForm.phoneNumberIsRequiredError'))
+            .required(t<string>('forms.phoneNumberIsRequiredError'))
             .matches(
                 phoneRegExp,
-                t<string>('signUpForm.phoneNumberIsNotCorrectError')
+                t<string>('forms.phoneNumberIsNotCorrectError')
             ),
-        name: Yup.string().required(
-            t<string>('signUpForm.nameIsRequiredError')
-        ),
+        name: Yup.string().required(t<string>('forms.nameIsRequiredError')),
         yearOfBirth: Yup.number()
-            .required(t<string>('signUpForm.yearOfBirthIsRequiredError'))
-            .typeError(t<string>('signUpForm.yearOfBirthIsInvalidError')),
+            .required(t<string>('forms.yearOfBirthIsRequiredError'))
+            .typeError(t<string>('forms.yearOfBirthIsInvalidError')),
         localization: Yup.string().required(
-            t<string>('signUpForm.localizationIsRequiredError')
+            t<string>('forms.localizationIsRequiredError')
         ),
         otherLocalization: Yup.string().when('localization', {
             is: 'other',
             then: Yup.string().required(
-                'signUpForm.otherLocalizationIsRequiredError'
+                'forms.otherLocalizationIsRequiredError'
             ),
         }),
         regulations: Yup.boolean().oneOf(
             [true],
-            t<string>('signUpForm.regulationsIsRequiredError')
+            t<string>('forms.regulationsIsRequiredError')
         ),
     });
 
@@ -176,7 +175,7 @@ const SingUpForm = () => {
             localization:
                 localization === 'other'
                     ? otherLocalization
-                    : t(`signUpForm.localizationsOptions.${localization}`),
+                    : t(`forms.localizationsOptions.${localization}`),
             additionalInfo,
         };
 
@@ -201,7 +200,7 @@ const SingUpForm = () => {
     return (
         <Styled.SignUpForm onSubmit={handleSubmit(handleSendEmail)}>
             <Styled.SignUpFormWrapper>
-                <Styled.SignUpFormInput>
+                <CommonStyled.FormInput>
                     <Controller
                         name="email"
                         control={control}
@@ -210,15 +209,15 @@ const SingUpForm = () => {
                             <Input
                                 id="email"
                                 type="text"
-                                label={`${t('signUpForm.emailLabel')}*`}
+                                label={`${t('forms.emailLabel')}*`}
                                 error={!!formErrors?.email}
                                 helperText={formErrors?.email?.message}
                                 {...field}
                             />
                         )}
                     />
-                </Styled.SignUpFormInput>
-                <Styled.SignUpFormInput>
+                </CommonStyled.FormInput>
+                <CommonStyled.FormInput>
                     <Controller
                         name="phoneNumber"
                         control={control}
@@ -227,17 +226,17 @@ const SingUpForm = () => {
                             <Input
                                 id="phoneNumber"
                                 type="text"
-                                label={`${t('signUpForm.phoneNumberLabel')}*`}
+                                label={`${t('forms.phoneNumberLabel')}*`}
                                 error={!!formErrors?.phoneNumber}
                                 helperText={formErrors?.phoneNumber?.message}
                                 {...field}
                             />
                         )}
                     />
-                </Styled.SignUpFormInput>
+                </CommonStyled.FormInput>
             </Styled.SignUpFormWrapper>
             <Styled.SignUpFormWrapper>
-                <Styled.SignUpFormInput>
+                <CommonStyled.FormInput>
                     <Controller
                         name="name"
                         control={control}
@@ -246,15 +245,15 @@ const SingUpForm = () => {
                             <Input
                                 id="name"
                                 type="text"
-                                label={`${t('signUpForm.nameLabel')}*`}
+                                label={`${t('forms.nameLabel')}*`}
                                 error={!!formErrors?.name}
                                 helperText={formErrors?.name?.message}
                                 {...field}
                             />
                         )}
                     />
-                </Styled.SignUpFormInput>
-                <Styled.SignUpFormInput>
+                </CommonStyled.FormInput>
+                <CommonStyled.FormInput>
                     <Controller
                         name="yearOfBirth"
                         control={control}
@@ -263,17 +262,17 @@ const SingUpForm = () => {
                             <Input
                                 id="yearOfBirth"
                                 type="text"
-                                label={`${t('signUpForm.yearOfBirthLabel')}*`}
+                                label={`${t('forms.yearOfBirthLabel')}*`}
                                 error={!!formErrors?.yearOfBirth}
                                 helperText={formErrors?.yearOfBirth?.message}
                                 {...field}
                             />
                         )}
                     />
-                </Styled.SignUpFormInput>
+                </CommonStyled.FormInput>
             </Styled.SignUpFormWrapper>
             <Styled.SignUpFormWrapper>
-                <Styled.SignUpFormInput>
+                <CommonStyled.FormInput>
                     <Controller
                         name="localization"
                         control={control}
@@ -282,12 +281,8 @@ const SingUpForm = () => {
                             <Select
                                 labelId="localization"
                                 id="localization"
-                                selectLabel={`${t(
-                                    'signUpForm.localizationLabel'
-                                )}*`}
-                                inputLabel={`${t(
-                                    'signUpForm.localizationLabel'
-                                )}*`}
+                                selectLabel={`${t('forms.localizationLabel')}*`}
+                                inputLabel={`${t('forms.localizationLabel')}*`}
                                 onChangeHandler={onChange}
                                 options={localizationsOptions}
                                 {...field}
@@ -296,9 +291,9 @@ const SingUpForm = () => {
                             />
                         )}
                     />
-                </Styled.SignUpFormInput>
+                </CommonStyled.FormInput>
                 {watchShowOtherLocalization === 'other' && (
-                    <Styled.SignUpFormInput>
+                    <CommonStyled.FormInput>
                         <Controller
                             name="otherLocalization"
                             control={control}
@@ -308,7 +303,7 @@ const SingUpForm = () => {
                                     id="otherLocalization"
                                     type="text"
                                     label={`${t(
-                                        'signUpForm.otherLocalizationLabel'
+                                        'forms.otherLocalizationLabel'
                                     )}*`}
                                     error={!!formErrors?.otherLocalization}
                                     helperText={
@@ -318,11 +313,11 @@ const SingUpForm = () => {
                                 />
                             )}
                         />
-                    </Styled.SignUpFormInput>
+                    </CommonStyled.FormInput>
                 )}
             </Styled.SignUpFormWrapper>
             <Styled.SignUpFormWrapper>
-                <Styled.SignUpFormInput textarea>
+                <CommonStyled.FormInput textarea>
                     <Controller
                         name="additionalInfo"
                         control={control}
@@ -331,7 +326,7 @@ const SingUpForm = () => {
                             <Input
                                 id="additionalInfo"
                                 type="text"
-                                label={t('signUpForm.additionalInfoLabel')}
+                                label={t('forms.additionalInfoLabel')}
                                 multiline
                                 rows={4}
                                 {...field}
@@ -340,7 +335,7 @@ const SingUpForm = () => {
                             />
                         )}
                     />
-                </Styled.SignUpFormInput>
+                </CommonStyled.FormInput>
             </Styled.SignUpFormWrapper>
             <Styled.SignUpFormWrapper>
                 <Controller
@@ -353,9 +348,7 @@ const SingUpForm = () => {
                             label={
                                 <>
                                     <span>
-                                        {t(
-                                            'signUpForm.regulationsLabelPartOne'
-                                        )}{' '}
+                                        {t('forms.regulationsLabelPartOne')}{' '}
                                     </span>
                                     <Styled.RegulationsLink
                                         href={clubRegulations}
@@ -363,16 +356,12 @@ const SingUpForm = () => {
                                         {t('regulations')}
                                     </Styled.RegulationsLink>
                                     <span>
-                                        {t(
-                                            'signUpForm.regulationsLabelPartTwo'
-                                        )}{' '}
+                                        {t('forms.regulationsLabelPartTwo')}{' '}
                                     </span>
                                     <Styled.RegulationsLink
                                         href={membershipDeclaration}
                                     >
-                                        {t(
-                                            'signUpForm.regulationsLabelPartThree'
-                                        )}
+                                        {t('forms.regulationsLabelPartThree')}
                                     </Styled.RegulationsLink>
                                     *
                                 </>
@@ -390,7 +379,7 @@ const SingUpForm = () => {
             </Styled.SignUpFormWrapper>
             <Styled.SignUpFormWrapper>
                 <Styled.RequiredTextInfo>
-                    {t('signUpForm.requiredTextInfo')}
+                    {t('forms.requiredTextInfo')}
                 </Styled.RequiredTextInfo>
             </Styled.SignUpFormWrapper>
             <Styled.SubmitButton
@@ -403,9 +392,9 @@ const SingUpForm = () => {
                 {t('send')}
             </Styled.SubmitButton>
             <Styled.QuestionText>
-                {t('signUpForm.questionText')}{' '}
+                {t('forms.questionText')}{' '}
                 <Styled.RegulationsLink href={frequentlyAskedQuestions}>
-                    {t('signUpForm.questionTextLink')}
+                    {t('forms.questionTextLink')}
                 </Styled.RegulationsLink>
             </Styled.QuestionText>
         </Styled.SignUpForm>
