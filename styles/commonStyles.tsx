@@ -193,3 +193,54 @@ export const InternalRegulationsLink = styled(Link)`
         }) => primaryGreen};
     }
 `;
+
+export const FormInput = styled.div<{textarea?: boolean}>`
+    display: flex;
+    width: ${({textarea}) => (textarea ? '100%' : '50%')};
+    padding: 0 15px;
+
+    .MuiFormControl-root {
+        width: 100%;
+
+        .MuiFormLabel-root {
+            color: ${({
+                theme: {
+                    palette: {
+                        basketballAcademy: {fontGraySecond},
+                    },
+                },
+            }) => fontGraySecond};
+
+            &.Mui-focused {
+                color: ${({
+                    theme: {
+                        palette: {
+                            basketballAcademy: {primaryGreen},
+                        },
+                    },
+                }) => primaryGreen};
+            }
+        }
+
+        .MuiInputBase-root {
+            border-radius: 0;
+
+            &.Mui-focused {
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: ${({
+                        theme: {
+                            palette: {
+                                basketballAcademy: {primaryGreen},
+                            },
+                        },
+                    }) => primaryGreen};
+                }
+            }
+        }
+    }
+
+    @media ${mobile} {
+        width: 100%;
+        margin: 15px 0;
+    }
+`;

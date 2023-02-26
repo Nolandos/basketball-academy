@@ -109,3 +109,10 @@ export const removeTags = (str: string) => {
 
 export const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+export const formatPrice = (price: number, currency: string) => {
+    const partOne = `${Math.floor(price * 100)}`.slice(0, -2);
+    const partTwo = `${Math.floor(price * 100)}`.slice(-2);
+
+    return `${partOne},${partTwo} ${currency}`;
+};

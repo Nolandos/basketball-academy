@@ -3,7 +3,8 @@
   "more": "Więcej",
   "alerts": {
     "sendEmailOk": "Wysłano wiadomość!",
-    "sendEmailError": "Nie wysłano wiadomości"
+    "sendEmailError": "Nie wysłano wiadomości",
+    "sendEmailOrderError": "Nie udało się złożyć zamówienia"
   },
   "aboutUs": {
     "siteTitle": "O nas",
@@ -42,15 +43,22 @@
   "signUp": "Zapisz się",
   "regulations": "Regulamin",
   "send": "Wyślij",
-  "shop": "sklep",
+  "shopLink": "sklep",
   "contactForm": "formularz kontaktowy",
   "news": "Aktualności",
   "lastEntries": "Ostatnie wpisy",
+  "none": "brak",
+  "delete": "usuń",
+  "back": "Powrót",
   "pagination": {
     "next": "Następna",
     "previous": "Poprzednia",
     "from": "z",
-    "pageSizeSelect": "Aktualności na stronie"
+    "pageSizeSelect": {
+      "newsPerPage": "Aktualności na stronie",
+      "photosPerPage": "Zdjęć na stronie",
+      "productsPerPage": "Produktów na stronie"
+    }
   },
   "offer": {
     "siteTitle": "Oferta",
@@ -164,7 +172,7 @@
     "backToGalleryCollections": "Wróć do galerii",
     "noPhotosText": "Brak zdjęć"
   },
-  "signUpForm": {
+  "forms": {
     "emailLabel": "Email",
     "emailIsRequiredError": "Adres Email jest wymagany",
     "emailIsNotCorrectError": "Adres Email jest nieprawidłowy",
@@ -220,6 +228,54 @@
       "plewiska": "Plewiska",
       "wronki": "Wronki",
       "other": "Inne"
+    },
+    "deliveryAddressLabel": "Adres do wysyłki",
+    "deliveryAddressIsRequiredError": "Adres do wysyłki jest wymagany",
+    "deliveryAddressIsInvalidError": "Niepoprawny adres do wysyłki",
+    "sendOrder": "Wyślij zamówienie"
+  },
+  "shop": {
+    "siteTitle": "Sklep",
+    "noShopText": "Brak produktów",
+    "heightLabel": "Wzrost (cm)",
+    "lengthLabel": "Długość (cm)",
+    "widthLabel": "Szerokość (cm)",
+    "thirdValueLabel": "Długość spodenek (cm)",
+    "addToCartButton": "Dodaj do koszyka",
+    "sizeSelectLabel": "Wybierz rozmiar",
+    "name": "Nazwisko lub ksywka",
+    "nr": "Nr",
+    "purchaseSummaryModal": {
+      "title": "Dodano produkt do koszyka!",
+      "content": "Kontynuuj zakupy lub przejdź do podsumowania",
+      "continueButton": "Kontynuuj",
+      "goToSummaryButton": "Przejdź do podsumowania"
+    }
+  },
+  "shopCart": {
+    "siteTitle": "Podsumowanie zakupu",
+    "noProductsInCart": "Brak produktów w koszyku",
+    "name": "Nazwa",
+    "size": "Rozmiar",
+    "pricePerItem": "Cena za szt.",
+    "amount": "Ilość",
+    "additionalInfo": "Dodatkowe informacje",
+    "price": "Cena",
+    "total": "Suma",
+    "additionalInfoTooltipContent": "Nazwisko lub ksywka / Numer",
+    "deleteProduct": "Usuń z koszyka",
+    "howToBuySubtitle": "Jak zamawiać?",
+    "howToBuyPointOne": "Wybierz interesujące Ciebie produkty. Prosimy zwrócić uwagę na wybierany rozmiar i ilość.",
+    "howToBuyPointTwo": "Poniższa tabela przedstawia podsumowanie twojego zamówienia. Prosimy o sprawdzenie czy wszystko się zgadza.",
+    "howToBuyPointThree": "Do skompletowania zamówienia potrzebne są dane do wysyłki i dane kontaktowe, możliwe do uzupełnienia pod podsumowaniem.",
+    "howToBuyPointFour": "Po uzupełnieniu danych i wysłaniu zamówienia, zostanie <strong>wygenerowany kod</strong>, który należy wpisać w tytule przelewu. Prosimy o skopiowanie lub zapisanie kodu.",
+    "howToBuyPointFive": "Minimalny czas realizacji to <strong>15 dni</strong> od opłacenia zamówienia.",
+    "howToBuyPointSix": "Konto bakowe: <strong>64 1050 1520 1000 0090 3033 1269</strong>",
+    "formSubtitle": "Dane do wysyłki",
+    "orderSuccessed": {
+      "subtitle": "Twoje zamówienie zostało wysłane!",
+      "content": "Proces zamówinia przebiegł pomyślnie! Ostatnim korkiem jest opłacenie zamówienia. W tytule przelewu prosimy o wpisanie poniższego kodu:",
+      "copyToClipboardText": "Skopiowano!"
     }
   },
   "faq": {

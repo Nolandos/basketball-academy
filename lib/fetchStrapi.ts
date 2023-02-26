@@ -1,6 +1,6 @@
 import {fetchData} from '@/utils/utils';
 import {FetchDataMethods} from '@/utils/commonEnums';
-import {sendSignUpEmailTypes} from '@/utils/commonTypes';
+import {sendOrderEmailTypes, sendSignUpEmailTypes} from '@/utils/commonTypes';
 
 const {GET, POST} = FetchDataMethods;
 export const fetchTrainers = () =>
@@ -63,4 +63,35 @@ export const sendSignUpEmail = ({
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/email/sign-up-mail?name=${name}&yearOfBirth=${yearOfBirth}&phoneNumber=${phoneNumber}&email=
         ${email}&additionalInfo=${additionalInfo}&localization=${localization}`,
         POST
+    );
+
+export const sendOrderEmail = ({
+    email,
+    phoneNumber,
+    name,
+    localization,
+    generatedOrderCode,
+    shopCartProducts,
+    totalPrice,
+}: sendOrderEmailTypes) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/email/send-order-mail?email=${email}&phoneNumber=${phoneNumber}&name=${name}&localization=
+        ${localization}&generatedOrderCode=${generatedOrderCode}&totalPrice=${totalPrice}`,
+        POST,
+        null,
+        {
+            shopCartProducts,
+        }
+    );
+
+export const fetchProducts = (page: string, pageSize: string) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/products?pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=publishedAt:DESC&populate=*`,
+        GET
+    );
+
+export const fetchProductDetails = (slug: string) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/product-info/${slug}?populate=*`,
+        GET
     );

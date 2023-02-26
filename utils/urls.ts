@@ -1,6 +1,4 @@
-import supremeProdukcja from '@/assets/partnersBar/supreme-produkcja.png';
 import {include} from 'named-urls';
-import ministerstwoSportuITurystyki from '@/assets/partnersBar/ministerstwo-sportu-i-turystyki.png';
 
 export default {
     // Simple routes
@@ -27,7 +25,6 @@ export default {
     trainingSchedule: 'harmonogram-treningow',
     pyraPoznan: '/pyra-poznan',
     simpleHelp: '/prosta-pomoc',
-    shop: '/sklep',
     contact: '/kontakt',
     recommendUs: '/polecaja-nas',
     // External urls
@@ -68,6 +65,15 @@ export default {
             detail: include(':slug/', {
                 show: '',
             }),
+        }),
+    }),
+
+    shop: include('/sklep', {
+        base: '/sklep',
+        all: '/sklep?page=1&pageSize=25',
+        summary: '/sklep/podsumowanie',
+        detail: include(':slug/', {
+            show: '',
         }),
     }),
 };

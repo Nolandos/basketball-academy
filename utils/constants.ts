@@ -2,6 +2,7 @@ export default {
     phoneNumber: '605 222 613',
     email: 'biuro@akademiakoszykowki.poznan.pl',
     bankAccountNumber: '64 1050 1520 1000 0090 3033 1269',
+    defaultPriceCurrency: 'zł',
     pageSizeValues: [
         {id: '1', value: 1, label: '1'},
         {id: '10', value: 10, label: '10'},

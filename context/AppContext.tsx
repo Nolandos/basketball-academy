@@ -5,6 +5,7 @@ import {AlertMessagesTypes} from '@/utils/commonEnums';
 type App = {
     lastNews: {loading: boolean; data: [] | Array<NewsType>};
     messageBox: {id: string; text: string; type: AlertMessagesTypes} | null;
+    shopCartCounter: number;
 };
 
 type AppProviderProps = {
@@ -25,6 +26,8 @@ type AppContext = {
         text: string;
         type: AlertMessagesTypes;
     }) => void;
+
+    handleSetShopCartCounter: (amount: number) => void;
 };
 
 const initialContext: AppContext = {
@@ -34,6 +37,7 @@ const initialContext: AppContext = {
             data: [],
         },
         messageBox: null,
+        shopCartCounter: 0,
     },
     setApp: (): void => {
         throw new Error('setApp function must be overridden');
@@ -61,6 +65,11 @@ const initialContext: AppContext = {
             `handleCloseMessageBox function must be overridden , data:`
         );
     },
+    handleSetShopCartCounter: (amount: number): void => {
+        throw new Error(
+            `handleSetShopCartCounter function must be overridden, data: ${amount}`
+        );
+    },
 };
 
 export const AppContext = createContext<AppContext>(initialContext);
@@ -72,6 +81,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({children}) => {
             data: [],
         },
         messageBox: null,
+        shopCartCounter: 0,
     });
 
     const handleSetMessageBox = ({
@@ -95,6 +105,10 @@ export const AppProvider: React.FC<AppProviderProps> = ({children}) => {
         setApp({...app, lastNews: {...app.lastNews, loading, data}});
     };
 
+    const handleSetShopCartCounter = (amount: number) => {
+        setApp({...app, shopCartCounter: amount});
+    };
+
     return (
         <AppContext.Provider
             value={{
@@ -103,6 +117,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({children}) => {
                 handleSetLastNews,
                 handleSetMessageBox,
                 handleCloseMessageBox,
+                handleSetShopCartCounter,
             }}
         >
             {children}

@@ -1,5 +1,6 @@
 import {StaticImageData} from 'next/image';
-import {ReactNode} from 'react';
+import React, {ReactNode} from 'react';
+import {formatPrice} from '@/utils/utils';
 
 export type sendSignUpEmailTypes = {
     name: string;
@@ -8,6 +9,25 @@ export type sendSignUpEmailTypes = {
     email: string;
     additionalInfo: string;
     localization: string;
+};
+
+export type sendOrderEmailTypes = {
+    email: string;
+    phoneNumber: string;
+    name: string;
+    localization: string;
+    generatedOrderCode: string;
+    totalPrice: string;
+    shopCartProducts:
+        | {
+              productName: string;
+              productSize: string;
+              amount: string;
+              pricePerItem: string;
+              price: string;
+              additionalInfo: ReactNode;
+          }[]
+        | [];
 };
 
 export type BarListItemType = {
@@ -132,5 +152,51 @@ export type BackendPaginationMeta = {
         pageSize: number;
         pageCount: number;
         total: number;
+    };
+};
+
+export type ProductsDetailsType = {
+    id: number;
+    attributes: {
+        name: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
+        price: number;
+        slug: string;
+        additionalInfo: boolean;
+        sizes: {
+            data: {
+                id: number;
+                attributes: {
+                    name: string;
+                    createdAt: string;
+                    updatedAt: string;
+                    publishedAt: string;
+                    width: number;
+                    length: number;
+                    label: string;
+                    thirdSize: number | null;
+                    humanHeight: string | null;
+                };
+            }[];
+        };
+        photo: {
+            data: PhotoTypes;
+        };
+    };
+};
+
+export type TableDataTypes = {
+    tableData: {
+        tableHeadData: Array<{
+            id: string;
+            name: string;
+            style?: {[key: string]: string | number};
+            hidden?: boolean;
+        }>;
+        tableBodyData:
+            | Array<{id: string; [key: string]: string | ReactNode}>
+            | [];
     };
 };

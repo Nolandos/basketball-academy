@@ -14,7 +14,7 @@ const FAQ = () => {
         emailBiuro,
         trainingSchedule,
         clubRegulations,
-        shop,
+        shop: {all: shopUrl},
     } = urls;
     const faqItems: {
         id: string;
@@ -66,7 +66,7 @@ const FAQ = () => {
                     <p>{t('faq.faq4ContentPartTwo')}</p>
                     <p>
                         {t('faq.faq4ContentPartThree')}{' '}
-                        <CommonStyled.InternalRegulationsLink href={shop}>
+                        <CommonStyled.InternalRegulationsLink href={shopUrl}>
                             {t('faq.faq4ContentPartFour')}
                         </CommonStyled.InternalRegulationsLink>
                     </p>
@@ -79,7 +79,7 @@ const FAQ = () => {
             content: (
                 <p>
                     {t('faq.faq5ContentPartOne')}{' '}
-                    <CommonStyled.InternalRegulationsLink href={shop}>
+                    <CommonStyled.InternalRegulationsLink href={shopUrl}>
                         {t('faq.faq5ContentPartTwo')}
                     </CommonStyled.InternalRegulationsLink>
                 </p>

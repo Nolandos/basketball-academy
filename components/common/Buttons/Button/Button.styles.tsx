@@ -103,6 +103,30 @@ export const Button = styled.button<{variant?: ButtonVariantsTypes}>`
             display: block;
         }
     }
+
+    &:disabled,
+    &[disabled] {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+
+        &:hover {
+            color: #666666;
+            transition: none;
+
+            .icon-start,
+            .icon-end {
+                svg {
+                    transition: none;
+                    transform: translateX(0);
+                }
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
 `;
 
 export const ButtonLoader = styled(CircularProgress)`
