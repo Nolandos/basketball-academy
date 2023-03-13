@@ -14,6 +14,7 @@ export default {
     frequentlyAskedQuestions: '/najczesciej-zadawane-pytania',
     resignations: '/rezygnacje',
     leagueRecruitment: '/nabory-ligowe',
+    documents: '/dokumenty',
     sportsCamps: '/obozy-sportowe',
     recreationalDayCamps: '/polkolonie-rekreacyjne',
     membershipDeclaration: '/deklaracja-czlonkowska',
@@ -27,6 +28,8 @@ export default {
     simpleHelp: '/prosta-pomoc',
     contact: '/kontakt',
     recommendUs: '/polecaja-nas',
+    trainingInStudio: '/trening-w-studio',
+    trainingOnline: '/treningi-online',
     // External urls
     facebook: 'https://www.facebook.com/akademiakoszykowkipoznan',
     instagram: 'https://www.instagram.com/akademiakoszykowki/',
@@ -40,6 +43,7 @@ export default {
     pyraPoznanExternal: 'http://www.pyra.com.pl/',
     siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',
     emailBiuro: 'biuro@akademiakoszykówki.poznan.pl',
+    timetable: '/grafik-zajec',
 
     news: include('/aktualnosci', {
         base: '/aktualnosci',

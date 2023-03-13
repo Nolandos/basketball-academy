@@ -154,6 +154,10 @@ export const MenuItem = styled.li<{hasItems: boolean; isExpand: boolean}>`
         }
     }
 
+    span {
+        white-space: nowrap;
+    }
+
     @media ${widescreenOnly} {
         max-width: 190px;
     }

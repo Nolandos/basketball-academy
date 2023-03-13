@@ -41,6 +41,7 @@
   },
   "and": "i",
   "signUp": "Zapisz się",
+  "timetable": "Grafik zajęć",
   "regulations": "Regulamin",
   "send": "Wyślij",
   "shopLink": "sklep",
@@ -96,6 +97,12 @@
     "individualTrainingArrangement": "min. 3 miesiące",
     "individualTrainingTrainingTime": "1h",
     "individualTrainingPrice": "100 zł/h",
+    "trainingInStudioSubtitle": "Trening w studio",
+    "trainingInStudioPartOne": "Dla zawodników chcących zdobyć prawidłowe wzorce ruchowe i poprawić koordynację ruchową oraz umiejętności motoryczne.",
+    "trainingInStudioPartTwo": "Z oferty mogą skorzystać także zawodnicy innych klubów koszykarskich chcących pracować sam na sam z trenerem w studio.",
+    "trainingInStudioArrangement": "min. 3 miesiące",
+    "trainingInStudioTrainingTime": "1h",
+    "trainingInStudioPrice": "160 zł/h",
     "3x3TrainingSubtitle": "Treningi 3x3",
     "3x3TrainingPartOne": "Dla zawodników powyżej 13 roku życia lubiących szybszą i nowocześniejszą formę treningów i gry.",
     "3x3TrainingArrangement": "rezygnacja w dowolnym momencie",
@@ -227,10 +234,13 @@
       "mosina": "Mosina",
       "plewiska": "Plewiska",
       "wronki": "Wronki",
+      "treningiIndywidualne": "Treningi indywidualne",
       "other": "Inne"
     },
     "deliveryAddressLabel": "Adres do wysyłki",
+    "trainingLocationLabel": "Lokalizacja treningu",
     "deliveryAddressIsRequiredError": "Adres do wysyłki jest wymagany",
+    "trainingLocationAddressIsRequiredError": "Lokalizacja treningu jest wymagana",
     "deliveryAddressIsInvalidError": "Niepoprawny adres do wysyłki",
     "sendOrder": "Wyślij zamówienie"
   },
@@ -277,6 +287,34 @@
       "content": "Proces zamówinia przebiegł pomyślnie! Ostatnim korkiem jest opłacenie zamówienia. W tytule przelewu prosimy o wpisanie poniższego kodu:",
       "copyToClipboardText": "Skopiowano!"
     }
+  },
+  "documents": {
+    "siteTitle": "Dokumenty",
+    "documentsList": {
+      "membershipDeclaration": "Deklaracja członkowska",
+      "clubRegulations": "Regulamin Klubu",
+      "individualTrainingContract": "Umowa treningi indywidualne",
+      "participantCard": "Karta uczestnika obóz/półkolinia",
+      "campInformationCard": "Karta informacyjna obóz"
+    }
+  },
+  "trainingInStudio": {
+    "siteTitle": "Trening w studio",
+    "siteSubtitle": "Informacje",
+    "partOne": "Treningi mają na celu nauczenia młodych sportowców i dzieci prawidłowych wzorców ruchowych, odpowiedniej koordynacji ruchowej oraz umiejętności motorycznych, które stanowią fundament w późniejszych latach treningów.",
+    "partTwo": "Podczas treningu pracujemy m.in. nad takimi umiejętnościami jak: szybkość reakcji, zdolność orientacji przestrzennej, zdolność równowagi, zdolność dostosowywania się, łączenia i rozdzielania ruchów, różnicowania, rytmizacji, koordynacji oko-ręka i oko-noga, a także siły i mocy oraz szybkości, zwinności i skoczności.",
+    "partThree": "Program treningowy ustalany jest indywidualnie do Uczestnika zajęć biorąc pod uwagę takie czynniki jak: wiek, płeć, stan zdrowia, cel, poziom sportowy, doświadczenie, kondycję fizyczną, wyniki testów diagnostycznych przeprowadzonych na pierwszym spotkaniu oraz docelową dyscyplinę, w tym przypadku koszykówkę.",
+    "partFour": "Studio dysponuje sprzętem i akcesoriami sportowymi dla dzieci i młodzięży oraz profesjonalnych sportowców.",
+    "whyYouShouldCareSubtitle": "Dlaczego warto zadbać o przygotowanie motoryczne dziecka już od najmłodszych lat?",
+    "partFive": "Trening motoryczny to podstawa u dzieci i młodych zawodników. Odpowiednie przygotowanie ogólnorozwojowe rozpoczęte przed okresem pokwitania w dużej mierze przyczynia się do zmniejszenia ryzyka kontuzji, docelowego poziomu sportowego, możliwości rozwoju oraz realizacji treningu specjalistycznego w późniejszych latach kariery (okres pokwitania u dziewczynek występuje między 10-12 r.ż., a u chłopców między 12-14 r.ż.).",
+    "partSix": "Zaniedbanie tego okresu może powodować wyrobienie nieprawidłowych nawyków i wzorców ruchowych oraz niezbudowanie odpowiedniej bazy do treningów specjalistycznych w uprawianej dyscyplinie w dalszym etapie kariery zawodnika (po okresie pokwitania), co może skutkować wystąpieniem większego ryzyka kontuzji, mniejszymi i/lub wolniejszymi postępami w rozwoju umiejętności oraz słabszymi wynikami sportowymi.",
+    "partSeven": "Treningi prowadzić będzie Kinga Demczur – trener personalny, trener przygotowania motorycznego młodych sportowców, trener koszykówki, była zawodniczka koszykówki z 18-letnim doświadczeniem.",
+    "partEight": "Koszt treningu w studiu 160zł / za każdy trening.",
+    "partNine": "Umowa na treningi indywidualne jest podpisywana na okres co najmniej 3 miesięcy.",
+    "partTen": "Adres DTZ Studio Treningu:  ul. Cieszkowskiego 13, 62-020 Swarzędz"
+  },
+  "trainingOnline": {
+    "siteTitle": "Treningi Online"
   },
   "faq": {
     "title": "Najczęśćiej zadawane pytania (F.A.Q)",

@@ -13,6 +13,7 @@ type ShopCartFormValues = {
     phoneNumber: string;
     name: string;
     localization: string;
+    trainingLocation: string;
 };
 
 type ShopCartFormProps = {
@@ -30,6 +31,7 @@ const ShopCartForm: FC<ShopCartFormProps> = ({
         phoneNumber: '',
         name: '',
         localization: '',
+        trainingLocation: '',
     };
 
     const validationSchema = Yup.object({
@@ -46,6 +48,9 @@ const ShopCartForm: FC<ShopCartFormProps> = ({
 
         localization: Yup.string().required(
             t<string>('forms.deliveryAddressIsRequiredError')
+        ),
+        trainingLocation: Yup.string().required(
+            t<string>('forms.trainingLocationAddressIsRequiredError')
         ),
     });
     const {
@@ -125,6 +130,23 @@ const ShopCartForm: FC<ShopCartFormProps> = ({
                             label={`${t('forms.deliveryAddressLabel')}*`}
                             error={!!formErrors?.localization}
                             helperText={formErrors?.localization?.message}
+                            {...field}
+                        />
+                    )}
+                />
+            </Styled.FormInput>
+            <Styled.FormInput>
+                <Controller
+                    name="trainingLocation"
+                    control={control}
+                    defaultValue={defaultValues.trainingLocation}
+                    render={({field}) => (
+                        <Input
+                            id="trainingLocation"
+                            type="text"
+                            label={`${t('forms.trainingLocationLabel')}*`}
+                            error={!!formErrors?.trainingLocation}
+                            helperText={formErrors?.trainingLocation?.message}
                             {...field}
                         />
                     )}

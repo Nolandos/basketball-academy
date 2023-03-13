@@ -23,6 +23,7 @@ const Offer = () => {
         individualTrainings,
         sportsCamps,
         recreationalDayCamps,
+        trainingInStudio,
     } = urls;
 
     const howWorksArray: Array<{
@@ -152,6 +153,32 @@ const Offer = () => {
                     <p>
                         <b>{t('common:offer.price')}: </b>
                         {t('common:offer.individualTrainingPrice')}
+                    </p>
+                </>
+            ),
+        },
+        {
+            id: 'trainingInStudio',
+            title: (
+                <Link href={trainingInStudio}>
+                    {t('common:offer.trainingInStudioSubtitle')}
+                </Link>
+            ),
+            content: (
+                <>
+                    <p>{t('common:offer.trainingInStudioPartOne')}</p>
+                    <p>{t('common:offer.trainingInStudioPartTwo')}</p>
+                    <p>
+                        <b>{t('common:offer.arrangement')}: </b>
+                        {t('common:offer.trainingInStudioArrangement')}
+                    </p>
+                    <p>
+                        <b>{t('common:offer.trainingTime')}: </b>
+                        {t('common:offer.trainingInStudioTrainingTime')}
+                    </p>
+                    <p>
+                        <b>{t('common:offer.price')}: </b>
+                        {t('common:offer.trainingInStudioPrice')}
                     </p>
                 </>
             ),

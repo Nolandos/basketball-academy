@@ -13,6 +13,7 @@ import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton'
 import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 import elderly from '@/assets/pages/group-workouts/10-13.jpg';
 import oldest from '@/assets/pages/group-workouts/14-17.jpg';
+import TimetableButton from '@/components/common/Buttons/TimetableButton/TimetableButton';
 
 const GroupWorkouts = () => {
     const {t} = useTranslation();
@@ -151,6 +152,7 @@ const GroupWorkouts = () => {
                     </Styled.AgeCategory>
                     <Styled.ButtonWrapper>
                         <SignUpButton />
+                        <TimetableButton />
                     </Styled.ButtonWrapper>
                 </Styled.AgeCategories>
             </Styled.GroupWorkouts>
