@@ -12,6 +12,7 @@ import {BarListItemType} from '@/utils/commonTypes';
 import siekierki from '@/assets/partnersBar/siekierki.png';
 import pyraPoznan from '@/assets/partnersBar/pyra-poznan.png';
 import eneaAzs from '@/assets/partnersBar/enea-azs.png';
+import DTZStudioTreningu from '@/assets/partnersBar/logo-studio-treningu.png';
 
 const PartnersBar: FC = () => {
     const {
@@ -112,6 +113,11 @@ const PartnersBar: FC = () => {
             height: 70,
             url: eneaAzsUrl,
             urlExternal: true,
+        },
+        {
+            id: 'DTZStudioTreningu',
+            src: DTZStudioTreningu,
+            height: 90,
         },
     ];
 

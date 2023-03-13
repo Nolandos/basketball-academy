@@ -110,11 +110,13 @@ const ShopCart = () => {
         phoneNumber,
         name,
         localization,
+        trainingLocation,
     }: {
         email: string;
         phoneNumber: string;
         name: string;
         localization: string;
+        trainingLocation: string;
     }) => {
         const generatedOrderCode = shortUUID.generate();
 
@@ -123,6 +125,7 @@ const ShopCart = () => {
             phoneNumber,
             name,
             localization,
+            trainingLocation,
             generatedOrderCode,
             totalPrice: formatPrice(
                 [...shopCartProducts]?.reduce(

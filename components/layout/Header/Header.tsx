@@ -42,18 +42,15 @@ const Header: FC = () => {
         leagueRecruitment,
         sportsCamps,
         recreationalDayCamps,
-        membershipDeclaration,
-        clubRegulations,
-        individualTrainingContract,
-        participantCard,
+        documents,
         gallery: {photos, movies},
         sponsorship,
         openingOfANewLocation,
-        pyraPoznan,
-        simpleHelp,
         shop: {all: shopUrl},
         contact,
         leagueWorkouts,
+        trainingInStudio,
+        trainingOnline,
     } = urls;
     const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -113,6 +110,16 @@ const Header: FC = () => {
                     title: t<string>('links.individualTrainings'),
                     url: individualTrainings,
                 },
+                {
+                    id: 'trainingInStudio',
+                    title: t<string>('links.trainingInStudio'),
+                    url: trainingInStudio,
+                },
+                {
+                    id: 'trainingOnline',
+                    title: t<string>('links.trainingOnline'),
+                    url: trainingOnline,
+                },
             ],
         },
         {
@@ -160,28 +167,30 @@ const Header: FC = () => {
         {
             id: 'documents',
             title: t<string>('links.documents'),
-            items: [
-                {
-                    id: 'membershipDeclaration',
-                    title: t<string>('links.membershipDeclaration'),
-                    url: membershipDeclaration,
-                },
-                {
-                    id: 'clubRegulations',
-                    title: t<string>('links.clubRegulations'),
-                    url: clubRegulations,
-                },
-                {
-                    id: 'individualTrainingContract',
-                    title: t<string>('links.individualTrainingContract'),
-                    url: individualTrainingContract,
-                },
-                {
-                    id: 'participantCard',
-                    title: t<string>('links.participantCard'),
-                    url: participantCard,
-                },
-            ],
+            url: documents,
+            items: null,
+            // items: [
+            //     {
+            //         id: 'membershipDeclaration',
+            //         title: t<string>('links.membershipDeclaration'),
+            //         url: membershipDeclaration,
+            //     },
+            //     {
+            //         id: 'clubRegulations',
+            //         title: t<string>('links.clubRegulations'),
+            //         url: clubRegulations,
+            //     },
+            //     {
+            //         id: 'individualTrainingContract',
+            //         title: t<string>('links.individualTrainingContract'),
+            //         url: individualTrainingContract,
+            //     },
+            //     {
+            //         id: 'participantCard',
+            //         title: t<string>('links.participantCard'),
+            //         url: participantCard,
+            //     },
+            // ],
         },
         {
             id: 'gallery',
@@ -213,16 +222,16 @@ const Header: FC = () => {
                     title: t<string>('links.openingOfANewLocation'),
                     url: openingOfANewLocation,
                 },
-                {
-                    id: 'pyraPoznan',
-                    title: t<string>('links.pyraPoznan'),
-                    url: pyraPoznan,
-                },
-                {
-                    id: 'simpleHelp',
-                    title: t<string>('links.simpleHelp'),
-                    url: simpleHelp,
-                },
+                // {
+                //     id: 'pyraPoznan',
+                //     title: t<string>('links.pyraPoznan'),
+                //     url: pyraPoznan,
+                // },
+                // {
+                //     id: 'simpleHelp',
+                //     title: t<string>('links.simpleHelp'),
+                //     url: simpleHelp,
+                // },
             ],
         },
         {

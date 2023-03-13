@@ -18,6 +18,8 @@ export type sendOrderEmailTypes = {
     localization: string;
     generatedOrderCode: string;
     totalPrice: string;
+
+    trainingLocation: string;
     shopCartProducts:
         | {
               productName: string;

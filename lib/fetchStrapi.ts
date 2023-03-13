@@ -70,13 +70,14 @@ export const sendOrderEmail = ({
     phoneNumber,
     name,
     localization,
+    trainingLocation,
     generatedOrderCode,
     shopCartProducts,
     totalPrice,
 }: sendOrderEmailTypes) =>
     fetchData(
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/email/send-order-mail?email=${email}&phoneNumber=${phoneNumber}&name=${name}&localization=
-        ${localization}&generatedOrderCode=${generatedOrderCode}&totalPrice=${totalPrice}`,
+        ${localization}&trainingLocation=${trainingLocation}&generatedOrderCode=${generatedOrderCode}&totalPrice=${totalPrice}`,
         POST,
         null,
         {
