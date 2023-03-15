@@ -316,6 +316,28 @@
   "trainingOnline": {
     "siteTitle": "Treningi Online"
   },
+  "camps": {
+    "siteTitle": "Obozy sportowe",
+    "siteSubtitle": "Informacje",
+    "partOne": "W Akademii przygotowaliśmy specjalną ofertę wyjazdów na obozy sportowo-rekreacyjne oraz obozy ligowe w okresie wakacyjnym i ziomwym",
+    "partTwo": "O planowanych obozach informujemy za pośrednictwem naszej strony, a także facebooka - wystarczy śledzić nasze aktualności i szukać w nich informacji o najbliższych terminach.",
+    "howToSignUpSubtitle": "Jak zgłosić chęć uczestnictwa w obozie?",
+    "howToSignUpPartOne": "Potrzebne jest nam tylko wypełnione",
+    "howToSignUpRegistration": "zgłoszenie",
+    "howToSignUpPartTwo": "lub bezpośredni mail z zapisem dziecka na adres",
+    "basketballAcademyCampsLikeSubtitle": "Jak wyglądają obozy Akademii Koszykówki?",
+    "basketballAcademyCampsLikePartOne": "Nasze wyjazdy to przede wszystkim mnóstwo treningów, ale także wiele różnorodnych atrakcji, które zawsze dopasowujemy do aktualnej pory roku i miejsca pobytu. Dzięki temu każdy obóz jest jeszcze ciekawszy i daje szansę na wypoczynek w sportowym stylu dla dzieci w każdym wieku.",
+    "summerCampsSubtitle": "Obozy letnie",
+    "summerCampsPartOne": "Baza obozów Karnice (koło Rewala, województwo zachodniopomorskie).",
+    "winterCampsSubtitle": "Obozy zimowe",
+    "winterCampsPartOne": "Baza obozów Dobrzyń nad Wisłą (koło Włocławka województwo kujawsko-pomorski)",
+    "advantagesCampsFood": "Pełne i smaczne wyżywienie",
+    "advantagesCampsSportsHall": "Hala sportowa do dyspozycji uczetników",
+    "advantagesCampsSportsCadre": "Całodobowa opieka wykwalfikowanej kadry opiekunów i trenerów",
+    "advantagesCampsSportsPramedic": "Nadzór ratownika medycznego",
+    "advantagesCampsSportsBasketballTraining": "Treningi koszykarskie",
+    "advantagesCampsSportsAdditionalAttractions": "Dodatkowe atrakcje ( wyjazdy nad morze czy basen, gry i zabawy integracyjne, wycieczki i zwiedzanie lokalnych atrakcji )"
+  },
   "faq": {
     "title": "Najczęśćiej zadawane pytania (F.A.Q)",
     "clickThere": "klikając tutaj.",
