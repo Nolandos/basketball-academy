@@ -5,14 +5,35 @@ import Link from 'next/link';
 import device from '@/styles/breakpoints';
 
 const {touch, mobileSmall} = device;
-export const Camps = styled(CommonStyled.Page)``;
+export const RecreationalDayCamps = styled(CommonStyled.Page)``;
 export const Container = styled(CommonStyled.Container)`
     @media ${touch} {
         padding: 0 15px;
     }
 `;
 
-export const CampsList = styled.ul`
+export const InfoBox = styled.div`
+    width: 100%;
+    max-width: 780px;
+    border: ${({theme}) =>
+        `2px solid ${theme.palette.basketballAcademy.primaryGreen}`};
+    padding: 25px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.0625rem;
+`;
+
+export const InfoBoxWrapper = styled.div`
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+`;
+
+export const RecreationalDayCampsList = styled.ul`
     width: 100%;
     list-style-type: none;
     display: flex;
@@ -44,6 +65,13 @@ export const CampsList = styled.ul`
     }
 `;
 
+export const ButtonsWrapper = styled.div`
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 export const LeagueWorkoutsArrowForward = styled(ArrowForward)`
     margin-right: 5px;
     color: ${({
@@ -55,7 +83,15 @@ export const LeagueWorkoutsArrowForward = styled(ArrowForward)`
     }) => primaryGreen};
 `;
 
-export const CampsLink = styled(Link)`
+export const ButtonWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+`;
+
+export const RecreationalDayCampsLink = styled(Link)`
     text-decoration: underline;
     color: ${({
         theme: {
@@ -134,12 +170,4 @@ export const CampBenefitsTile = styled.div`
     @media ${mobileSmall} {
         width: 100%;
     }
-`;
-
-export const ButtonsWrapper = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 35px 0;
 `;

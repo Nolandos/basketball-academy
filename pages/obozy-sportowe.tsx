@@ -8,16 +8,26 @@ import urls from '@/utils/urls';
 import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 import {
     Attractions,
+    ChevronRight,
     Home,
     MedicalInformation,
     People,
     Restaurant,
     Sports,
 } from '@mui/icons-material';
+import Button from '@/components/common/Buttons/Button/Button';
+import {useRouter} from 'next/router';
 
 const Camps = () => {
     const {t} = useTranslation();
-    const {emailBiuro, applicationForm} = urls;
+    const {
+        emailBiuro,
+        applicationForm,
+        gallery: {
+            photos: {all: galleryPhotosAllUrl},
+        },
+    } = urls;
+    const router = useRouter();
 
     const advantagesCamps: Array<{
         id: string;
@@ -158,6 +168,16 @@ const Camps = () => {
                             </p>
                         </li>
                     </Styled.CampsList>
+                    <Styled.ButtonsWrapper>
+                        <Button
+                            onClickHandler={() =>
+                                router.push(galleryPhotosAllUrl)
+                            }
+                            iconEnd={<ChevronRight />}
+                        >
+                            {t('common:goToGallery')}
+                        </Button>
+                    </Styled.ButtonsWrapper>
                 </Styled.Container>
                 <Styled.CampBenefitsWrapper>
                     <CommonStyled.Container>
