@@ -49,6 +49,16 @@ const DocumentsList: FC = () => {
             url: 'pdf-files/oboz-karta.pdf',
             title: t('common:documents.documentsList.participantCard'),
         },
+        {
+            id: 'campRegulations',
+            url: 'pdf-files/regulamin-oboz.pdf',
+            title: t('common:documents.documentsList.campRegulations'),
+        },
+        {
+            id: 'dayCampRegulations',
+            url: 'pdf-files/regulamin-polkolonie.pdf',
+            title: t('common:documents.documentsList.dayCampRegulations'),
+        },
     ];
 
     return (

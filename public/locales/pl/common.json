@@ -1,6 +1,7 @@
 {
   "title": "Akademia koszykówki",
   "more": "Więcej",
+  "goToGallery": "Przejdź do galerii",
   "alerts": {
     "sendEmailOk": "Wysłano wiadomość!",
     "sendEmailError": "Nie wysłano wiadomości",
@@ -295,7 +296,9 @@
       "clubRegulations": "Regulamin Klubu",
       "individualTrainingContract": "Umowa treningi indywidualne",
       "participantCard": "Karta uczestnika obóz/półkolinia",
-      "campInformationCard": "Karta informacyjna obóz"
+      "campInformationCard": "Karta informacyjna obóz",
+      "campRegulations": "Regulamin obozu",
+      "dayCampRegulations": "Regulamin półkolonie"
     }
   },
   "trainingInStudio": {
@@ -315,6 +318,71 @@
   },
   "trainingOnline": {
     "siteTitle": "Treningi Online"
+  },
+  "camps": {
+    "siteTitle": "Obozy sportowe",
+    "siteSubtitle": "Informacje",
+    "partOne": "W Akademii przygotowaliśmy specjalną ofertę wyjazdów na obozy sportowo-rekreacyjne oraz obozy ligowe w okresie wakacyjnym i ziomwym",
+    "partTwo": "O planowanych obozach informujemy za pośrednictwem naszej strony, a także facebooka - wystarczy śledzić nasze aktualności i szukać w nich informacji o najbliższych terminach.",
+    "howToSignUpSubtitle": "Jak zgłosić chęć uczestnictwa w obozie?",
+    "howToSignUpPartOne": "Potrzebne jest nam tylko wypełnione",
+    "howToSignUpRegistration": "zgłoszenie",
+    "howToSignUpPartTwo": "lub bezpośredni mail z zapisem dziecka na adres",
+    "basketballAcademyCampsLikeSubtitle": "Jak wyglądają obozy Akademii Koszykówki?",
+    "basketballAcademyCampsLikePartOne": "Nasze wyjazdy to przede wszystkim mnóstwo treningów, ale także wiele różnorodnych atrakcji, które zawsze dopasowujemy do aktualnej pory roku i miejsca pobytu. Dzięki temu każdy obóz jest jeszcze ciekawszy i daje szansę na wypoczynek w sportowym stylu dla dzieci w każdym wieku.",
+    "summerCampsSubtitle": "Obozy letnie",
+    "summerCampsPartOne": "Baza obozów Karnice (koło Rewala, województwo zachodniopomorskie).",
+    "winterCampsSubtitle": "Obozy zimowe",
+    "winterCampsPartOne": "Baza obozów Dobrzyń nad Wisłą (koło Włocławka województwo kujawsko-pomorski)",
+    "advantagesCampsFood": "Pełne i smaczne wyżywienie",
+    "advantagesCampsSportsHall": "Hala sportowa do dyspozycji uczetników",
+    "advantagesCampsSportsCadre": "Całodobowa opieka wykwalfikowanej kadry opiekunów i trenerów",
+    "advantagesCampsSportsPramedic": "Nadzór ratownika medycznego",
+    "advantagesCampsSportsBasketballTraining": "Treningi koszykarskie",
+    "advantagesCampsSportsAdditionalAttractions": "Dodatkowe atrakcje ( wyjazdy nad morze czy basen, gry i zabawy integracyjne, wycieczki i zwiedzanie lokalnych atrakcji )"
+  },
+  "recreationalDayCamps": {
+    "siteTitle": "Półkolonie rekreacyjne",
+    "siteSubtitle": "Informacje",
+    "partOne": "W Akademii przygotowaliśmy specjalną ofertę 5-cio dniowych półkolonii rekreacyjnych odbywających się podczas wakacji i ferii ziomwych.",
+    "partTwo": "W półkoloniach mogą brac udział dzieci spoza klubu nie będące naszymi zawodnikami. Wypoczynek dedykowany dzieciom w wieku od 6 do 16 roku życia.",
+    "dayCampBaseSubtitle": "Baza półkolonii",
+    "dayCampBasePartOne": "Szkoła Podstawowa nr 58 Grunwald",
+    "dayCampBasePartTwo": "Szkoła Podstawowa nr 48 Naramowice",
+    "dayCampBaseInformation": "Prosimy śledzić aktualności na naszej stronie i facebooku - o organizowanych półkoloniach i ich terminach zawsze informujemy z odpowiednim wyprzedzeniem.",
+    "dayCampInformationAppearsSubtitle": "A co zrobić, kiedy pojawi się już informacja półkolonii?",
+    "dayCampInformationAppearsPartOne": "To proste, wystarczy tylko zarezerwować miejsce dla dziecka wypełniając ",
+    "dayCampInformationAppearsRegistration": "zgłoszenie",
+    "dayCampInformationAppearsPartTwo": " lub pisząc do nas bezpośrednio na adres",
+    "dayCampInformationAppearsPartThree": "Wszystkie nasze półkolonie obfitują w moc atrakcji dla dzieci w różnym wieku. Rodzaje zajęć, aktywności i form spędzania czasu są dostosowane do sezonu letniego lub zimowego, a nasza oferta jest ciągle udoskonalana. Dzięki temu każda półkolonia jest jeszcze ciekawsza od poprzednich. Nasi trenerzy i animatorzy mają mnóstwo pomysłów na świetną zabawę w sportowym stylu, więc żadne dziecko nie będzie się nudzić.",
+    "careQualifiedTutors": "Pełna opieka wykwalfikowanych wychowawców i anmiatorów podczas trwania półkolonii",
+    "twoCourseDinner": "Wyżywienie w postaci dwudaniowego obiadu",
+    "additionalAttractions": "Wyjścia na atrakcje takie jak: basen, kino, kręgle, park tampolin, park wspinaczkowy, łyżwy, różnego rodzaju warsztaty tematyczne",
+    "sportsAndArtisticActivities": "Zajęcia sportowe i artystyczne",
+    "outdoorActivities": "Zajęcia na świeżym powietrzu dostosowane do odpowiedniej pory roku",
+    "contestsAndGames": "Konkursy i gry z nagordami",
+    "lowPrice": "Niska cena 490 zł"
+  },
+  "resignations": {
+    "siteTitle": "Rezygnacje",
+    "siteSubtitle": "Rezygnacja",
+    "partOne": "Rezygnacja z członkostwa w naszym klubie jest bardzo prosta i szybka.",
+    "partTwo": "Wystarczy napisać do nas mail na adres: ",
+    "partThree": " a w nim zawrzeć:",
+    "partTwoPointOne": "Imię i nazwisko zawodnika, który chce zrezygnować z członkostwa w klubie",
+    "partTwoPointTwo": "Lokalizacje do której uczęszczał zawodnik wraz z oznaczeniem grupy wiekowej",
+    "partTwoPointThree": "Krótki opis przyczyny rezygnacji",
+    "resignationsInformation": "Pamiętaj tylko, że zgodnie z regulaminem klubu najlepiej złożyć rezygnację <strong>przed rozpoczęciem się nowego miesiąca</strong>, by nie doszło do naliczenia składki członkowskiej w kolejnym okresie.",
+    "suspensionSubtitle": "Zawieszenie",
+    "suspensionPartOne": "Dodatkowo klub umożliwia zawodnikom opcję <strong>zawieszenia</strong> treningów w momencie dłuższej nieobecności na zajęciach.",
+    "suspensionPartTwo": "Oznacza to, że w momencie dłuższej choroby, kontuzji lub innego powodu absencji zawodnika, ten może skorzystać z zawieszenia treningów nie tracąc przy tym członkostwa w klubie ani miejsca w grupie treningowej.",
+    "suspensionPartThree": "Zawieszenie należy zgłosić mailowo na adres: ",
+    "suspensionPartFour": " w wiadomości należy zawrzeć:",
+    "suspensionPartThreePointOne": "Imię i nazwisko zawodnika zawieszającego członkostwo",
+    "suspensionPartThreePointTwo": "Lokalizację oraz grupę treningową",
+    "suspensionPartThreePointThree": "Przyczynę zawieszenia treningów",
+    "suspensionPartThreePointFour": "Okres w jakim zawieszenie ma być uznane <strong>(nie dłuższe niż 3 miesiące)</strong>",
+    "suspensionInformation": "Pamiętaj tylko, że zgodnie z regulaminem zawsze opłacamy trwający miesiąc. Jeśli zawieszenie będzie zgłoszone w trakcie trwającego miesiąca - opłata za ten miesiąc musi być uiszczona na konto klubu, dopiero kolejne miesiące oznaczone jako <strong>“zawieszenie”</strong> nie będą naliczane."
   },
   "faq": {
     "title": "Najczęśćiej zadawane pytania (F.A.Q)",
