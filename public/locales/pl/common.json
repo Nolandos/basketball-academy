@@ -296,7 +296,9 @@
       "clubRegulations": "Regulamin Klubu",
       "individualTrainingContract": "Umowa treningi indywidualne",
       "participantCard": "Karta uczestnika obóz/półkolinia",
-      "campInformationCard": "Karta informacyjna obóz"
+      "campInformationCard": "Karta informacyjna obóz",
+      "campRegulations": "Regulamin obozu",
+      "dayCampRegulations": "Regulamin półkolonie"
     }
   },
   "trainingInStudio": {
@@ -360,6 +362,27 @@
     "outdoorActivities": "Zajęcia na świeżym powietrzu dostosowane do odpowiedniej pory roku",
     "contestsAndGames": "Konkursy i gry z nagordami",
     "lowPrice": "Niska cena 490 zł"
+  },
+  "resignations": {
+    "siteTitle": "Rezygnacje",
+    "siteSubtitle": "Rezygnacja",
+    "partOne": "Rezygnacja z członkostwa w naszym klubie jest bardzo prosta i szybka.",
+    "partTwo": "Wystarczy napisać do nas mail na adres: ",
+    "partThree": " a w nim zawrzeć:",
+    "partTwoPointOne": "Imię i nazwisko zawodnika, który chce zrezygnować z członkostwa w klubie",
+    "partTwoPointTwo": "Lokalizacje do której uczęszczał zawodnik wraz z oznaczeniem grupy wiekowej",
+    "partTwoPointThree": "Krótki opis przyczyny rezygnacji",
+    "resignationsInformation": "Pamiętaj tylko, że zgodnie z regulaminem klubu najlepiej złożyć rezygnację <strong>przed rozpoczęciem się nowego miesiąca</strong>, by nie doszło do naliczenia składki członkowskiej w kolejnym okresie.",
+    "suspensionSubtitle": "Zawieszenie",
+    "suspensionPartOne": "Dodatkowo klub umożliwia zawodnikom opcję <strong>zawieszenia</strong> treningów w momencie dłuższej nieobecności na zajęciach.",
+    "suspensionPartTwo": "Oznacza to, że w momencie dłuższej choroby, kontuzji lub innego powodu absencji zawodnika, ten może skorzystać z zawieszenia treningów nie tracąc przy tym członkostwa w klubie ani miejsca w grupie treningowej.",
+    "suspensionPartThree": "Zawieszenie należy zgłosić mailowo na adres: ",
+    "suspensionPartFour": " w wiadomości należy zawrzeć:",
+    "suspensionPartThreePointOne": "Imię i nazwisko zawodnika zawieszającego członkostwo",
+    "suspensionPartThreePointTwo": "Lokalizację oraz grupę treningową",
+    "suspensionPartThreePointThree": "Przyczynę zawieszenia treningów",
+    "suspensionPartThreePointFour": "Okres w jakim zawieszenie ma być uznane <strong>(nie dłuższe niż 3 miesiące)</strong>",
+    "suspensionInformation": "Pamiętaj tylko, że zgodnie z regulaminem zawsze opłacamy trwający miesiąc. Jeśli zawieszenie będzie zgłoszone w trakcie trwającego miesiąca - opłata za ten miesiąc musi być uiszczona na konto klubu, dopiero kolejne miesiące oznaczone jako <strong>“zawieszenie”</strong> nie będą naliczane."
   },
   "faq": {
     "title": "Najczęśćiej zadawane pytania (F.A.Q)",
