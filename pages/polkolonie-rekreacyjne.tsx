@@ -9,19 +9,17 @@ import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 import {
     AttachMoney,
     Attractions,
-    ChevronRight,
     DinnerDining,
     DirectionsRun,
     EmojiEvents,
-    Home,
-    MedicalInformation,
     People,
-    Restaurant,
-    Sports,
     WbSunny,
 } from '@mui/icons-material';
-import Button from '@/components/common/Buttons/Button/Button';
 import {useRouter} from 'next/router';
+import Image from 'next/image';
+import informationImg from '@/assets/pages/recreational-day-camps/recreational-day-camps-information.jpg';
+import baseImg from '@/assets/pages/recreational-day-camps/recreational-day-camps-information-base.jpg';
+import appearsImg from '@/assets/pages/recreational-day-camps/recreational-day-camps-appears.jpg';
 
 const RecreationalDayCamps = () => {
     const {t} = useTranslation();
@@ -99,59 +97,90 @@ const RecreationalDayCamps = () => {
                         </CommonStyled.Title>
                     </CommonStyled.HeroContent>
                 </CommonStyled.HeroImage>
-                <Styled.Container>
-                    <Styled.RecreationalDayCampsList>
+
+                <Styled.Wrapper even>
+                    <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>
                             {t('common:recreationalDayCamps.siteSubtitle')}
                         </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:recreationalDayCamps.partOne')}</p>
-                        </li>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:recreationalDayCamps.partTwo')}</p>
-                        </li>
-                    </Styled.RecreationalDayCampsList>
-                    <Styled.RecreationalDayCampsList>
+                        <Styled.SectionContent>
+                            <Styled.SectionDescription even>
+                                <Trans
+                                    i18nKey={t(
+                                        'common:recreationalDayCamps.partOne'
+                                    )}
+                                />
+                            </Styled.SectionDescription>
+                            <Styled.ContentImage>
+                                <Image
+                                    src={informationImg}
+                                    alt={t(
+                                        'common:recreationalDayCamps.siteSubtitle'
+                                    )}
+                                />
+                            </Styled.ContentImage>
+                        </Styled.SectionContent>
+                    </CommonStyled.Container>
+                </Styled.Wrapper>
+                <Styled.Wrapper even={false}>
+                    <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>
                             {t(
                                 'common:recreationalDayCamps.dayCampBaseSubtitle'
                             )}
                         </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>
+                        <Styled.SectionContent>
+                            <Styled.ContentImage>
+                                <Image
+                                    src={baseImg}
+                                    alt={t(
+                                        'common:recreationalDayCamps.dayCampBaseSubtitle'
+                                    )}
+                                />
+                            </Styled.ContentImage>
+                            <Styled.SectionDescription even={false}>
+                                <Styled.RecreationalDayCampsList>
+                                    <li>
+                                        <Styled.RecreationalDayCampsPlaceIcon />
+                                        <p>
+                                            {t(
+                                                'common:recreationalDayCamps.dayCampBasePartOne'
+                                            )}
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <Styled.RecreationalDayCampsPlaceIcon />
+                                        <p>
+                                            {t(
+                                                'common:recreationalDayCamps.dayCampBasePartTwo'
+                                            )}
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <Styled.RecreationalDayCampsPlaceIcon />
+                                        <p>
+                                            {t(
+                                                'common:recreationalDayCamps.dayCampBasePartThree'
+                                            )}
+                                        </p>
+                                    </li>
+                                </Styled.RecreationalDayCampsList>
                                 {t(
-                                    'common:recreationalDayCamps.dayCampBasePartOne'
+                                    'common:recreationalDayCamps.dayCampBaseInformation'
                                 )}
-                            </p>
-                        </li>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>
-                                {t(
-                                    'common:recreationalDayCamps.dayCampBasePartTwo'
-                                )}
-                            </p>
-                        </li>
-                    </Styled.RecreationalDayCampsList>
-                    <Styled.InfoBoxWrapper>
-                        <Styled.InfoBox>
-                            {t(
-                                'common:recreationalDayCamps.dayCampBaseInformation'
-                            )}
-                        </Styled.InfoBox>
-                    </Styled.InfoBoxWrapper>
-                    <Styled.RecreationalDayCampsList>
+                            </Styled.SectionDescription>
+                        </Styled.SectionContent>
+                    </CommonStyled.Container>
+                </Styled.Wrapper>
+                <Styled.Wrapper even>
+                    <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>
                             {t(
                                 'common:recreationalDayCamps.dayCampInformationAppearsSubtitle'
                             )}
                         </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>
+                        <Styled.SectionContent>
+                            <Styled.SectionDescription even>
                                 {t(
                                     'common:recreationalDayCamps.dayCampInformationAppearsPartOne'
                                 )}{' '}
@@ -170,27 +199,23 @@ const RecreationalDayCamps = () => {
                                 >
                                     {emailBiuro}
                                 </Styled.RecreationalDayCampsLink>
-                            </p>
-                        </li>
-                    </Styled.RecreationalDayCampsList>
-                    <Styled.InfoBoxWrapper>
-                        <Styled.InfoBox>
-                            {t(
-                                'common:recreationalDayCamps.dayCampInformationAppearsPartThree'
-                            )}
-                        </Styled.InfoBox>
-                    </Styled.InfoBoxWrapper>
-                    <Styled.ButtonsWrapper>
-                        <Button
-                            onClickHandler={() =>
-                                router.push(galleryPhotosAllUrl)
-                            }
-                            iconEnd={<ChevronRight />}
-                        >
-                            {t('common:goToGallery')}
-                        </Button>
-                    </Styled.ButtonsWrapper>
-                </Styled.Container>
+                                .
+                                <br />
+                                {t(
+                                    'common:recreationalDayCamps.dayCampInformationAppearsPartThree'
+                                )}
+                            </Styled.SectionDescription>
+                            <Styled.ContentImage>
+                                <Image
+                                    src={appearsImg}
+                                    alt={t(
+                                        'common:recreationalDayCamps.dayCampInformationAppearsSubtitle'
+                                    )}
+                                />
+                            </Styled.ContentImage>
+                        </Styled.SectionContent>
+                    </CommonStyled.Container>
+                </Styled.Wrapper>
                 <Styled.CampBenefitsWrapper>
                     <CommonStyled.Container>
                         <Styled.CampBenefitsContent>
