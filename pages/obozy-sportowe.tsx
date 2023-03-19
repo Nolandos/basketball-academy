@@ -136,17 +136,13 @@ const Camps = () => {
                                 <Styled.CampsLink href={`mailto:${emailBiuro}`}>
                                     {emailBiuro}
                                 </Styled.CampsLink>
-                                <br />
-                                <Trans
-                                    i18nKey={t(
-                                        'common:camps.howToSignUpPartFour'
-                                    )}
-                                />
                                 <Styled.InfoBoxWrapper>
                                     <Styled.InfoBox even small>
-                                        {t(
-                                            'common:recreationalDayCamps.dayCampInformationAppearsPartThree'
-                                        )}
+                                        <Trans
+                                            i18nKey={t(
+                                                'common:camps.howToSignUpPartFour'
+                                            )}
+                                        />
                                     </Styled.InfoBox>
                                 </Styled.InfoBoxWrapper>
                             </Styled.SectionDescription>
@@ -235,96 +231,6 @@ const Camps = () => {
                         {t('common:documentsBtn')}
                     </Button>
                 </Styled.ButtonsWrapper>
-                {/* <Styled.Container> */}
-                {/*    <Styled.CampsList> */}
-                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
-                {/*            {t('common:camps.siteSubtitle')} */}
-                {/*        </CommonStyled.SectionSubtitle> */}
-                {/*        <li> */}
-                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
-                {/*            <p>{t('common:camps.partOne')}</p> */}
-                {/*        </li> */}
-                {/*        <li> */}
-                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
-                {/*            <p>{t('common:camps.partTwo')}</p> */}
-                {/*        </li> */}
-                {/*    </Styled.CampsList> */}
-                {/*    <Styled.CampsList> */}
-                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
-                {/*            {t('common:camps.howToSignUpSubtitle')} */}
-                {/*        </CommonStyled.SectionSubtitle> */}
-                {/*        <li> */}
-                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
-                {/*            <p> */}
-                {/*                {t('common:camps.howToSignUpPartOne')}{' '} */}
-                {/*                <Styled.CampsLink href={applicationForm}> */}
-                {/*                    {t('common:camps.howToSignUpRegistration')} */}
-                {/*                </Styled.CampsLink>{' '} */}
-                {/*                {t('common:camps.howToSignUpPartTwo')}{' '} */}
-                {/*                <Styled.CampsLink href={`mailto:${emailBiuro}`}> */}
-                {/*                    {emailBiuro} */}
-                {/*                </Styled.CampsLink> */}
-                {/*            </p> */}
-                {/*        </li> */}
-                {/*    </Styled.CampsList> */}
-                {/*    <Styled.CampsList> */}
-                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
-                {/*            {t( */}
-                {/*                'common:camps.basketballAcademyCampsLikeSubtitle' */}
-                {/*            )} */}
-                {/*        </CommonStyled.SectionSubtitle> */}
-                {/*        <li> */}
-                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
-                {/*            <p> */}
-                {/*                <Trans */}
-                {/*                    i18nKey={t( */}
-                {/*                        'common:camps.basketballAcademyCampsLikePartOne' */}
-                {/*                    )} */}
-                {/*                /> */}
-                {/*            </p> */}
-                {/*        </li> */}
-                {/*    </Styled.CampsList> */}
-                {/*    <Styled.CampsList> */}
-                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
-                {/*            {t('common:camps.summerCampsSubtitle')} */}
-                {/*        </CommonStyled.SectionSubtitle> */}
-                {/*        <li> */}
-                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
-                {/*            <p> */}
-                {/*                <Trans */}
-                {/*                    i18nKey={t( */}
-                {/*                        'common:camps.summerCampsPartOne' */}
-                {/*                    )} */}
-                {/*                /> */}
-                {/*            </p> */}
-                {/*        </li> */}
-                {/*    </Styled.CampsList> */}
-                {/*    <Styled.CampsList> */}
-                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
-                {/*            {t('common:camps.winterCampsSubtitle')} */}
-                {/*        </CommonStyled.SectionSubtitle> */}
-                {/*        <li> */}
-                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
-                {/*            <p> */}
-                {/*                <Trans */}
-                {/*                    i18nKey={t( */}
-                {/*                        'common:camps.winterCampsPartOne' */}
-                {/*                    )} */}
-                {/*                /> */}
-                {/*            </p> */}
-                {/*        </li> */}
-                {/*    </Styled.CampsList> */}
-                {/*    <Styled.ButtonsWrapper> */}
-                {/*        <Button */}
-                {/*            onClickHandler={() => */}
-                {/*                router.push(galleryPhotosAllUrl) */}
-                {/*            } */}
-                {/*            iconEnd={<ChevronRight />} */}
-                {/*        > */}
-                {/*            {t('common:goToGallery')} */}
-                {/*        </Button> */}
-                {/*    </Styled.ButtonsWrapper> */}
-                {/* </Styled.Container> */}
                 <Styled.CampBenefitsWrapper>
                     <CommonStyled.Container>
                         <Styled.CampBenefitsContent>
