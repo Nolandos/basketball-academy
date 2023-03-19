@@ -5,9 +5,31 @@ import * as Styled from '@/styles/styledPage/TrainingInStudio.styles';
 import * as CommonStyled from '@/styles/commonStyles';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
+import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
+import Image, {StaticImageData} from 'next/image';
+import photoOne from '@/assets/partnersBar/logo-studio-treningu.png';
 
 const TrainingInStudio = () => {
     const {t} = useTranslation();
+
+    const photosArray: Array<{id: string; url: StaticImageData}> = [
+        {
+            id: 'photoOne',
+            url: photoOne,
+        },
+        {
+            id: 'photoTwo',
+            url: photoOne,
+        },
+        {
+            id: 'photoThree',
+            url: photoOne,
+        },
+        {
+            id: 'photoFour',
+            url: photoOne,
+        },
+    ];
 
     return (
         <div>
@@ -61,6 +83,13 @@ const TrainingInStudio = () => {
                                 <Styled.LeagueWorkoutsArrowForward />
                                 <p>{t('common:trainingInStudio.partSix')}</p>
                             </li>
+                        </Styled.TrainingInStudioList>
+                        <Styled.TrainingInStudioList>
+                            <CommonStyled.SectionSubtitle belt={false}>
+                                {t(
+                                    'common:trainingInStudio.informationSubtitle'
+                                )}
+                            </CommonStyled.SectionSubtitle>
                             <li>
                                 <Styled.LeagueWorkoutsArrowForward />
                                 <p>{t('common:trainingInStudio.partSeven')}</p>
@@ -78,6 +107,16 @@ const TrainingInStudio = () => {
                                 <p>{t('common:trainingInStudio.partTen')}</p>
                             </li>
                         </Styled.TrainingInStudioList>
+                        <Styled.ButtonWrapper>
+                            <SignUpButton />
+                        </Styled.ButtonWrapper>
+                        <Styled.Photos>
+                            {photosArray.map(({id, url}) => (
+                                <Styled.ContentImage key={id}>
+                                    <Image src={url} alt={id} />
+                                </Styled.ContentImage>
+                            ))}
+                        </Styled.Photos>
                     </CommonStyled.Container>
                 </Styled.TrainingInStudioContainer>
             </Styled.TrainingInStudioPage>

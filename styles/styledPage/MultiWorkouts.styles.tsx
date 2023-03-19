@@ -5,7 +5,9 @@ import device from '@/styles/breakpoints';
 
 const {touch} = device;
 
-export const MultiWorkouts = styled(CommonStyled.Page)``;
+export const MultiWorkouts = styled(CommonStyled.Page)`
+    padding-bottom: 45px;
+`;
 
 export const Container = styled(CommonStyled.Container)`
     @media ${touch} {
@@ -70,4 +72,25 @@ export const ContentImage = styled.div`
     @media ${touch} {
         width: 100%;
     }
+`;
+
+export const InfoBox = styled.div`
+    width: 100%;
+    max-width: 780px;
+    border: ${({theme}) =>
+        `2px solid ${theme.palette.basketballAcademy.primaryGreen}`};
+    padding: 25px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.0625rem;
+`;
+
+export const InfoBoxWrapper = styled.div`
+    width: 100%;
+    margin: 45px 0 0 0;
+    display: flex;
+    justify-content: center;
 `;

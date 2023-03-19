@@ -67,27 +67,6 @@ export const Section = styled.section`
     flex-direction: column;
     align-items: center;
 `;
-
-export const Title = styled.h1`
-    font-size: ${({theme}) => theme.typography.fontSize * 3.125}px;
-    color: ${({theme}) => theme.palette.basketballAcademy.white};
-    font-weight: 700;
-    position: relative;
-    text-align: center;
-
-    &:after {
-        content: '';
-        position: absolute;
-        width: 40px;
-        height: 5px;
-        background-color: ${({theme}) =>
-            theme.palette.basketballAcademy.primaryGreen};
-        bottom: -15px;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-`;
-
 export const SectionSubtitle = styled.h2<{belt: boolean}>`
     font-size: ${({theme}) => theme.typography.fontSize * 2.25}px;
     font-weight: 700;
@@ -109,6 +88,25 @@ export const SectionSubtitle = styled.h2<{belt: boolean}>`
 
     @media ${touch} {
         text-align: center;
+    }
+`;
+export const Title = styled.h1`
+    font-size: ${({theme}) => theme.typography.fontSize * 3.125}px;
+    color: ${({theme}) => theme.palette.basketballAcademy.white};
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: ${({theme}) =>
+            theme.palette.basketballAcademy.primaryGreen};
+        bottom: -15px;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 `;
 

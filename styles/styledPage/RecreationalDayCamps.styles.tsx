@@ -178,13 +178,17 @@ export const SectionDescription = styled.div<{even: boolean}>`
     }
 `;
 
-export const InfoBox = styled.div`
+export const InfoBox = styled.div<{even: boolean; small: boolean}>`
     width: 100%;
     max-width: 780px;
-    border: ${({theme}) =>
-        `2px solid ${theme.palette.basketballAcademy.primaryGreen}`};
-    padding: 25px;
-    min-height: 150px;
+    border: ${({theme, even}) =>
+        `2px solid ${
+            even
+                ? theme.palette.basketballAcademy.primaryGreen
+                : theme.palette.basketballAcademy.white
+        }`};
+    padding: ${({small}) => (small ? '15px' : '25px')};
+    min-height: ${({small}) => (small ? '75px' : '150px')};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,6 +250,10 @@ export const ButtonsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    > button {
+        margin: 0 10px;
+    }
 `;
 export const LeagueWorkoutsArrowForward = styled(ArrowForward)`
     margin-right: 5px;

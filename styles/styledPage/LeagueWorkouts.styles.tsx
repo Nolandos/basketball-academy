@@ -70,4 +70,8 @@ export const ButtonWrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin: 35px 0;
+
+    > button {
+        margin: 0 15px;
+    }
 `;
