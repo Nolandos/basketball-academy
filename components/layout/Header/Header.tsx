@@ -48,6 +48,7 @@ const Header: FC = () => {
         openingOfANewLocation,
         shop: {all: shopUrl},
         contact,
+        applicationForm,
         leagueWorkouts,
         trainingInStudio,
         trainingOnline,
@@ -129,7 +130,7 @@ const Header: FC = () => {
                 {
                     id: 'applicationForm',
                     title: t<string>('links.applicationForm'),
-                    url: aboutUs,
+                    url: applicationForm,
                 },
                 {
                     id: 'frequentlyAskedQuestions',

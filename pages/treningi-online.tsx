@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useTranslation} from 'next-i18next';
+import {Trans, useTranslation} from 'next-i18next';
 import Head from 'next/head';
 import * as Styled from '@/styles/styledPage/TrainingOnline.styles';
 import * as CommonStyled from '@/styles/commonStyles';
@@ -55,21 +55,32 @@ const TrainingOnline = () => {
                             {loading ? (
                                 <Loader />
                             ) : (
-                                youtubeFilmsList.map(
+                                [...youtubeFilmsList].map(
                                     ({id, attributes: {title, url}}) => (
                                         <Styled.YoutubeFilmsListItem>
-                                            <h2>{title}</h2>
                                             <Styled.YoutubeFilmsListItemIframe
                                                 key={id}
                                                 title={title}
                                                 allowFullScreen
                                                 src={url}
                                             />
+                                            <h2>{title}</h2>
                                         </Styled.YoutubeFilmsListItem>
                                     )
                                 )
                             )}
                         </Styled.YoutubeFilmsList>
+                        <Styled.InfoBoxWrapper>
+                            <Styled.InfoBox>
+                                <p>
+                                    <Trans
+                                        i18nKey={t(
+                                            'common:trainingOnline.informations'
+                                        )}
+                                    />
+                                </p>
+                            </Styled.InfoBox>
+                        </Styled.InfoBoxWrapper>
                     </CommonStyled.Container>
                 </Styled.TrainingOnlineContainer>
             </Styled.TrainingOnlinePage>

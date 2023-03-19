@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import device from '@/styles/breakpoints';
 
-const {mobile, mobileSmall} = device;
-
+const {touch, touchSec, mobileMicro, mobileSmall, mobile} = device;
 export const TrainingOnlinePage = styled.div`
     max-width: 100vw;
     min-height: 100vh;
@@ -12,6 +11,30 @@ export const TrainingOnlinePage = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+`;
+
+export const InfoBoxWrapper = styled.div`
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+`;
+
+export const InfoBox = styled.div`
+    width: 100%;
+    max-width: 780px;
+    border: ${({theme}) =>
+        `2px solid ${theme.palette.basketballAcademy.primaryGreen}`};
+    padding: 25px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.0625rem;
+    @media ${touch} {
+        margin: 0 15px;
+    }
 `;
 
 export const TrainingOnlineContainer = styled.div`
@@ -30,33 +53,40 @@ export const YoutubeFilmsList = styled.ul`
     min-height: 250px;
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 15px;
 `;
 
 export const YoutubeFilmsListItem = styled.div`
-    width: 100%;
-    height: 750px;
-    margin: 35px 0;
+    width: calc(25% - 30px);
+    height: 320px;
+    margin: 0 15px;
 
     > h2 {
         width: 100%;
-        text-align: center;
+        font-weight: 600;
+        text-align: left;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    @media ${touchSec} {
+        width: 37%;
+    }
+
+    @media ${touch} {
+        width: 50%;
     }
 
     @media ${mobile} {
-        margin: 15px 0;
-        height: 550px;
-    }
-    @media ${mobileSmall} {
-        height: 350px;
+        width: 100%;
     }
 `;
 
 export const YoutubeFilmsListItemIframe = styled.iframe`
     width: 100%;
-    height: 100%;
+    height: 200px;
     max-height: 650px;
 
     @media ${mobile} {

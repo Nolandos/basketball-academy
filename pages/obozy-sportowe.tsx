@@ -17,6 +17,11 @@ import {
 } from '@mui/icons-material';
 import Button from '@/components/common/Buttons/Button/Button';
 import {useRouter} from 'next/router';
+import Image from 'next/image';
+import informationImg from '@/assets/pages/camps/camps-informations.jpg';
+import howToSignUp from '@/assets/pages/camps/camps-how-to-sign-up.jpg';
+import basketballAcademyCampsLikeImg from '@/assets/pages/camps/camps-basketball-academy-camps-like.jpg';
+import summerAndWinterCampsImg from '@/assets/pages/camps/camps-summer-and-winter-base.jpg';
 
 const Camps = () => {
     const {t} = useTranslation();
@@ -26,6 +31,7 @@ const Camps = () => {
         gallery: {
             photos: {all: galleryPhotosAllUrl},
         },
+        documents,
     } = urls;
     const router = useRouter();
 
@@ -89,96 +95,236 @@ const Camps = () => {
                         </CommonStyled.Title>
                     </CommonStyled.HeroContent>
                 </CommonStyled.HeroImage>
-                <Styled.Container>
-                    <Styled.CampsList>
+                <Styled.Wrapper even={false}>
+                    <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>
                             {t('common:camps.siteSubtitle')}
                         </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:camps.partOne')}</p>
-                        </li>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>{t('common:camps.partTwo')}</p>
-                        </li>
-                    </Styled.CampsList>
-                    <Styled.CampsList>
+                        <Styled.SectionContent>
+                            <Styled.ContentImage>
+                                <Image
+                                    src={informationImg}
+                                    alt={t('common:camps.siteSubtitle')}
+                                />
+                            </Styled.ContentImage>
+                            <Styled.SectionDescription even={false}>
+                                <Trans i18nKey={t('common:camps.partOne')} />
+                            </Styled.SectionDescription>
+                        </Styled.SectionContent>
+                    </CommonStyled.Container>
+                </Styled.Wrapper>
+                <Styled.Wrapper even>
+                    <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>
                             {t('common:camps.howToSignUpSubtitle')}
                         </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>
-                                {t('common:camps.howToSignUpPartOne')}{' '}
+                        <Styled.SectionContent>
+                            <Styled.SectionDescription even>
+                                <Trans
+                                    i18nKey={t(
+                                        'common:camps.howToSignUpPartOne'
+                                    )}
+                                />{' '}
                                 <Styled.CampsLink href={applicationForm}>
                                     {t('common:camps.howToSignUpRegistration')}
                                 </Styled.CampsLink>{' '}
-                                {t('common:camps.howToSignUpPartTwo')}{' '}
+                                <Trans
+                                    i18nKey={t(
+                                        'common:camps.howToSignUpPartTwo'
+                                    )}
+                                />{' '}
                                 <Styled.CampsLink href={`mailto:${emailBiuro}`}>
                                     {emailBiuro}
                                 </Styled.CampsLink>
-                            </p>
-                        </li>
-                    </Styled.CampsList>
-                    <Styled.CampsList>
+                                <br />
+                                <Trans
+                                    i18nKey={t(
+                                        'common:camps.howToSignUpPartFour'
+                                    )}
+                                />
+                                <Styled.InfoBoxWrapper>
+                                    <Styled.InfoBox even small>
+                                        {t(
+                                            'common:recreationalDayCamps.dayCampInformationAppearsPartThree'
+                                        )}
+                                    </Styled.InfoBox>
+                                </Styled.InfoBoxWrapper>
+                            </Styled.SectionDescription>
+                            <Styled.ContentImage>
+                                <Image
+                                    src={howToSignUp}
+                                    alt={t('common:camps.howToSignUpSubtitle')}
+                                />
+                            </Styled.ContentImage>
+                        </Styled.SectionContent>
+                    </CommonStyled.Container>
+                </Styled.Wrapper>
+                <Styled.Wrapper even={false}>
+                    <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>
                             {t(
                                 'common:camps.basketballAcademyCampsLikeSubtitle'
                             )}
                         </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>
+                        <Styled.SectionContent>
+                            <Styled.ContentImage>
+                                <Image
+                                    src={basketballAcademyCampsLikeImg}
+                                    alt={t(
+                                        'common:camps.basketballAcademyCampsLikeSubtitle'
+                                    )}
+                                />
+                            </Styled.ContentImage>
+                            <Styled.SectionDescription even={false}>
                                 <Trans
                                     i18nKey={t(
                                         'common:camps.basketballAcademyCampsLikePartOne'
                                     )}
                                 />
-                            </p>
-                        </li>
-                    </Styled.CampsList>
-                    <Styled.CampsList>
+                            </Styled.SectionDescription>
+                        </Styled.SectionContent>
+                    </CommonStyled.Container>
+                </Styled.Wrapper>
+                <Styled.Wrapper even>
+                    <CommonStyled.Container>
                         <CommonStyled.SectionSubtitle belt={false}>
-                            {t('common:camps.summerCampsSubtitle')}
+                            {t('common:camps.summerAndWinterCampsSubtitle')}
                         </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>
-                                <Trans
-                                    i18nKey={t(
-                                        'common:camps.summerCampsPartOne'
-                                    )}
+                        <Styled.SectionContent>
+                            <Styled.SectionDescription even>
+                                <Styled.CampsList>
+                                    <li>
+                                        <Styled.CampsPlaceIcon />
+                                        <p>
+                                            {t(
+                                                'common:camps.winterCampsPartOne'
+                                            )}
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <Styled.CampsPlaceIcon />
+                                        <p>
+                                            {t(
+                                                'common:camps.summerCampsPartOne'
+                                            )}
+                                        </p>
+                                    </li>
+                                </Styled.CampsList>
+                            </Styled.SectionDescription>
+                            <Styled.ContentImage>
+                                <Image
+                                    src={summerAndWinterCampsImg}
+                                    alt={t('common:camps.howToSignUpSubtitle')}
                                 />
-                            </p>
-                        </li>
-                    </Styled.CampsList>
-                    <Styled.CampsList>
-                        <CommonStyled.SectionSubtitle belt={false}>
-                            {t('common:camps.winterCampsSubtitle')}
-                        </CommonStyled.SectionSubtitle>
-                        <li>
-                            <Styled.LeagueWorkoutsArrowForward />
-                            <p>
-                                <Trans
-                                    i18nKey={t(
-                                        'common:camps.winterCampsPartOne'
-                                    )}
-                                />
-                            </p>
-                        </li>
-                    </Styled.CampsList>
-                    <Styled.ButtonsWrapper>
-                        <Button
-                            onClickHandler={() =>
-                                router.push(galleryPhotosAllUrl)
-                            }
-                            iconEnd={<ChevronRight />}
-                        >
-                            {t('common:goToGallery')}
-                        </Button>
-                    </Styled.ButtonsWrapper>
-                </Styled.Container>
+                            </Styled.ContentImage>
+                        </Styled.SectionContent>
+                    </CommonStyled.Container>
+                </Styled.Wrapper>
+                <Styled.ButtonsWrapper>
+                    <Button
+                        onClickHandler={() => router.push(galleryPhotosAllUrl)}
+                        iconEnd={<ChevronRight />}
+                    >
+                        {t('common:galleryBtn')}
+                    </Button>
+                    <Button
+                        onClickHandler={() => router.push(documents)}
+                        iconEnd={<ChevronRight />}
+                        variant="OUTLINED"
+                    >
+                        {t('common:documentsBtn')}
+                    </Button>
+                </Styled.ButtonsWrapper>
+                {/* <Styled.Container> */}
+                {/*    <Styled.CampsList> */}
+                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
+                {/*            {t('common:camps.siteSubtitle')} */}
+                {/*        </CommonStyled.SectionSubtitle> */}
+                {/*        <li> */}
+                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
+                {/*            <p>{t('common:camps.partOne')}</p> */}
+                {/*        </li> */}
+                {/*        <li> */}
+                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
+                {/*            <p>{t('common:camps.partTwo')}</p> */}
+                {/*        </li> */}
+                {/*    </Styled.CampsList> */}
+                {/*    <Styled.CampsList> */}
+                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
+                {/*            {t('common:camps.howToSignUpSubtitle')} */}
+                {/*        </CommonStyled.SectionSubtitle> */}
+                {/*        <li> */}
+                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
+                {/*            <p> */}
+                {/*                {t('common:camps.howToSignUpPartOne')}{' '} */}
+                {/*                <Styled.CampsLink href={applicationForm}> */}
+                {/*                    {t('common:camps.howToSignUpRegistration')} */}
+                {/*                </Styled.CampsLink>{' '} */}
+                {/*                {t('common:camps.howToSignUpPartTwo')}{' '} */}
+                {/*                <Styled.CampsLink href={`mailto:${emailBiuro}`}> */}
+                {/*                    {emailBiuro} */}
+                {/*                </Styled.CampsLink> */}
+                {/*            </p> */}
+                {/*        </li> */}
+                {/*    </Styled.CampsList> */}
+                {/*    <Styled.CampsList> */}
+                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
+                {/*            {t( */}
+                {/*                'common:camps.basketballAcademyCampsLikeSubtitle' */}
+                {/*            )} */}
+                {/*        </CommonStyled.SectionSubtitle> */}
+                {/*        <li> */}
+                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
+                {/*            <p> */}
+                {/*                <Trans */}
+                {/*                    i18nKey={t( */}
+                {/*                        'common:camps.basketballAcademyCampsLikePartOne' */}
+                {/*                    )} */}
+                {/*                /> */}
+                {/*            </p> */}
+                {/*        </li> */}
+                {/*    </Styled.CampsList> */}
+                {/*    <Styled.CampsList> */}
+                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
+                {/*            {t('common:camps.summerCampsSubtitle')} */}
+                {/*        </CommonStyled.SectionSubtitle> */}
+                {/*        <li> */}
+                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
+                {/*            <p> */}
+                {/*                <Trans */}
+                {/*                    i18nKey={t( */}
+                {/*                        'common:camps.summerCampsPartOne' */}
+                {/*                    )} */}
+                {/*                /> */}
+                {/*            </p> */}
+                {/*        </li> */}
+                {/*    </Styled.CampsList> */}
+                {/*    <Styled.CampsList> */}
+                {/*        <CommonStyled.SectionSubtitle belt={false}> */}
+                {/*            {t('common:camps.winterCampsSubtitle')} */}
+                {/*        </CommonStyled.SectionSubtitle> */}
+                {/*        <li> */}
+                {/*            <Styled.LeagueWorkoutsArrowForward /> */}
+                {/*            <p> */}
+                {/*                <Trans */}
+                {/*                    i18nKey={t( */}
+                {/*                        'common:camps.winterCampsPartOne' */}
+                {/*                    )} */}
+                {/*                /> */}
+                {/*            </p> */}
+                {/*        </li> */}
+                {/*    </Styled.CampsList> */}
+                {/*    <Styled.ButtonsWrapper> */}
+                {/*        <Button */}
+                {/*            onClickHandler={() => */}
+                {/*                router.push(galleryPhotosAllUrl) */}
+                {/*            } */}
+                {/*            iconEnd={<ChevronRight />} */}
+                {/*        > */}
+                {/*            {t('common:goToGallery')} */}
+                {/*        </Button> */}
+                {/*    </Styled.ButtonsWrapper> */}
+                {/* </Styled.Container> */}
                 <Styled.CampBenefitsWrapper>
                     <CommonStyled.Container>
                         <Styled.CampBenefitsContent>

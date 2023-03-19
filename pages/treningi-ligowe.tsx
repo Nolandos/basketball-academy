@@ -4,13 +4,14 @@ import React from 'react';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import * as Styled from '@/styles/styledPage/LeagueWorkouts.styles';
 import * as CommonStyled from '@/styles/commonStyles';
-import photoOne from '@/assets/pages/league-workouts/league-workouts-photo-one.jpg';
-import photoTwo from '@/assets/pages/league-workouts/league-workouts-photo-two.jpg';
-import photoThree from '@/assets/pages/league-workouts/league-workouts-photo-three.jpg';
-import photoFour from '@/assets/pages/league-workouts/league-workouts-photo-four.jpg';
+import photoOne from '@/assets/pages/league-drafts/league-drafts-photo-one.jpg';
+import photoTwo from '@/assets/pages/league-drafts/league-drafts-photo-two.jpg';
+import photoThree from '@/assets/pages/league-drafts/league-drafts-photo-three.jpg';
+import photoFour from '@/assets/pages/league-drafts/league-drafts-photo-four.jpg';
 import Image, {StaticImageData} from 'next/image';
 import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
 import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
+import TimetableButton from '@/components/common/Buttons/TimetableButton/TimetableButton';
 
 const LeagueWorkouts = () => {
     const {t} = useTranslation();
@@ -89,6 +90,7 @@ const LeagueWorkouts = () => {
                     </Styled.LeagueWorkoutsContainer>
                     <Styled.ButtonWrapper>
                         <SignUpButton />
+                        <TimetableButton />
                     </Styled.ButtonWrapper>
 
                     <Styled.Photos>

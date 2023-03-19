@@ -9,6 +9,7 @@ import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 import {
     AttachMoney,
     Attractions,
+    ChevronRight,
     DinnerDining,
     DirectionsRun,
     EmojiEvents,
@@ -20,12 +21,14 @@ import Image from 'next/image';
 import informationImg from '@/assets/pages/recreational-day-camps/recreational-day-camps-information.jpg';
 import baseImg from '@/assets/pages/recreational-day-camps/recreational-day-camps-information-base.jpg';
 import appearsImg from '@/assets/pages/recreational-day-camps/recreational-day-camps-appears.jpg';
+import Button from '@/components/common/Buttons/Button/Button';
 
 const RecreationalDayCamps = () => {
     const {t} = useTranslation();
     const {
         emailBiuro,
         applicationForm,
+        documents,
         gallery: {
             photos: {all: galleryPhotosAllUrl},
         },
@@ -57,17 +60,12 @@ const RecreationalDayCamps = () => {
             subtitle: t(
                 'common:recreationalDayCamps.sportsAndArtisticActivities'
             ),
-            icon: <DirectionsRun />,
+            icon: <EmojiEvents />,
         },
         {
             id: 'outdoorActivities ',
             subtitle: t('common:recreationalDayCamps.outdoorActivities'),
             icon: <WbSunny />,
-        },
-        {
-            id: 'contestsAndGames',
-            subtitle: t('common:recreationalDayCamps.contestsAndGames'),
-            icon: <EmojiEvents />,
         },
         {
             id: 'lowPrice',
@@ -165,9 +163,13 @@ const RecreationalDayCamps = () => {
                                         </p>
                                     </li>
                                 </Styled.RecreationalDayCampsList>
-                                {t(
-                                    'common:recreationalDayCamps.dayCampBaseInformation'
-                                )}
+                                <Styled.InfoBoxWrapper>
+                                    <Styled.InfoBox even={false} small={false}>
+                                        {t(
+                                            'common:recreationalDayCamps.dayCampBaseInformation'
+                                        )}{' '}
+                                    </Styled.InfoBox>
+                                </Styled.InfoBoxWrapper>
                             </Styled.SectionDescription>
                         </Styled.SectionContent>
                     </CommonStyled.Container>
@@ -200,10 +202,13 @@ const RecreationalDayCamps = () => {
                                     {emailBiuro}
                                 </Styled.RecreationalDayCampsLink>
                                 .
-                                <br />
-                                {t(
-                                    'common:recreationalDayCamps.dayCampInformationAppearsPartThree'
-                                )}
+                                <Styled.InfoBoxWrapper>
+                                    <Styled.InfoBox even small>
+                                        {t(
+                                            'common:recreationalDayCamps.dayCampInformationAppearsPartThree'
+                                        )}
+                                    </Styled.InfoBox>
+                                </Styled.InfoBoxWrapper>
                             </Styled.SectionDescription>
                             <Styled.ContentImage>
                                 <Image
@@ -216,6 +221,21 @@ const RecreationalDayCamps = () => {
                         </Styled.SectionContent>
                     </CommonStyled.Container>
                 </Styled.Wrapper>
+                <Styled.ButtonsWrapper>
+                    <Button
+                        onClickHandler={() => router.push(galleryPhotosAllUrl)}
+                        iconEnd={<ChevronRight />}
+                    >
+                        {t('common:galleryBtn')}
+                    </Button>
+                    <Button
+                        onClickHandler={() => router.push(documents)}
+                        iconEnd={<ChevronRight />}
+                        variant="OUTLINED"
+                    >
+                        {t('common:documentsBtn')}
+                    </Button>
+                </Styled.ButtonsWrapper>
                 <Styled.CampBenefitsWrapper>
                     <CommonStyled.Container>
                         <Styled.CampBenefitsContent>

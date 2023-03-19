@@ -56,6 +56,17 @@ const MultiWorkouts = () => {
                     </CommonStyled.HeroContent>
                 </CommonStyled.HeroImage>
                 <Styled.Container>
+                    <Styled.InfoBoxWrapper>
+                        <Styled.InfoBox>
+                            <p>
+                                <Trans
+                                    i18nKey={t(
+                                        'common:multiWorkouts.mainInformation'
+                                    )}
+                                />
+                            </p>
+                        </Styled.InfoBox>
+                    </Styled.InfoBoxWrapper>
                     <Styled.MultiWorkoutsList>
                         <CommonStyled.SectionSubtitle belt={false}>
                             {t('common:multiWorkouts.siteSubtitle')}

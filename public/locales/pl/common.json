@@ -2,6 +2,8 @@
   "title": "Akademia koszykówki",
   "more": "Więcej",
   "goToGallery": "Przejdź do galerii",
+  "galleryBtn": "Galeria",
+  "documentsBtn": "Dokumenty",
   "alerts": {
     "sendEmailOk": "Wysłano wiadomość!",
     "sendEmailError": "Nie wysłano wiadomości",
@@ -10,7 +12,7 @@
   "aboutUs": {
     "siteTitle": "O nas",
     "partOne": "Akademia Koszykówki została założona w maju 2014 roku przez zawodniczkę i jednocześnie trenerkę Paulinę Babij.",
-    "partTwo": "Najważniejszym bodźcem do założenia szkółki koszykarskiej była pasja do sportu oraz chęć przekazywania dzieciom i młodzieży pozytywnych wrażeń, a także doświadczeń związanych z rozwojem fizycznym, jak i grą w koszykówkę...",
+    "partTwo": "Najważniejszym bodźcem do założenia klubu koszykarskiego była pasja do sportu oraz chęć przekazywania dzieciom i młodzieży pozytywnych wrażeń, a także doświadczeń związanych z rozwojem fizycznym, jak i grą w koszykówkę...",
     "mainTargetSubtitle": "Główne cele",
     "mainTargetPartOne": "Najważniejszym bodźcem do założenia szkółki koszykarskiej była pasja do sportu oraz chęć przekazywania dzieciom i młodzieży pozytywnych wrażeń, a także doświadczeń związanych z rozwojem fizycznym, jak i grą w koszykówkę.\n W Akademii prowadzimy zajęcia w dostosowanych grupach wiekowych od najmłodszych przedszkolaków aż po treningi seniorskie i treningi indywidualne.",
     "mainTargetPartTwo": "W Akademii prowadzimy zajęcia w dostosowanych grupach wiekowych od najmłodszych przedszkolaków aż po treningi seniorskie.",
@@ -142,6 +144,7 @@
   },
   "multiWorkouts": {
     "siteTitle": "Treningi 3x3",
+    "mainInformation": "Czym jest gra 3x3 – odmiana klasycznej formy koszykówki wywodzącej się ze streetballu w której  zamiast 5x5 graczy bierze udział 3x3 zawodników. Szybsza i dynamiczniejsza forma gry rozgrywana  na jednej połowie boiska do koszykówki.",
     "siteSubtitle": "Informacje",
     "partOne": "Treningi 3x3 to treningi halowe i zewnętrzne dla zawodników od 13 roku życia interesujących się nową formą gry w koszykówkę. Treningi trwają od 60 do 120 minut.",
     "partTwo": "W okresie letnim zapewmniamy możliwość udania się wraz z zespołem na turnieje dedykowane grze ulicznej i 3x3.",
@@ -303,7 +306,7 @@
   },
   "trainingInStudio": {
     "siteTitle": "Trening w studio",
-    "siteSubtitle": "Informacje",
+    "siteSubtitle": "Czym jest trening w studio?",
     "partOne": "Treningi mają na celu nauczenia młodych sportowców i dzieci prawidłowych wzorców ruchowych, odpowiedniej koordynacji ruchowej oraz umiejętności motorycznych, które stanowią fundament w późniejszych latach treningów.",
     "partTwo": "Podczas treningu pracujemy m.in. nad takimi umiejętnościami jak: szybkość reakcji, zdolność orientacji przestrzennej, zdolność równowagi, zdolność dostosowywania się, łączenia i rozdzielania ruchów, różnicowania, rytmizacji, koordynacji oko-ręka i oko-noga, a także siły i mocy oraz szybkości, zwinności i skoczności.",
     "partThree": "Program treningowy ustalany jest indywidualnie do Uczestnika zajęć biorąc pod uwagę takie czynniki jak: wiek, płeć, stan zdrowia, cel, poziom sportowy, doświadczenie, kondycję fizyczną, wyniki testów diagnostycznych przeprowadzonych na pierwszym spotkaniu oraz docelową dyscyplinę, w tym przypadku koszykówkę.",
@@ -311,29 +314,31 @@
     "whyYouShouldCareSubtitle": "Dlaczego warto zadbać o przygotowanie motoryczne dziecka już od najmłodszych lat?",
     "partFive": "Trening motoryczny to podstawa u dzieci i młodych zawodników. Odpowiednie przygotowanie ogólnorozwojowe rozpoczęte przed okresem pokwitania w dużej mierze przyczynia się do zmniejszenia ryzyka kontuzji, docelowego poziomu sportowego, możliwości rozwoju oraz realizacji treningu specjalistycznego w późniejszych latach kariery (okres pokwitania u dziewczynek występuje między 10-12 r.ż., a u chłopców między 12-14 r.ż.).",
     "partSix": "Zaniedbanie tego okresu może powodować wyrobienie nieprawidłowych nawyków i wzorców ruchowych oraz niezbudowanie odpowiedniej bazy do treningów specjalistycznych w uprawianej dyscyplinie w dalszym etapie kariery zawodnika (po okresie pokwitania), co może skutkować wystąpieniem większego ryzyka kontuzji, mniejszymi i/lub wolniejszymi postępami w rozwoju umiejętności oraz słabszymi wynikami sportowymi.",
+    "informationSubtitle": "Informacje",
     "partSeven": "Treningi prowadzić będzie Kinga Demczur – trener personalny, trener przygotowania motorycznego młodych sportowców, trener koszykówki, była zawodniczka koszykówki z 18-letnim doświadczeniem.",
     "partEight": "Koszt treningu w studiu 160zł / za każdy trening.",
     "partNine": "Umowa na treningi indywidualne jest podpisywana na okres co najmniej 3 miesięcy.",
     "partTen": "Adres DTZ Studio Treningu:  ul. Cieszkowskiego 13, 62-020 Swarzędz"
   },
   "trainingOnline": {
-    "siteTitle": "Treningi Online"
+    "siteTitle": "Treningi Online",
+    "informations": "Chcesz otrzymać od nas więcej materiałów filmowych z treningami,  które pomogą ci poprawić swoją koszykarską technikę i ogólną sprawność fizyczną? Napisz do nas i  dowiedz się więcej! Za pośrednictwem zgłoszenia i dodatkowej opłaty wyślemy ci dodatkowe niepublikowane nigdzie indziej filmy szkoleniowe dotyczące przygotowania motorycznego, koordynacji  ruchowej czy techniki koszykarskiej.  "
   },
   "camps": {
     "siteTitle": "Obozy sportowe",
     "siteSubtitle": "Informacje",
-    "partOne": "W Akademii przygotowaliśmy specjalną ofertę wyjazdów na obozy sportowo-rekreacyjne oraz obozy ligowe w okresie wakacyjnym i ziomwym",
-    "partTwo": "O planowanych obozach informujemy za pośrednictwem naszej strony, a także facebooka - wystarczy śledzić nasze aktualności i szukać w nich informacji o najbliższych terminach.",
+    "partOne": "W Akademii przygotowaliśmy specjalną ofertę wyjazdów na obozy sportowo-rekreacyjne oraz obozy ligowe w okresie wakacyjnym i zimowym.\n O planowanych obozach informujemy za pośrednictwem naszej strony, a także facebooka - wystarczy śledzić nasze aktualności i szukać w nich informacji o najbliższych terminach.",
     "howToSignUpSubtitle": "Jak zgłosić chęć uczestnictwa w obozie?",
     "howToSignUpPartOne": "Potrzebne jest nam tylko wypełnione",
     "howToSignUpRegistration": "zgłoszenie",
     "howToSignUpPartTwo": "lub bezpośredni mail z zapisem dziecka na adres",
+    "howToSignUpPartThree": "Po otrzymaniu informacji zwrotnej potwierdzającej rezerwację miejsca otrzymasz wszystkie niezbędne informacje oraz dokumentację.",
+    "howToSignUpPartFour": "Pamiętaj ilość miejsc na każdy obóz jest ograniczona.",
     "basketballAcademyCampsLikeSubtitle": "Jak wyglądają obozy Akademii Koszykówki?",
-    "basketballAcademyCampsLikePartOne": "Nasze wyjazdy to przede wszystkim mnóstwo treningów, ale także wiele różnorodnych atrakcji, które zawsze dopasowujemy do aktualnej pory roku i miejsca pobytu. Dzięki temu każdy obóz jest jeszcze ciekawszy i daje szansę na wypoczynek w sportowym stylu dla dzieci w każdym wieku.",
-    "summerCampsSubtitle": "Obozy letnie",
-    "summerCampsPartOne": "Baza obozów Karnice (koło Rewala, województwo zachodniopomorskie).",
-    "winterCampsSubtitle": "Obozy zimowe",
-    "winterCampsPartOne": "Baza obozów Dobrzyń nad Wisłą (koło Włocławka województwo kujawsko-pomorski)",
+    "basketballAcademyCampsLikePartOne": "Nasze wyjazdy to przede wszystkim mnóstwo treningów, ale także wiele różnorodnych atrakcji, które zawsze dopasowujemy do aktualnej pory roku i miejsca pobytu. \n Dzięki temu każdy obóz jest jeszcze ciekawszy i daje szansę na wypoczynek w sportowym stylu dla dzieci w każdym wieku i na każdym poziomie treningowym. \n Każdy nasz obóz jest zgłoszony do bazy wypoczynku gov.",
+    "summerAndWinterCampsSubtitle": "Nasza baza wypoczynkowa",
+    "winterCampsPartOne": "ZSP Karnice (koło Rewala, województwo Zachodniopomorskie).",
+    "summerCampsPartOne": "DCSiT Dobrzyń nad Wisłą (koło Włocławka województwo Kujawsko-Pomorskie)",
     "advantagesCampsFood": "Pełne i smaczne wyżywienie",
     "advantagesCampsSportsHall": "Hala sportowa do dyspozycji uczetników",
     "advantagesCampsSportsCadre": "Całodobowa opieka wykwalfikowanej kadry opiekunów i trenerów",
@@ -344,22 +349,22 @@
   "recreationalDayCamps": {
     "siteTitle": "Półkolonie rekreacyjne",
     "siteSubtitle": "Informacje",
-    "partOne": "W Akademii przygotowaliśmy specjalną ofertę 5-cio dniowych półkolonii rekreacyjnych odbywających się podczas wakacji i ferii ziomwych.\n W półkoloniach mogą brac udział dzieci spoza klubu nie będące naszymi zawodnikami. Wypoczynek dedykowany dzieciom w wieku od 6 do 16 roku życia.",
+    "partOne": "W Akademii przygotowaliśmy specjalną ofertę 5-cio dniowych półkolonii rekreacyjnych\nodbywających się podczas wakacji i ferii zimowych. ( od poniedziałku do piątku ).\n Na półkolonii organizujemy zajęcia ogólnosportowe i rekreacyjne, plastyczne i ogólnorozwijające różnego typu zainteresowania. Podczas trwania półkolonii organizujemy także wyjścia na różnego typu atrakcje zewnętrzne na terenie Poznania, które zawarte są już w cenie.\n W półkoloniach mogą brać udział dzieci spoza klubu nie będące naszymi zawodnikami oraz takie, które nigdy nie trenowały żadnej dyscypliny sportowej.\n Wypoczynek dedykowany jest dzieciom w wieku od 6 do 16 roku życia.",
     "partTwo": "W półkoloniach mogą brac udział dzieci spoza klubu nie będące naszymi zawodnikami. Wypoczynek dedykowany dzieciom w wieku od 6 do 16 roku życia.",
     "dayCampBaseSubtitle": "Baza półkolonii",
     "dayCampBasePartOne": "Szkoła Podstawowa nr 58 Grunwald",
     "dayCampBasePartTwo": "Szkoła Podstawowa nr 48 Naramowice",
     "dayCampBasePartThree": "Szkoła Podstawowa nr 34 Piątkowo",
     "dayCampBaseInformation": "Prosimy śledzić aktualności na naszej stronie i facebooku - o organizowanych półkoloniach i ich terminach zawsze informujemy z odpowiednim wyprzedzeniem.",
-    "dayCampInformationAppearsSubtitle": "A co zrobić, kiedy pojawi się już informacja półkolonii?",
+    "dayCampInformationAppearsSubtitle": "Co zrobić, kiedy pojawi się już informacja półkolonii?",
     "dayCampInformationAppearsPartOne": "To proste, wystarczy tylko zarezerwować miejsce dla dziecka wypełniając ",
     "dayCampInformationAppearsRegistration": "zgłoszenie",
     "dayCampInformationAppearsPartTwo": " lub pisząc do nas bezpośrednio na adres",
-    "dayCampInformationAppearsPartThree": "Wszystkie nasze półkolonie obfitują w moc atrakcji dla dzieci w różnym wieku. Rodzaje zajęć, aktywności i form spędzania czasu są dostosowane do sezonu letniego lub zimowego, a nasza oferta jest ciągle udoskonalana. Dzięki temu każda półkolonia jest jeszcze ciekawsza od poprzednich. Nasi trenerzy i animatorzy mają mnóstwo pomysłów na świetną zabawę w sportowym stylu, więc żadne dziecko nie będzie się nudzić.",
+    "dayCampInformationAppearsPartThree": "Pamiętaj ilość miejsc w każdym turnusie jest ograniczona.",
     "careQualifiedTutors": "Pełna opieka wykwalfikowanych wychowawców i anmiatorów podczas trwania półkolonii",
     "twoCourseDinner": "Wyżywienie w postaci dwudaniowego obiadu",
     "additionalAttractions": "Wyjścia na atrakcje takie jak: basen, kino, kręgle, park tampolin, park wspinaczkowy, łyżwy, różnego rodzaju warsztaty tematyczne",
-    "sportsAndArtisticActivities": "Zajęcia sportowe i artystyczne",
+    "sportsAndArtisticActivities": "Zajęcia sportowe i artystyczne oraz konkursy i gry z nagrodami",
     "outdoorActivities": "Zajęcia na świeżym powietrzu dostosowane do odpowiedniej pory roku",
     "contestsAndGames": "Konkursy i gry z nagordami",
     "lowPrice": "Niska cena 490 zł"
@@ -384,6 +389,20 @@
     "suspensionPartThreePointThree": "Przyczynę zawieszenia treningów",
     "suspensionPartThreePointFour": "Okres w jakim zawieszenie ma być uznane <strong>(nie dłuższe niż 3 miesiące)</strong>",
     "suspensionInformation": "Pamiętaj tylko, że zgodnie z regulaminem zawsze opłacamy trwający miesiąc. Jeśli zawieszenie będzie zgłoszone w trakcie trwającego miesiąca - opłata za ten miesiąc musi być uiszczona na konto klubu, dopiero kolejne miesiące oznaczone jako <strong>“zawieszenie”</strong> nie będą naliczane."
+  },
+  "leagueDrafts": {
+    "siteTitle": "Nabory Ligowe",
+    "siteSubtitle": "Nabór na treningi lokalizacyjne",
+    "partOne": "Nabór w akademii do grup lokalizacyjnych prowadzimy w sposób ciągły, oznacza to, że na treningi grupowe w wybranej przez siebie lokalizacji możesz zapisać się w dowolnym momencie poprzez formularz zgłoszeniowy zamieszczony na naszej stronie internetowej.",
+    "partOneInformations": "Pamiętaj jednak, że grupy mają swoje ograniczenia w ilości zawodników na treningu. Po przekroczeniu 25 zawodników zapisanych do grupy – zapis nie będzie możliwy.",
+    "recruitmentToLeagueTeamsSubtitle": "Nabór do zespołów ligowych",
+    "recruitmentToLeagueTeamsPartOne": "Nabór do zespołów ligowych prowadzimy na 3 sposoby:",
+    "recruitmentToLeagueTeamsPartOnePointOne": "Testy sprawnościowe do lig, które organizujemy co sezon w okresie wrzesień - październik. Śledź komunikaty i aktualności w tym okresie by zapisać się na testy i sprawdzić swoje możliwości na hali z trenerami ligowymi.",
+    "recruitmentToLeagueTeamsPartOnePointTwo": "Podczas obozów zimowych i letnich, w których biorą udział trenerzy poszczególnych lig i doglądają dzieci oraz ich umiejętności na treningach podczas konkretnego obozu",
+    "recruitmentToLeagueTeamsPartOnePointThree": "Poprzez polecenie zawodnika przez trenera prowadzącego treningi w lokalizacji"
+  },
+  "applicationForms": {
+    "siteTitle": "Formularz zgłoszeniowy"
   },
   "faq": {
     "title": "Najczęśćiej zadawane pytania (F.A.Q)",
@@ -449,5 +468,16 @@
     "otherInfoMailSubtitle": "Chcesz zadać pytanie?",
     "otherInfoMailPartOne": "Jeśli nie znalazłeś odpowiedzi na swoje pytanie",
     "otherInfoMailPartTwo": "napisz do nas"
+  },
+  "newLocation": {
+    "siteTitle": "Otwarcie nowej lokalizacji",
+    "partOne": "Mieszkacie w miejscu, gdzie jeszcze nie ma naszych zajęć? Chcielibyście by Wasze dziecko rozpoczęło  przygodę z koszykówką i naszym klubem? Nic trudnego! Zorganizujcie min. 8 chętnych dzieci w  podobnym wieku, a my zajmiemy się resztą.",
+    "partTwo": "Poszukamy dla Was najbliższej dostępnej sali zorganizujemy dalszy nabór dzieci na zajęcia, przygotujemy materiały promocyjne i reklamę dobierzemy trenera Akademii i rozpoczniemy treningi dla Waszych dzieci.",
+    "partThree": "Jeśli jesteście zainteresowani nie zwlekajcie i już teraz zgłoście chęć utworzenia swojej grupy i  lokalizacji.",
+    "partFour": "Zgłoszenie zajmie Wam dosłownie chwilę, napisz do nas: ",
+    "iconographyPartOne": "Poszukamy dla Was najbliższej sali",
+    "iconographyPartTwo": "Zorganizujemy dalszy nabór na zajęcia",
+    "iconographyPartThree": "Przygotujemy materiały promocyjne",
+    "iconographyPartFour": "Rozpoczniemy zajęcia dla Waszych dzieci"
   }
 }
