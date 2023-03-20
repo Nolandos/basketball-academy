@@ -170,11 +170,45 @@ export const NewLocationStepsWrapper = styled.div`
 export const TextContainer = styled.div`
     width: 100%;
     display: flex;
-    font-size: 1.25rem;
+    flex-wrap: wrap;
+    font-size: 1rem;
     padding: 38px 15px;
 
+    > h2 {
+        width: 100%;
+        padding-left: 15px;
+        margin-bottom: 0;
+        @media ${touch} {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
     > p {
-        text-align: center;
+        width: 50%;
+        padding: 0 15px;
+
+        @media ${touch} {
+            text-align: center;
+            width: 100%;
+        }
+    }
+`;
+
+export const ContentImage = styled.div`
+    width: 50%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @media ${touch} {
+        width: 100%;
+    }
+
+    @media ${touch} {
+        width: 100%;
     }
 `;
 

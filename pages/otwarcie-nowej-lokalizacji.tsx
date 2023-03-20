@@ -19,7 +19,8 @@ import {
     PlayCircleOutline,
     WbSunny,
 } from '@mui/icons-material';
-import {NewLocationLink} from '@/styles/styledPage/NewLocation.styles';
+import newLocationInformationImg from '@/assets/pages/new-location/new-location-information.jpg';
+import Image from 'next/image';
 
 const NewLocation = () => {
     const {t} = useTranslation();
@@ -75,7 +76,16 @@ const NewLocation = () => {
                 </CommonStyled.HeroImage>
                 <Styled.Container>
                     <Styled.TextContainer>
+                        <CommonStyled.SectionSubtitle belt={false}>
+                            {t('common:newLocation.siteSubtitle')}
+                        </CommonStyled.SectionSubtitle>
                         <p>{t('common:newLocation.partOne')}</p>
+                        <Styled.ContentImage>
+                            <Image
+                                src={newLocationInformationImg}
+                                alt={t('common:newLocation.siteTitle')}
+                            />
+                        </Styled.ContentImage>
                     </Styled.TextContainer>
                 </Styled.Container>
                 <Styled.NewLocationStepsWrapper>
