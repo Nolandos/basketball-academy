@@ -151,7 +151,7 @@ const PhotosCollections: FC<PhotosProps> = ({
                                                     }
                                                 )}
                                             >
-                                                {title} ({getFormatDate(date)})
+                                                {title}
                                             </Link>
                                         </h2>
                                     </Styled.Content>
