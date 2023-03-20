@@ -101,6 +101,16 @@ const SingUpForm = () => {
             value: 'treningiIndywidualne',
         },
         {
+            id: 'treningiOnline',
+            label: t('forms.localizationsOptions.treningiOnline'),
+            value: 'treningiOnline',
+        },
+        {
+            id: 'treningWStudio',
+            label: t('forms.localizationsOptions.treningWStudio'),
+            value: 'treningWStudio',
+        },
+        {
             id: 'other',
             label: t('forms.localizationsOptions.other'),
             value: 'other',
