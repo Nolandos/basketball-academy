@@ -18,12 +18,18 @@ export type ModalProps = {
     children: ReactNode;
 };
 
-const Modal: FC<ModalProps> = ({open, toggleModalHandler, children}) => (
+const Modal: FC<ModalProps> = ({
+    open,
+    toggleModalHandler,
+    children,
+    ...props
+}) => (
     <Styled.Modal
         open={open}
         TransitionComponent={Transition}
         keepMounted
         onClose={() => toggleModalHandler(false)}
+        {...props}
     >
         {children}
     </Styled.Modal>

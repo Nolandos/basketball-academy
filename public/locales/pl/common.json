@@ -44,7 +44,7 @@
   },
   "and": "i",
   "signUp": "Zapisz się",
-  "timetable": "Grafik zajęć",
+  "timetableButton": "Grafik zajęć",
   "regulations": "Regulamin",
   "send": "Wyślij",
   "shopLink": "sklep",
@@ -530,5 +530,12 @@
     "contact4Title": "Klub Sportowy Akademia Koszykówki oddział Wronki",
     "contact4PartOne": "<strong>Mail: </strong>",
     "contact4PartTwo": "<strong>Tel.</strong> 605-222-613 lub 723-540-589"
+  },
+  "timetable": {
+    "siteTitle": "Lokalizacje i Grafik",
+    "moreInfoText": " Kliknij w interesujący Cię trening, aby zobaczyć szczegóły",
+    "newLocationSubtitle": "Nowa lokalizacja",
+    "newLocationContent": "Chcesz byśmy utworzyli nową lokalizację w twoim miejscu zamieszkania?",
+    "newLocationLink": "Kliknij tutaj"
   }
 }
