@@ -44,7 +44,7 @@ export default {
     siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',
     emailBiuro: 'biuro@akademiakoszykówki.poznan.pl',
     emailBabij: 'Babij@akademiakoszykowki.poznan.pl',
-    timetable: '/grafik-zajec',
+    timetable: '/lokalizacje-i-grafik',
 
     news: include('/aktualnosci', {
         base: '/aktualnosci',

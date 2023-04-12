@@ -91,6 +91,12 @@ export const fetchProducts = (page: string, pageSize: string) =>
         GET
     );
 
+export const fetchTimetable = () =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/timetables?sort=startDate:ASC,endDate:ASC&populate=*`,
+        GET
+    );
+
 export const fetchProductDetails = (slug: string) =>
     fetchData(
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/product-info/${slug}?populate=*`,

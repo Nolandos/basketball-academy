@@ -116,3 +116,6 @@ export const formatPrice = (price: number, currency: string) => {
 
     return `${partOne},${partTwo} ${currency}`;
 };
+
+export const formatTime = (date: string) =>
+    `${date.split(':')[0]}:${date.split(':')[1]}`;

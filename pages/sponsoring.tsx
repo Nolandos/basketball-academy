@@ -9,13 +9,7 @@ import * as Styled from '@/styles/styledPage/Sponsorship.styles';
 
 const Sponsorship = () => {
     const {t} = useTranslation();
-    const {
-        applicationForm,
-        emailBiuro,
-        trainingSchedule,
-        clubRegulations,
-        shop: {all: shopUrl},
-    } = urls;
+    const {emailBiuro} = urls;
     const sponsorshipItems: {
         id: string;
         header: string;

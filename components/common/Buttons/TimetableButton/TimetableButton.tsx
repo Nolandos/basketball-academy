@@ -16,7 +16,7 @@ const TimetableButton = () => {
             onClickHandler={() => router.push(timetable)}
             iconEnd={<ChevronRight />}
         >
-            {t('common:timetable')}
+            {t('common:timetableButton')}
         </Button>
     );
 };

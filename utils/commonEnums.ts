@@ -28,3 +28,14 @@ export enum AlertMessagesTypes {
     SUCCESS = 'success',
     ERROR = 'error',
 }
+
+// eslint-disable-next-line no-shadow
+export enum DaysOfWeekEnum {
+    MONDAY = 'Poniedziałek',
+    TUESDAY = 'Wtorek',
+    WEDNESDAY = 'Środa',
+    THURSDAY = 'Czwartek',
+    FRIDAY = 'Piątek',
+    SATURDAY = 'Sobota',
+    SUNDAY = 'Niedziela',
+}

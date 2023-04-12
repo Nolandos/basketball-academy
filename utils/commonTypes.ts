@@ -1,6 +1,7 @@
 import {StaticImageData} from 'next/image';
 import React, {ReactNode} from 'react';
 import {formatPrice} from '@/utils/utils';
+import {DaysOfWeekEnum} from '@/utils/commonEnums';
 
 export type sendSignUpEmailTypes = {
     name: string;
@@ -201,4 +202,19 @@ export type TableDataTypes = {
             | Array<{id: string; [key: string]: string | ReactNode}>
             | [];
     };
+};
+
+export type TimetableDataTypes = {
+    title: string;
+    ageGroup: string;
+    annotation: string;
+    coach: string;
+    createdAt: string;
+    dayOfTheWeek: DaysOfWeekEnum[] | [];
+    district: string;
+    endDate: string;
+    place: string;
+    publishedAt: string;
+    startDate: string;
+    updatedAt: string;
 };

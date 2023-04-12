@@ -52,6 +52,7 @@ const Header: FC = () => {
         leagueWorkouts,
         trainingInStudio,
         trainingOnline,
+        timetable,
     } = urls;
     const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -89,7 +90,7 @@ const Header: FC = () => {
                 {
                     id: 'localizations',
                     title: t<string>('links.localizations'),
-                    url: aboutUs,
+                    url: timetable,
                 },
                 {
                     id: 'groupWorkouts',
