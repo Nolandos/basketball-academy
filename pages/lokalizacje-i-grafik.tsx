@@ -103,6 +103,14 @@ const Timetable = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Styled.Timetable>
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?showDate=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=a.koszykowki%40gmail.com&amp;color=%23125A12&amp;ctz=Europe%2FWarsaw"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    scrolling="no"
+                />
+
                 {currentTraining?.trainingDetails && (
                     <TimetableDetailsModal
                         isOpen={currentTraining?.open}
@@ -140,14 +148,6 @@ const Timetable = () => {
                                             {daysOfWeekPl.map((day) => (
                                                 <Styled.DaysLabel key={day}>
                                                     {day}
-                                                    <span>{`(${
-                                                        hoursValues[0]
-                                                    } - ${
-                                                        hoursValues[
-                                                            hoursValues.length -
-                                                                1
-                                                        ]
-                                                    })`}</span>
                                                 </Styled.DaysLabel>
                                             ))}
                                         </Styled.DaysLabels>
