@@ -93,7 +93,7 @@ export const fetchProducts = (page: string, pageSize: string) =>
 
 export const fetchTimetable = () =>
     fetchData(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/timetables?sort=startDate:ASC,endDate:ASC&populate=*`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/timetables?pagination[page]=1&pagination[pageSize]=9999&sort=startDate:ASC,endDate:ASC&populate=*`,
         GET
     );
 
