@@ -53,6 +53,8 @@ const Header: FC = () => {
         trainingInStudio,
         trainingOnline,
         timetable,
+        news: {all: newsUrl},
+        recommendUs,
     } = urls;
     const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -80,6 +82,16 @@ const Header: FC = () => {
                     id: 'trainers',
                     title: t<string>('links.trainers'),
                     url: trainersBase,
+                },
+                {
+                    id: 'news',
+                    title: t<string>('links.news'),
+                    url: newsUrl,
+                },
+                {
+                    id: 'recommendUs',
+                    title: t<string>('links.recommendUs'),
+                    url: recommendUs,
                 },
             ],
         },

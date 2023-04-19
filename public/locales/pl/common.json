@@ -537,5 +537,8 @@
     "newLocationSubtitle": "Nowa lokalizacja",
     "newLocationContent": "Chcesz byśmy utworzyli nową lokalizację w twoim miejscu zamieszkania?",
     "newLocationLink": "Kliknij tutaj"
+  },
+  "recommendUs": {
+    "siteTitle": "Polecają nas"
   }
 }

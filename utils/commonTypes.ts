@@ -218,3 +218,14 @@ export type TimetableDataTypes = {
     startDate: string;
     updatedAt: string;
 };
+
+export type RecommendUsTypes = {
+    id: number;
+    attributes: {
+        name: string;
+        description: string;
+        photo: {
+            data: PhotoTypes;
+        };
+    };
+};

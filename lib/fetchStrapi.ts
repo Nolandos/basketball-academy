@@ -102,3 +102,9 @@ export const fetchProductDetails = (slug: string) =>
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/product-info/${slug}?populate=*`,
         GET
     );
+
+export const fetchRecommendUs = () =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/recommend-uses?populate=*`,
+        GET
+    );
