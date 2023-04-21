@@ -53,6 +53,7 @@ const Header: FC = () => {
         trainingInStudio,
         trainingOnline,
         timetable,
+        supportUs,
         news: {all: newsUrl},
         recommendUs,
     } = urls;
@@ -235,6 +236,11 @@ const Header: FC = () => {
                     id: 'openingOfANewLocation',
                     title: t<string>('links.openingOfANewLocation'),
                     url: openingOfANewLocation,
+                },
+                {
+                    id: 'supportUs',
+                    title: t<string>('links.supportUs'),
+                    url: supportUs,
                 },
                 // {
                 //     id: 'pyraPoznan',
