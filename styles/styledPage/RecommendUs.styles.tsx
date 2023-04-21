@@ -106,23 +106,14 @@ export const SectionContent = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: 500px;
+    height: auto;
     overflow: hidden;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 15%);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     top: -25px;
-    background-color: ${({
-        theme: {
-            palette: {
-                basketballAcademy: {black},
-            },
-        },
-    }) => black};
 
     @media ${touch} {
         top: 0;

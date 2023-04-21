@@ -108,3 +108,6 @@ export const fetchRecommendUs = () =>
         `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/recommend-uses?populate=*`,
         GET
     );
+
+export const fetchKRSNumber = () =>
+    fetchData(`${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/others`, GET);

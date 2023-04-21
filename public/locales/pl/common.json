@@ -540,5 +540,15 @@
   },
   "recommendUs": {
     "siteTitle": "Polecają nas"
+  },
+  "supportUs": {
+    "siteTitle": "Wspieraj nas",
+    "partOne": "Wesprzyj naszą działalność i przekaż klubowi ",
+    "partTwo": "KRS: ",
+    "partThree": "numer KRS zostanie podany wkrótce",
+    "partFour": "(z obowiązkowym dopiskiem: Akademia Koszykówki Poznań).",
+    "partFive": "Pamiętaj możesz także wesprzeć nasz klub dokonując darowizny na konto klubu:",
+    "partSix": "Dzięki twojemu wsparciu jesteśmy w stanie ciągle rozwijać nowe młode talenty!",
+    "partSeven": "Dziękujemy!"
   }
 }

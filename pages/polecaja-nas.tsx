@@ -66,7 +66,7 @@ const RecommendUs: NextPage<RecommendUsProps> = ({recommendUs}) => {
                                             <Styled.ImageWrapper>
                                                 <Image
                                                     height={300}
-                                                    width={300}
+                                                    width={500}
                                                     src={
                                                         data
                                                             ? `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${data?.attributes.url}`

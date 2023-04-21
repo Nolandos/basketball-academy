@@ -45,6 +45,7 @@ export default {
     emailBiuro: 'biuro@akademiakoszykówki.poznan.pl',
     emailBabij: 'Babij@akademiakoszykowki.poznan.pl',
     timetable: '/lokalizacje-i-grafik',
+    supportUs: '/wspieraj-nas',
 
     news: include('/aktualnosci', {
         base: '/aktualnosci',
