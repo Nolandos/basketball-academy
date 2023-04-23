@@ -17,7 +17,7 @@ type SupportUsProps = {
 };
 const SupportUs: NextPage<SupportUsProps> = ({KRSNumber}) => {
     const {t} = useTranslation();
-    console.log('KRSNumber', KRSNumber);
+
     const {bankAccountNumber} = constants;
     return (
         <div>

@@ -46,6 +46,7 @@ export default {
     emailBabij: 'Babij@akademiakoszykowki.poznan.pl',
     timetable: '/lokalizacje-i-grafik',
     supportUs: '/wspieraj-nas',
+    offerForSchoolsAndKindergartens: 'oferta-dla-szkol-i-przedszkoli',
 
     news: include('/aktualnosci', {
         base: '/aktualnosci',

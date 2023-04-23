@@ -19,8 +19,7 @@ type RecommendUsProps = {
 };
 const RecommendUs: NextPage<RecommendUsProps> = ({recommendUs}) => {
     const {t} = useTranslation();
-    const {emailBiuro} = urls;
-    console.log('RECOMMEND', recommendUs);
+
     return (
         <div>
             <Head>
