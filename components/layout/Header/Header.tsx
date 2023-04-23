@@ -56,6 +56,7 @@ const Header: FC = () => {
         supportUs,
         news: {all: newsUrl},
         recommendUs,
+        offerForSchoolsAndKindergartens,
     } = urls;
     const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -241,6 +242,11 @@ const Header: FC = () => {
                     id: 'supportUs',
                     title: t<string>('links.supportUs'),
                     url: supportUs,
+                },
+                {
+                    id: 'offerForSchoolsAndKindergartens',
+                    title: t<string>('links.offerForSchoolsAndKindergartens'),
+                    url: offerForSchoolsAndKindergartens,
                 },
                 // {
                 //     id: 'pyraPoznan',
