@@ -217,11 +217,11 @@ const Header: FC = () => {
                     title: t<string>('links.photos'),
                     url: photos.all,
                 },
-                // {
-                //     id: 'movies',
-                //     title: t<string>('links.movies'),
-                //     url: movies,
-                // },
+                {
+                    id: 'movies',
+                    title: t<string>('links.movies'),
+                    url: movies,
+                },
             ],
         },
         {

@@ -522,6 +522,7 @@
     "contact1Title": "Klub Sportowy Akademia Koszykówki Poznań",
     "contact1PartOne": "<strong>NIP:</strong> 7822570000",
     "contact1PartTwo": "<strong>REGON:</strong> 302674207",
+    "contact1PartThree": "<strong>Nr konta:</strong> 64 1050 1520 1000 0090 3033 1269",
     "contact2Title": "Biuro",
     "contact2PartOne": "<strong>Mail:</strong> ",
     "contact3Title": "Koordynator grup młodzieżowych",
@@ -566,6 +567,10 @@
     "whatDoesTheSchoolGainPartSix": "Bezpłatne zajęcia pokazowe i trenerzy do dyspozycji podczas świąt, festynów i obchodów szkoły",
     "whatDoesTheSchoolGainInfoBox": "Chcesz zorganizować cykliczne zajęcia koszykarskie lub pokaz sportowy dla swoich podopiecznych? Napisz do nas: ",
     "wideStaffSubtitle": "Szeroka kadra",
-    "wideStaffPartOne": "Dodatkowo, jeśli brakuje w twojej placówce wykwalifikowanej kadry i chętnych osób do  prowadzenia zajęć sportowych czy zajęć wychowania fizycznego, skontaktuj się z nami. Dysponujemy  szeroką kadrą trenerów z wykształceniem pedagogicznym i sportowym oraz szerokim  doświadczeniem w pracy z dziećmi i młodzieżą oraz z różnymi dyscyplinami sportu."
+    "wideStaffPartOne": "Dodatkowo, jeśli brakuje w twojej placówce wykwalifikowanej kadry i chętnych osób do  prowadzenia zajęć sportowych czy zajęć wychowania fizycznego, skontaktuj się z nami. Dysponujemy  szeroką kadrą trenerów z wykształceniem pedagogicznym i sportowym oraz szerokim  doświadczeniem w pracy z dziećmi i młodzieżą oraz z różnymi dyscyplinami sportu.",
+    "contactSubtitle": "Skontaktuj się z nami"
+  },
+  "movies": {
+    "siteTitle": "Filmy"
   }
 }

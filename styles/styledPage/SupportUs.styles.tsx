@@ -5,6 +5,7 @@ import device from '@/styles/breakpoints';
 const {touch} = device;
 
 export const SupportUs = styled(CommonStyled.Page)`
+    padding-bottom: 35px;
     @media ${touch} {
         padding-bottom: 35px;
     }
