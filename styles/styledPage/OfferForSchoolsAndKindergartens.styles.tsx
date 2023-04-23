@@ -14,6 +14,7 @@ export const OfferForSchoolsAndKindergartensPage = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-bottom: 35px;
 
     @media ${touch} {
         h1 {
@@ -242,4 +243,36 @@ export const InfoBoxWrapper = styled.div`
     margin: 25px 0;
     display: flex;
     justify-content: center;
+`;
+
+export const IndividualWorkoutsList = styled.ul`
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+
+    > li {
+        display: flex;
+
+        > svg {
+            margin-top: 16px;
+        }
+
+        ul {
+            padding-left: 0;
+
+            > p {
+                font-weight: 700;
+                margin-top: 14px;
+                font-size: 1.25rem;
+            }
+
+            li {
+                margin: 10px 0 10px 40px;
+                font-size: 1.0625rem;
+            }
+        }
+    }
 `;

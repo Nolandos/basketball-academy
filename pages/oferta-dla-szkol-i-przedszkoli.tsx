@@ -11,6 +11,7 @@ import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 import * as Styled from '@/styles/styledPage/OfferForSchoolsAndKindergartens.styles';
 
 import urls from '@/utils/urls';
+import {OfferForSchoolsAndKindergartensLink} from '@/styles/styledPage/OfferForSchoolsAndKindergartens.styles';
 
 const OfferForSchoolsAndKindergartens = () => {
     const {t} = useTranslation();
@@ -188,6 +189,50 @@ const OfferForSchoolsAndKindergartens = () => {
                         </Styled.SectionContent>
                     </CommonStyled.Container>
                 </Styled.Wrapper>
+                <CommonStyled.Container>
+                    <Styled.IndividualWorkoutsList>
+                        <CommonStyled.SectionSubtitle belt={false}>
+                            {t(
+                                'common:offerForSchoolsAndKindergartens.contactSubtitle'
+                            )}
+                        </CommonStyled.SectionSubtitle>
+                        <li>
+                            <Styled.LeagueWorkoutsArrowForward />
+
+                            <p>
+                                <Trans
+                                    i18nKey={t(
+                                        'common:individualWorkouts.localizationsAndTermsListItemOne'
+                                    )}
+                                />
+                            </p>
+                        </li>
+                        <li>
+                            <Styled.LeagueWorkoutsArrowForward />
+                            <p>
+                                {t(
+                                    'common:individualWorkouts.localizationsAndTermsListItemTwo'
+                                )}{' '}
+                                <Styled.OfferForSchoolsAndKindergartensLink
+                                    href={`mailto:${emailBiuro}`}
+                                >
+                                    {emailBiuro}
+                                </Styled.OfferForSchoolsAndKindergartensLink>
+                            </p>
+                        </li>
+                        <li>
+                            <Styled.LeagueWorkoutsArrowForward />
+                            <p>
+                                {t(
+                                    'common:individualWorkouts.localizationsAndTermsListItemThree'
+                                )}{' '}
+                                <Styled.OfferForSchoolsAndKindergartensLink href="/formularz-kontaktowy">
+                                    {t('common:contactForm')}
+                                </Styled.OfferForSchoolsAndKindergartensLink>
+                            </p>
+                        </li>
+                    </Styled.IndividualWorkoutsList>
+                </CommonStyled.Container>
             </Styled.OfferForSchoolsAndKindergartensPage>
         </div>
     );

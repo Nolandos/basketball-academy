@@ -55,6 +55,15 @@ const Kontakt = () => {
                                 />
                             </p>
                         </li>
+                        <li>
+                            <p>
+                                <Trans
+                                    i18nKey={t(
+                                        'common:contact.contact1PartThree'
+                                    )}
+                                />
+                            </p>
+                        </li>
                     </Styled.ContactList>
                     <Styled.ContactList>
                         <Styled.SectionSubtitle>
