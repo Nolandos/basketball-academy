@@ -261,6 +261,7 @@
     "sizeSelectLabel": "Wybierz rozmiar",
     "name": "Nazwisko lub ksywka",
     "nr": "Nr",
+    "productUnavailableInfo": "Produkt jest niedostępny w magazynie",
     "purchaseSummaryModal": {
       "title": "Dodano produkt do koszyka!",
       "content": "Kontynuuj zakupy lub przejdź do podsumowania",
@@ -369,7 +370,7 @@
     "sportsAndArtisticActivities": "Zajęcia sportowe i artystyczne oraz konkursy i gry z nagrodami",
     "outdoorActivities": "Zajęcia na świeżym powietrzu dostosowane do odpowiedniej pory roku",
     "contestsAndGames": "Konkursy i gry z nagordami",
-    "lowPrice": "Niska cena 490 zł"
+    "lowPrice": "Niska cena"
   },
   "resignations": {
     "siteTitle": "Rezygnacje",

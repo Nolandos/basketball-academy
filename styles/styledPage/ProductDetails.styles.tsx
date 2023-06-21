@@ -61,7 +61,7 @@ export const ImageContent = styled.div`
 `;
 
 export const ProductName = styled.h2`
-    margin: 15px 0;
+    margin: 15px 0 0 0;
     font-size: 2.25rem;
 `;
 
@@ -245,5 +245,16 @@ export const NoneContentTableCell = styled(TableCell)`
         justify-content: center;
         align-items: center;
         color: ${({theme}) => theme.palette.basketballAcademy.white};
+    }
+`;
+
+export const ProductUnavailableInfo = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: ${({theme}) => theme.palette.basketballAcademy.error};
+
+    > svg {
+        margin-right: 5px;
     }
 `;

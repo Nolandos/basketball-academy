@@ -84,6 +84,10 @@ export const NumbersSection = styled(CommonStyled.Section)`
 export const MainHero = styled(CommonStyled.Section)`
     height: 500px;
     position: relative;
+
+    @media ${touch} {
+        height: 600px;
+    }
 `;
 
 export const MainHeroImage = styled.div<{backgroundImage: string}>`
@@ -110,6 +114,8 @@ export const MainHeroContent = styled.div`
     position: absolute;
 
     @media ${touch} {
+        padding-top: 80px;
+
         .main-hero-logo {
             width: 280px;
             height: 280px;
@@ -172,5 +178,51 @@ export const LastNewsList = styled.ul`
 
     @media ${touch} {
         flex-direction: column;
+    }
+`;
+
+export const MainHeroFollowUs = styled.div`
+    width: 190px;
+    min-height: 70px;
+    border: 5px solid white;
+    border-radius: 7px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    top: 10px;
+    background-color: ${({theme}) => theme.palette.basketballAcademy.white};
+    color: ${({theme}) => theme.palette.basketballAcademy.black};
+
+    .MuiSvgIcon-root {
+        margin: 0 12px;
+    }
+
+    .followUsText {
+        margin: 3px 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    @media ${touch} {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+`;
+
+export const FollowUsIcons = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > a {
+        cursor: pointer;
+
+        &:hover {
+            color: ${({theme}) => theme.palette.basketballAcademy.primaryGreen};
+        }
     }
 `;

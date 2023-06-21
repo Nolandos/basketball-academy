@@ -10,7 +10,7 @@ import * as Styled from '@/styles/styledPage/ProductDetails.styles';
 import Image from 'next/image';
 import {formatPrice} from '@/utils/utils';
 import constants from '@/utils/constants';
-import {Add, Remove, Swipe} from '@mui/icons-material';
+import {Add, Remove, Swipe, WarningAmber} from '@mui/icons-material';
 import {Table} from '@mui/material';
 import Select from '@/components/common/Select/Select';
 import Input from '@/components/common/Input/Input';
@@ -60,6 +60,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({productDetails}) => {
             price,
             additionalInfo,
             photo: {data: photosData},
+            isUnavailable,
         },
     } = productDetails;
     const {defaultPriceCurrency} = constants;
@@ -291,6 +292,12 @@ const ProductDetails: FC<ProductDetailsProps> = ({productDetails}) => {
                         </Styled.ProductDetailsWrapper>
                         <Styled.ProductDetailsWrapper>
                             <Styled.ProductName>{name}</Styled.ProductName>
+                            {isUnavailable && (
+                                <Styled.ProductUnavailableInfo>
+                                    <WarningAmber fontSize="small" />
+                                    {t('shop.productUnavailableInfo')}
+                                </Styled.ProductUnavailableInfo>
+                            )}
                             <Styled.ProductPrice>
                                 {formatPrice(price, defaultPriceCurrency)}
                             </Styled.ProductPrice>
@@ -367,6 +374,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({productDetails}) => {
                                     </Styled.FormInput>
                                 )}
                                 <Styled.AddToCartButton
+                                    disabled={!!isUnavailable}
                                     onClickHandler={handleAddToCart}
                                 >
                                     {t('shop.addToCartButton')}

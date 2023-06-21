@@ -35,6 +35,15 @@ export const TrainerContainer = styled.div`
         width: 100%;
     }
 
+    p {
+        width: 100%;
+        margin: 5px 0;
+
+        &.club-positions {
+            margin: 0 0 16px 0;
+        }
+    }
+
     ul {
         margin-top: 0;
     }
