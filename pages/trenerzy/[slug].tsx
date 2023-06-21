@@ -29,7 +29,9 @@ const TrainerInfo: FC<TrainerInfoType> = ({trainer}) => {
                     <Styled.TrainerName>
                         {firstName} {surname}
                     </Styled.TrainerName>
-                    <Styled.Positions>{positions}</Styled.Positions>
+                    <Styled.Positions className="club-positions">
+                        {positions}
+                    </Styled.Positions>
                     <HtmlBox>{description || ''}</HtmlBox>
                     {clubs && clubs.trim() !== '' && (
                         <Styled.ClubsInfo>

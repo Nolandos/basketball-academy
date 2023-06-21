@@ -78,7 +78,7 @@ export const NoPhotosText = styled.p`
 export const PhotosListItem = styled.div`
     width: 33%;
     margin: 20px 0;
-    min-height: 470px;
+    min-height: 215px;
     display: flex;
     flex-direction: column;
     align-items: center;

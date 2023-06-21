@@ -108,6 +108,9 @@ export const Segment = styled.div`
     flex-direction: column;
     position: relative;
     padding: 0 25px 16px 25px;
+    border: ${({theme}) =>
+        `3px solid ${theme.palette.basketballAcademy.primaryGreen}`};
+    border-left: none;
 
     &:first-child {
         margin-top: 0;

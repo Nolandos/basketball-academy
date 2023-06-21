@@ -8,7 +8,7 @@ import {useTranslation} from 'next-i18next';
 import mainHeroBackground from '@/assets/index/index-main-hero.jpg';
 import mainHeroLogo from '@/assets/index/index-main-hero-logo.png';
 import Image from 'next/image';
-import {ChevronRight} from '@mui/icons-material';
+import {ChevronRight, YouTube} from '@mui/icons-material';
 import {useRouter} from 'next/router';
 import urls from '@/utils/urls';
 import Button from '@/components/common/Buttons/Button/Button';
@@ -18,6 +18,8 @@ import Loader from '@/components/common/Loader/Loader';
 import SingUpForm from '@/components/common/SingUpForm/SingUpForm';
 import Targets from '@/components/index/Targets/Targets';
 import AcademyNumbers from '@/components/index/AcademyNumbers/AcademyNumbers';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Home = () => {
     const {t} = useTranslation();
@@ -33,6 +35,9 @@ const Home = () => {
             detail: {show: newsDetailShow},
         },
         applicationForm,
+        facebook,
+        instagram,
+        youtube,
     } = urls;
 
     return (
@@ -55,6 +60,34 @@ const Home = () => {
                             alt="index-main-hero-logo"
                             className="main-hero-logo"
                         />
+                        <Styled.MainHeroFollowUs>
+                            <p className="followUsText">
+                                {t<string>('layout:footer.followUs')}
+                            </p>
+                            <Styled.FollowUsIcons>
+                                <a
+                                    href={facebook}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <FacebookIcon />
+                                </a>
+                                <a
+                                    href={instagram}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <InstagramIcon />
+                                </a>
+                                <a
+                                    href={youtube}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <YouTube fontSize="large" />
+                                </a>
+                            </Styled.FollowUsIcons>
+                        </Styled.MainHeroFollowUs>
                         <Styled.ButtonWrapper>
                             <Button
                                 variant="CONTAINED"

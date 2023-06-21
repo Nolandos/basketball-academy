@@ -168,6 +168,7 @@ export type ProductsDetailsType = {
         price: number;
         slug: string;
         additionalInfo: boolean;
+        isUnavailable: boolean | null;
         sizes: {
             data: {
                 id: number;
