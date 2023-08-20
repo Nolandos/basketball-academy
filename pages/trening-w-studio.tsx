@@ -7,7 +7,10 @@ import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import heroBackgroundImg from '@/assets/index/index-main-hero.jpg';
 import SignUpButton from '@/components/common/Buttons/SignUpButton/SignUpButton';
 import Image, {StaticImageData} from 'next/image';
-import photoOne from '@/assets/partnersBar/logo-studio-treningu.png';
+import photoOne from '@/assets/pages/training-in-studio/training-in-studio-one.jpg';
+import photoTwo from '@/assets/pages/training-in-studio/training-in-studio-two.jpg';
+import photoThree from '@/assets/pages/training-in-studio/training-in-studio-three.jpg';
+import photoFour from '@/assets/pages/training-in-studio/training-in-studio-four.jpg';
 
 const TrainingInStudio = () => {
     const {t} = useTranslation();
@@ -19,15 +22,15 @@ const TrainingInStudio = () => {
         },
         {
             id: 'photoTwo',
-            url: photoOne,
+            url: photoTwo,
         },
         {
             id: 'photoThree',
-            url: photoOne,
+            url: photoThree,
         },
         {
             id: 'photoFour',
-            url: photoOne,
+            url: photoFour,
         },
     ];
 

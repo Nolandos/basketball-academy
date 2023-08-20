@@ -42,7 +42,7 @@ export default {
     eneaAzs: 'http://azs.poznan.pl/',
     pyraPoznanExternal: 'http://www.pyra.com.pl/',
     siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',
-    emailBiuro: 'biuro@akademiakoszykówki.poznan.pl',
+    emailBiuro: 'biuro@akademiakoszykowki.poznan.pl',
     emailBabij: 'Babij@akademiakoszykowki.poznan.pl',
     timetable: '/lokalizacje-i-grafik',
     supportUs: '/wspieraj-nas',
