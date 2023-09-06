@@ -238,6 +238,9 @@
       "mosina": "Mosina",
       "plewiska": "Plewiska",
       "wronki": "Wronki",
+      "steszew": "Stęszew",
+      "kamionki": "Kamionki",
+      "ligowcy": "Ligowcy",
       "treningiIndywidualne": "Treningi indywidualne",
       "treningiOnline": "Treningi online",
       "treningWStudio": "Treningi w studio",
@@ -297,6 +300,8 @@
   },
   "documents": {
     "siteTitle": "Dokumenty",
+    "sourceButton": "Źródło ",
+    "moreInfoText": "Kliknij w wygenerowany obrazek lub w razie problemów spróbuj z alternatywnych źródeł",
     "documentsList": {
       "membershipDeclaration": "Deklaracja członkowska",
       "clubRegulations": "Regulamin Klubu",

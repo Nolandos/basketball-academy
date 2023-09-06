@@ -96,6 +96,21 @@ const SingUpForm = () => {
             value: 'wronki',
         },
         {
+            id: 'steszew',
+            label: t('forms.localizationsOptions.steszew'),
+            value: 'steszew',
+        },
+        {
+            id: 'kamionki',
+            label: t('forms.localizationsOptions.kamionki'),
+            value: 'kamionki',
+        },
+        {
+            id: 'ligowcy',
+            label: t('forms.localizationsOptions.ligowcy'),
+            value: 'ligowcy',
+        },
+        {
             id: 'treningiIndywidualne',
             label: t('forms.localizationsOptions.treningiIndywidualne'),
             value: 'treningiIndywidualne',
