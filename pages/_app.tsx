@@ -12,6 +12,10 @@ const App = ({Component, pageProps}: AppProps) => {
         if (jssStyles) {
             jssStyles?.parentElement?.removeChild(jssStyles);
         }
+        // PREVENT FOUC
+        if (process.browser) {
+            document.body.classList.add('loaded');
+        }
     }, []);
 
     return (

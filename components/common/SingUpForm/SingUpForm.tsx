@@ -30,8 +30,7 @@ type SignUpFormValues = {
 const SingUpForm = () => {
     const {t} = useTranslation();
     const {handleSetMessageBox} = useContext(AppContext);
-    const {clubRegulations, membershipDeclaration, frequentlyAskedQuestions} =
-        urls;
+    const {documents, frequentlyAskedQuestions} = urls;
 
     const localizationsOptions = [
         {
@@ -380,17 +379,13 @@ const SingUpForm = () => {
                                     <span>
                                         {t('forms.regulationsLabelPartOne')}{' '}
                                     </span>
-                                    <Styled.RegulationsLink
-                                        href={clubRegulations}
-                                    >
+                                    <Styled.RegulationsLink href={documents}>
                                         {t('regulations')}
                                     </Styled.RegulationsLink>
                                     <span>
                                         {t('forms.regulationsLabelPartTwo')}{' '}
                                     </span>
-                                    <Styled.RegulationsLink
-                                        href={membershipDeclaration}
-                                    >
+                                    <Styled.RegulationsLink href={documents}>
                                         {t('forms.regulationsLabelPartThree')}
                                     </Styled.RegulationsLink>
                                     *

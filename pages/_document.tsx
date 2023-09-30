@@ -9,6 +9,18 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
+                    {
+                        // PREVENT FOUC
+                        <style
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                        body #__next div {visibility: hidden}
+                        body.loaded #__next div {visibility: visible}
+                    `,
+                            }}
+                        />
+                    }
+
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
@@ -19,6 +31,7 @@ export default class MyDocument extends Document {
                     />
                 </Head>
                 <body>
+                    <script>0</script>
                     <Main />
                     <NextScript />
                 </body>
