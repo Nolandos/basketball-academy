@@ -13,6 +13,7 @@ import siekierki from '@/assets/partnersBar/siekierki.png';
 import pyraPoznan from '@/assets/partnersBar/pyra-poznan.png';
 import eneaAzs from '@/assets/partnersBar/enea-azs.png';
 import DTZStudioTreningu from '@/assets/partnersBar/logo-studio-treningu.png';
+import spiceSport from '@/assets/partnersBar/spice-sport.png';
 
 const PartnersBar: FC = () => {
     const {
@@ -24,6 +25,7 @@ const PartnersBar: FC = () => {
         pyraPoznanExternal: pyraPoznanExternalUrl,
         siekierki: siekierkiUrl,
         eneaAzs: eneaAzsUrl,
+        spiceSport: spiceSportUrl,
     } = urls;
 
     const settings = {
@@ -118,6 +120,13 @@ const PartnersBar: FC = () => {
             id: 'DTZStudioTreningu',
             src: DTZStudioTreningu,
             height: 90,
+        },
+        {
+            id: 'spiceSport',
+            src: spiceSport,
+            height: 70,
+            url: spiceSportUrl,
+            urlExternal: true,
         },
     ];
 
