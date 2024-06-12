@@ -131,7 +131,9 @@
     "elderlySubtitle": "<strong>Kadeci</strong> - dla dzieci od 10 do 14 lat zajęcia trwają 60 min.",
     "elderlyPartOne": "Dla starszych dzieci prowadzimy treningi udoskanalające, utrwalające i poprawiające wcześniej poznane elementy, przy jednoczesnym wprowadzeniu nowych czynności koszykarskich. W tym wieku rozpoczynamy także prawdziwe mecze, podwyższamy poziom kosza i dostosowujemy sprzęt do wyższej kategorii wiekowej",
     "theOldestSubtitle": "<strong>Juniorzy</strong> - dla dzieci od 14 do 17 roku życia zajęcia trwają od 60 min do 120 min.",
-    "theOldestPartOne": " Grupa ukierunkowana dla najstarszych dzieci chcących kontynuować treningi koszykarskie i swoją pasję szkolną do tej dyscypliny. Na tym etapie odbywa się dalsze szkolenie zawodnika oraz poprawa błędów technicznych."
+    "theOldestPartOne": " Grupa ukierunkowana dla najstarszych dzieci chcących kontynuować treningi koszykarskie i swoją pasję szkolną do tej dyscypliny. Na tym etapie odbywa się dalsze szkolenie zawodnika oraz poprawa błędów technicznych.",
+    "seniorsSubtitle": "<strong>Seniorzy</strong> - od 17 do 30 roku życia",
+    "seniorsPartOne": "3LM– czwarta w hierarchii klasa męskich ligowych rozgrywek koszykarskich w Polsce. Rozgrywki organizowane sa przez WZKOSZ należący do Pzkosz"
   },
   "leagueWorkouts": {
     "siteTitle": "Treningi ligowe",
@@ -184,13 +186,13 @@
     "noPhotosText": "Brak zdjęć"
   },
   "forms": {
-    "emailLabel": "Email",
+    "emailLabel": "E-mail do opiekuna",
     "emailIsRequiredError": "Adres Email jest wymagany",
     "emailIsNotCorrectError": "Adres Email jest nieprawidłowy",
-    "phoneNumberLabel": "Numer telefonu",
+    "phoneNumberLabel": "Numer telefonu do opiekuna",
     "phoneNumberIsRequiredError": "Numer telefonu jest wymagany",
     "phoneNumberIsNotCorrectError": "Numer telefonu jest niepoprawny",
-    "nameLabel": "Imię i nazwisko",
+    "nameLabel": "Imię i nazwisko dziecka/zawodnika",
     "nameIsRequiredError": "Imię i nazwisko jest wymagane",
     "yearOfBirthLabel": "Rok urodzenia",
     "yearOfBirthIsRequiredError": "Rok urodzenia jest wymagany",
