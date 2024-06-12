@@ -112,34 +112,6 @@ const Kontakt = () => {
                             </p>
                         </li>
                     </Styled.ContactList>
-                    <Styled.ContactList>
-                        <Styled.SectionSubtitle>
-                            {t('common:contact.contact4Title')}
-                        </Styled.SectionSubtitle>
-                        <li>
-                            <p>
-                                <Trans
-                                    i18nKey={t(
-                                        'common:contact.contact4PartOne'
-                                    )}
-                                />
-                                <CommonStyled.InternalRegulationsLink
-                                    href={`mailto:${emailBiuro}`}
-                                >
-                                    {emailBiuro}
-                                </CommonStyled.InternalRegulationsLink>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <Trans
-                                    i18nKey={t(
-                                        'common:contact.contact4PartTwo'
-                                    )}
-                                />
-                            </p>
-                        </li>
-                    </Styled.ContactList>
                 </Styled.Container>
             </Styled.Contact>
         </div>
