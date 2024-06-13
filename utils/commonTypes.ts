@@ -215,6 +215,8 @@ export type TimetableDataTypes = {
     district: string;
     endDate: string;
     place: string;
+    color: string | null;
+    backgroundColor: string | null;
     publishedAt: string;
     startDate: string;
     updatedAt: string;
