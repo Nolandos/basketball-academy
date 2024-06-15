@@ -42,15 +42,13 @@ export const ProductDetailsWrapper = styled.div`
 
 export const ImageContent = styled.div`
     width: 100%;
-    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media ${touch} {
         width: 100%;
-        height: 350px;
-
+        //height: 350px;
         img {
             width: 100%;
             height: 100%;
@@ -153,6 +151,7 @@ export const AddToCartButton = styled(Button)`
 
 export const SizesWrapper = styled.div`
     width: 100%;
+    margin-top: 25px;
     padding: 0 10px;
 `;
 

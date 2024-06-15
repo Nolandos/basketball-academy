@@ -77,7 +77,6 @@ const Timetable = () => {
         );
         setTimetableData(data || []);
 
-        console.log('HEH_DATA', data);
         setLoading(false);
     };
 

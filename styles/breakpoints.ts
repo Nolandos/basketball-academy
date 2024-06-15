@@ -1,5 +1,6 @@
 const size = {
     mobileMicro: '480px',
+    totalMicro: '375px',
     mobileSmall: '575.98px',
     colXxs: '576px',
     colXs: '768px',
@@ -13,6 +14,7 @@ const size = {
 
 const device = {
     mobileMicro: `screen and (max-width: ${size.mobileMicro})`,
+    totalMicro: `screen and (max-width: ${size.totalMicro})`,
     mobileSmall: `screen and (max-width: ${size.mobileSmall})`,
     smallDevices: `screen and (min-width: ${size.colXxs})`,
     smallDevicesOnly: `screen and (min-width: ${size.colXxs}) and (max-width: ${size.mobile}))`,

@@ -7,7 +7,6 @@ import {useRouter} from 'next/router';
 import {ProductsDetailsType} from '@/utils/commonTypes';
 import * as CommonStyled from '@/styles/commonStyles';
 import * as Styled from '@/styles/styledPage/ProductDetails.styles';
-import Image from 'next/image';
 import {formatPrice} from '@/utils/utils';
 import constants from '@/utils/constants';
 import {Add, Remove, Swipe, WarningAmber} from '@mui/icons-material';
@@ -19,6 +18,7 @@ import {AppContext} from '@/context/AppContext';
 import PurchaseSummaryModal from '@/components/sklep/PurchaseSummaryModal/PurchaseSummaryModal';
 import urls from '@/utils/urls';
 import {Controller, useFieldArray, useForm} from 'react-hook-form';
+import ShopProductPhotoSliders from '@/components/sklep/ShopProductPhotoSliders/ShopProductPhotoSliders';
 
 type ProductDetailsProps = {
     productDetails: ProductsDetailsType;
@@ -279,14 +279,8 @@ const ProductDetails: FC<ProductDetailsProps> = ({productDetails}) => {
                     <Styled.ProductDetails>
                         <Styled.ProductDetailsWrapper>
                             <Styled.ImageContent>
-                                <Image
-                                    width={500}
-                                    height={500}
-                                    src={
-                                        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${photosData?.attributes?.url}` ||
-                                        ''
-                                    }
-                                    alt={slug}
+                                <ShopProductPhotoSliders
+                                    shopProductPhotos={photosData}
                                 />
                             </Styled.ImageContent>
                         </Styled.ProductDetailsWrapper>

@@ -33,7 +33,7 @@ export type sendOrderEmailTypes = {
         | [];
 };
 
-export type BarListItemType = {
+export type SliderListItemType = {
     id: string;
     src: string | StaticImageData;
     height?: number;
@@ -186,7 +186,7 @@ export type ProductsDetailsType = {
             }[];
         };
         photo: {
-            data: PhotoTypes;
+            data: PhotoTypes[];
         };
     };
 };

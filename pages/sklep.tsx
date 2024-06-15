@@ -128,7 +128,7 @@ const Shop: FC<ShopProps> = ({products, paginationInfo}) => {
                                                 width={200}
                                                 height={200}
                                                 src={
-                                                    `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${photo?.data?.attributes?.url}` ||
+                                                    `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}${photo?.data[0]?.attributes?.url}` ||
                                                     ''
                                                 }
                                                 alt={slug}
