@@ -1,5 +1,5 @@
 import {FetchDataMethods} from '@/utils/commonEnums';
-import {PhotoTypes} from '@/utils/commonTypes';
+import {ExtendThirdMenLeagueDataTypes, PhotoTypes} from '@/utils/commonTypes';
 
 export const checkIsMobile = (resolution: number) =>
     window.innerWidth < resolution;
@@ -119,3 +119,45 @@ export const formatPrice = (price: number, currency: string) => {
 
 export const formatTime = (date: string) =>
     `${date.split(':')[0]}:${date.split(':')[1]}`;
+
+export const formatDateWithDayShortcut = (dateString: string) => {
+    const date = new Date(dateString);
+
+    const daysOfWeek = ['NIE', 'PON', 'WTO', 'ŚRO', 'CZW', 'PIĄ', 'SOB'];
+
+    const dayOfWeek = daysOfWeek[date.getDay()];
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+
+    return `${dayOfWeek}, ${day}.${month}.${year}`;
+};
+
+export const groupMatchesByMonth = (
+    matches: ExtendThirdMenLeagueDataTypes[]
+) => {
+    const groupedMatches: {
+        [key: string]: ExtendThirdMenLeagueDataTypes[];
+    } = {};
+
+    matches?.forEach((match) => {
+        const date = new Date(match.date);
+        const year = date.getFullYear();
+        const month = date.toLocaleString('default', {month: 'long'});
+
+        const key = `${month} ${year}`;
+
+        if (!groupedMatches[key]) {
+            groupedMatches[key] = [];
+        }
+        if (groupedMatches[key]) {
+            groupedMatches[key].push(match);
+        }
+    });
+
+    return groupedMatches;
+};
+
+export const isEmptyObject = (obj: {
+    [p: string]: ExtendThirdMenLeagueDataTypes[];
+}) => Object.keys(obj).length === 0;

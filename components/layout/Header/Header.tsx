@@ -57,6 +57,7 @@ const Header: FC = () => {
         news: {all: newsUrl},
         recommendUs,
         offerForSchoolsAndKindergartens,
+        thirdMenLeague,
     } = urls;
     const {t} = useTranslation('layout');
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -135,6 +136,11 @@ const Header: FC = () => {
                     id: 'trainingOnline',
                     title: t<string>('links.trainingOnline'),
                     url: trainingOnline,
+                },
+                {
+                    id: 'thirdMenLeague',
+                    title: t<string>('links.thirdMenLeague'),
+                    url: thirdMenLeague,
                 },
             ],
         },

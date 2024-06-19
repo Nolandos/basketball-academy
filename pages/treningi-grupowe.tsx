@@ -158,12 +158,12 @@ const GroupWorkouts = () => {
                             <p>{t('common:groupWorkouts.seniorsPartOne')}</p>
                         </Styled.AgeCategoryTile>
                         <Styled.AgeCategoryTile image>
-                            <Image
-                                src={elderly}
-                                width={211}
-                                height={200}
-                                alt={t('common:groupWorkouts.seniorsSubtitle')}
-                            />
+                            {/* <Image */}
+                            {/*    src={elderly} */}
+                            {/*    width={211} */}
+                            {/*    height={200} */}
+                            {/*    alt={t('common:groupWorkouts.seniorsSubtitle')} */}
+                            {/* /> */}
                         </Styled.AgeCategoryTile>
                     </Styled.AgeCategory>
                     <Styled.ButtonWrapper>

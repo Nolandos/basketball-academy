@@ -30,6 +30,7 @@ export default {
     recommendUs: '/polecaja-nas',
     trainingInStudio: '/trening-w-studio',
     trainingOnline: '/treningi-online',
+    thirdMenLeague: '/trzecia-liga-mezczyzn',
     // External urls
     facebook: 'https://www.facebook.com/akademiakoszykowkipoznan',
     instagram: 'https://www.instagram.com/akademiakoszykowki/',

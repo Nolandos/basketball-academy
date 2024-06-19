@@ -333,6 +333,14 @@
     "siteTitle": "Treningi Online",
     "informations": "Chcesz otrzymać od nas więcej materiałów filmowych z treningami,  które pomogą ci poprawić swoją koszykarską technikę i ogólną sprawność fizyczną? Napisz do nas i  dowiedz się więcej! Za pośrednictwem zgłoszenia i dodatkowej opłaty wyślemy ci dodatkowe niepublikowane nigdzie indziej filmy szkoleniowe dotyczące przygotowania motorycznego, koordynacji  ruchowej czy techniki koszykarskiej.  "
   },
+  "thirdMenLeague": {
+    "siteTitle": "Trzecia liga mężczyzn",
+    "generalInfoPartOne": "3LM– czwarta w hierarchii klasa męskich ligowych rozgrywek koszykarskich w Polsce. Rozgrywki organizowane są przez WZKOSZ należący do PZKosz",
+    "generalInfoPartTwo": "Chcesz dostać się do drużyny. Sprawdź nabory i testy sprawnościowe na naszej stronie lub napisz do nas.",
+    "schedulerSubtitle": "Terminarz",
+    "nextMatch": "Najbliższy mecz",
+    "noTimetableData": "Terminarz nie został jeszcze podany"
+  },
   "camps": {
     "siteTitle": "Obozy sportowe",
     "siteSubtitle": "Informacje",

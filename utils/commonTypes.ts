@@ -232,3 +232,34 @@ export type RecommendUsTypes = {
         };
     };
 };
+
+export type ThirdMenLeagueTeams = {
+    id: number;
+    attributes: {
+        teamName: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
+        teamLogo: {
+            data: PhotoTypes;
+        };
+    };
+};
+
+export type ThirdMenLeagueDataTypes = {
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    date: string;
+    place: string;
+    hosts: {data: ThirdMenLeagueTeams};
+    guests: {data: ThirdMenLeagueTeams};
+    hostsPoints: number | null;
+    time: string;
+    guestsPoints: number | null;
+};
+
+export type ExtendThirdMenLeagueDataTypes = ThirdMenLeagueDataTypes & {
+    guests: {name: string; logo: string | null};
+    hosts: {name: string; logo: string | null};
+};
