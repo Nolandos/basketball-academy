@@ -111,3 +111,15 @@ export const fetchRecommendUs = () =>
 
 export const fetchKRSNumber = () =>
     fetchData(`${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/others`, GET);
+
+export const fetchFindClosestMatch = () =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/lm-last-training`,
+        GET
+    );
+
+export const fetchThirdLeagueTimetable = (page: number, size: number) =>
+    fetchData(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_ADDRESS}/api/lm-trainings?pagination[page]=${page}&pagination[pageSize]=${size}&sort=date:ASC&populate[guests][populate]=*&populate[hosts][populate]=*`,
+        GET
+    );

@@ -76,6 +76,7 @@ const Timetable = () => {
             )
         );
         setTimetableData(data || []);
+
         setLoading(false);
     };
 
@@ -163,8 +164,16 @@ const Timetable = () => {
                                                                 startDate,
                                                                 endDate,
                                                                 title,
+                                                                color,
+                                                                backgroundColor,
                                                             }) => (
                                                                 <Styled.CardTrainingPerDay
+                                                                    backgroundColor={
+                                                                        backgroundColor
+                                                                    }
+                                                                    textColor={
+                                                                        color
+                                                                    }
                                                                     onClick={() =>
                                                                         setCurrentTraining(
                                                                             {

@@ -7,12 +7,14 @@ import ministerstwoSportuITurystyki from '@/assets/partnersBar/ministerstwo-spor
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import urls from '@/utils/urls';
-import Bar from '@/components/index/Bars/Bar';
-import {BarListItemType} from '@/utils/commonTypes';
+import Slider from '@/components/common/Slider/Slider';
+import {SliderListItemType} from '@/utils/commonTypes';
 import siekierki from '@/assets/partnersBar/siekierki.png';
 import pyraPoznan from '@/assets/partnersBar/pyra-poznan.png';
 import eneaAzs from '@/assets/partnersBar/enea-azs.png';
 import DTZStudioTreningu from '@/assets/partnersBar/logo-studio-treningu.png';
+import spiceSport from '@/assets/partnersBar/spice-sport.png';
+import * as Styled from './PartnersBar.styles';
 
 const PartnersBar: FC = () => {
     const {
@@ -24,6 +26,7 @@ const PartnersBar: FC = () => {
         pyraPoznanExternal: pyraPoznanExternalUrl,
         siekierki: siekierkiUrl,
         eneaAzs: eneaAzsUrl,
+        spiceSport: spiceSportUrl,
     } = urls;
 
     const settings = {
@@ -57,7 +60,7 @@ const PartnersBar: FC = () => {
         ],
     };
 
-    const partnersList: Array<BarListItemType> = [
+    const partnersList: Array<SliderListItemType> = [
         {
             id: 'poznan',
             src: poznan,
@@ -119,9 +122,20 @@ const PartnersBar: FC = () => {
             src: DTZStudioTreningu,
             height: 90,
         },
+        {
+            id: 'spiceSport',
+            src: spiceSport,
+            height: 70,
+            url: spiceSportUrl,
+            urlExternal: true,
+        },
     ];
 
-    return <Bar itemsList={partnersList} settings={settings} />;
+    return (
+        <Styled.PartnersBar>
+            <Slider itemsList={partnersList} settings={settings} />
+        </Styled.PartnersBar>
+    );
 };
 
 export default PartnersBar;

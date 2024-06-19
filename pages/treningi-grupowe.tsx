@@ -75,7 +75,7 @@ const GroupWorkouts = () => {
                         {t('common:groupWorkouts.ageCategories')}
                     </CommonStyled.SectionSubtitle>
                     <Styled.MeasureOfWeight>
-                        {[...Array(99).keys()].map((item) => (
+                        {[...Array(119).keys()].map((item) => (
                             <Styled.MeasureOfWeightBelt
                                 key={item}
                                 itemNumber={item}
@@ -148,6 +148,22 @@ const GroupWorkouts = () => {
                                 <Trans i18nKey="common:groupWorkouts.theOldestSubtitle" />
                             </h3>
                             <p>{t('common:groupWorkouts.theOldestPartOne')}</p>
+                        </Styled.AgeCategoryTile>
+                    </Styled.AgeCategory>
+                    <Styled.AgeCategory>
+                        <Styled.AgeCategoryTile>
+                            <h3>
+                                <Trans i18nKey="common:groupWorkouts.seniorsSubtitle" />
+                            </h3>
+                            <p>{t('common:groupWorkouts.seniorsPartOne')}</p>
+                        </Styled.AgeCategoryTile>
+                        <Styled.AgeCategoryTile image>
+                            {/* <Image */}
+                            {/*    src={elderly} */}
+                            {/*    width={211} */}
+                            {/*    height={200} */}
+                            {/*    alt={t('common:groupWorkouts.seniorsSubtitle')} */}
+                            {/* /> */}
                         </Styled.AgeCategoryTile>
                     </Styled.AgeCategory>
                     <Styled.ButtonWrapper>

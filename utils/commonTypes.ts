@@ -33,7 +33,7 @@ export type sendOrderEmailTypes = {
         | [];
 };
 
-export type BarListItemType = {
+export type SliderListItemType = {
     id: string;
     src: string | StaticImageData;
     height?: number;
@@ -186,7 +186,7 @@ export type ProductsDetailsType = {
             }[];
         };
         photo: {
-            data: PhotoTypes;
+            data: PhotoTypes[];
         };
     };
 };
@@ -215,6 +215,8 @@ export type TimetableDataTypes = {
     district: string;
     endDate: string;
     place: string;
+    color: string | null;
+    backgroundColor: string | null;
     publishedAt: string;
     startDate: string;
     updatedAt: string;
@@ -229,4 +231,35 @@ export type RecommendUsTypes = {
             data: PhotoTypes;
         };
     };
+};
+
+export type ThirdMenLeagueTeams = {
+    id: number;
+    attributes: {
+        teamName: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
+        teamLogo: {
+            data: PhotoTypes;
+        };
+    };
+};
+
+export type ThirdMenLeagueDataTypes = {
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    date: string;
+    place: string;
+    hosts: {data: ThirdMenLeagueTeams};
+    guests: {data: ThirdMenLeagueTeams};
+    hostsPoints: number | null;
+    time: string;
+    guestsPoints: number | null;
+};
+
+export type ExtendThirdMenLeagueDataTypes = ThirdMenLeagueDataTypes & {
+    guests: {name: string; logo: string | null};
+    hosts: {name: string; logo: string | null};
 };

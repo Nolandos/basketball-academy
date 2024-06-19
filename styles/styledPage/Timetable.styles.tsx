@@ -159,7 +159,11 @@ export const ContentPerDay = styled.div`
     border-top: none;
 `;
 
-export const CardTrainingPerDay = styled.div<{timeDuration: string}>`
+export const CardTrainingPerDay = styled.div<{
+    timeDuration: string;
+    backgroundColor: string | null;
+    textColor: string | null;
+}>`
     width: 100%;
     min-height: 60px;
     display: flex;
@@ -176,6 +180,9 @@ export const CardTrainingPerDay = styled.div<{timeDuration: string}>`
     padding: 7px;
     text-align: center;
     position: relative;
+    background-color: ${({backgroundColor}) =>
+        backgroundColor ? `${backgroundColor}` : ''};
+    color: ${({textColor}) => textColor};
 
     &:hover {
         cursor: pointer;

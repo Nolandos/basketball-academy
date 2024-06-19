@@ -30,6 +30,7 @@ export default {
     recommendUs: '/polecaja-nas',
     trainingInStudio: '/trening-w-studio',
     trainingOnline: '/treningi-online',
+    thirdMenLeague: '/trzecia-liga-mezczyzn',
     // External urls
     facebook: 'https://www.facebook.com/akademiakoszykowkipoznan',
     instagram: 'https://www.instagram.com/akademiakoszykowki/',
@@ -42,6 +43,8 @@ export default {
     eneaAzs: 'http://azs.poznan.pl/',
     pyraPoznanExternal: 'http://www.pyra.com.pl/',
     siekierki: 'https://www.facebook.com/UKSSiekierkiKostrzyn/',
+    spiceSport:
+        'https://www.facebook.com/profile.php?id=61555336299042&mibextid=LQQJ4d&rdid=5AxEpyR5ouSGnvyP&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FWCB1GDCHKa1YN32U%2F%3Fmibextid%3DLQQJ4d',
     emailBiuro: 'biuro@akademiakoszykowki.poznan.pl',
     emailBabij: 'Babij@akademiakoszykowki.poznan.pl',
     timetable: '/lokalizacje-i-grafik',

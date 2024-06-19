@@ -131,7 +131,9 @@
     "elderlySubtitle": "<strong>Kadeci</strong> - dla dzieci od 10 do 14 lat zajęcia trwają 60 min.",
     "elderlyPartOne": "Dla starszych dzieci prowadzimy treningi udoskanalające, utrwalające i poprawiające wcześniej poznane elementy, przy jednoczesnym wprowadzeniu nowych czynności koszykarskich. W tym wieku rozpoczynamy także prawdziwe mecze, podwyższamy poziom kosza i dostosowujemy sprzęt do wyższej kategorii wiekowej",
     "theOldestSubtitle": "<strong>Juniorzy</strong> - dla dzieci od 14 do 17 roku życia zajęcia trwają od 60 min do 120 min.",
-    "theOldestPartOne": " Grupa ukierunkowana dla najstarszych dzieci chcących kontynuować treningi koszykarskie i swoją pasję szkolną do tej dyscypliny. Na tym etapie odbywa się dalsze szkolenie zawodnika oraz poprawa błędów technicznych."
+    "theOldestPartOne": " Grupa ukierunkowana dla najstarszych dzieci chcących kontynuować treningi koszykarskie i swoją pasję szkolną do tej dyscypliny. Na tym etapie odbywa się dalsze szkolenie zawodnika oraz poprawa błędów technicznych.",
+    "seniorsSubtitle": "<strong>Seniorzy</strong> - od 17 do 30 roku życia",
+    "seniorsPartOne": "3LM– czwarta w hierarchii klasa męskich ligowych rozgrywek koszykarskich w Polsce. Rozgrywki organizowane sa przez WZKOSZ należący do Pzkosz"
   },
   "leagueWorkouts": {
     "siteTitle": "Treningi ligowe",
@@ -184,13 +186,13 @@
     "noPhotosText": "Brak zdjęć"
   },
   "forms": {
-    "emailLabel": "Email",
+    "emailLabel": "E-mail do opiekuna",
     "emailIsRequiredError": "Adres Email jest wymagany",
     "emailIsNotCorrectError": "Adres Email jest nieprawidłowy",
-    "phoneNumberLabel": "Numer telefonu",
+    "phoneNumberLabel": "Numer telefonu do opiekuna",
     "phoneNumberIsRequiredError": "Numer telefonu jest wymagany",
     "phoneNumberIsNotCorrectError": "Numer telefonu jest niepoprawny",
-    "nameLabel": "Imię i nazwisko",
+    "nameLabel": "Imię i nazwisko dziecka/zawodnika",
     "nameIsRequiredError": "Imię i nazwisko jest wymagane",
     "yearOfBirthLabel": "Rok urodzenia",
     "yearOfBirthIsRequiredError": "Rok urodzenia jest wymagany",
@@ -237,7 +239,6 @@
       "komorniki": "Komorniki",
       "mosina": "Mosina",
       "plewiska": "Plewiska",
-      "wronki": "Wronki",
       "steszew": "Stęszew",
       "kamionki": "Kamionki",
       "ligowcy": "Ligowcy",
@@ -331,6 +332,14 @@
   "trainingOnline": {
     "siteTitle": "Treningi Online",
     "informations": "Chcesz otrzymać od nas więcej materiałów filmowych z treningami,  które pomogą ci poprawić swoją koszykarską technikę i ogólną sprawność fizyczną? Napisz do nas i  dowiedz się więcej! Za pośrednictwem zgłoszenia i dodatkowej opłaty wyślemy ci dodatkowe niepublikowane nigdzie indziej filmy szkoleniowe dotyczące przygotowania motorycznego, koordynacji  ruchowej czy techniki koszykarskiej.  "
+  },
+  "thirdMenLeague": {
+    "siteTitle": "Trzecia liga mężczyzn",
+    "generalInfoPartOne": "3LM– czwarta w hierarchii klasa męskich ligowych rozgrywek koszykarskich w Polsce. Rozgrywki organizowane są przez WZKOSZ należący do PZKosz",
+    "generalInfoPartTwo": "Chcesz dostać się do drużyny. Sprawdź nabory i testy sprawnościowe na naszej stronie lub napisz do nas.",
+    "schedulerSubtitle": "Terminarz",
+    "nextMatch": "Najbliższy mecz",
+    "noTimetableData": "Terminarz nie został jeszcze podany"
   },
   "camps": {
     "siteTitle": "Obozy sportowe",
@@ -503,7 +512,7 @@
     "sponsorship1PartFour": "<p>PRZYKŁAD: <strong> \"NAZWA FIRMY SPOSNORUJĄCEGO\" </strong> Akademia Koszykówki</p>",
     "sponsorship1PartFive": "Nazwa tyularna użwyana będzie we wszystkich przekazach medialnych, na stronie internetowej i materiałach promocyjnych klubu oraz we wszystkich zmiankach i komunikatach meczowych czy turniejowych.",
     "sponsorship1PartSix": "Chcesz zostać sponsorem tytularnym naszego klubu napisz do nas:",
-    "sponsorship2ContentPartOne": "Obecnie w naszym szkoleniu bierze udział 520 zawodników na terenie gminy Poznań, Komorniki oraz Wronki. Szkolenie prowadzimy w odrębnych grupach wiekowych oraz z podziałem drużyn ligowych i lokalizacyjnych. Chcesz wesprzeć konkretną grupę śmiało ! Zgłoś się do nas mailowo: ",
+    "sponsorship2ContentPartOne": "Obecnie w naszym szkoleniu bierze udział 520 zawodników na terenie gminy Poznań i Komorniki. Szkolenie prowadzimy w odrębnych grupach wiekowych oraz z podziałem drużyn ligowych i lokalizacyjnych. Chcesz wesprzeć konkretną grupę śmiało ! Zgłoś się do nas mailowo: ",
     "sponsorship2ContentPartTwo": " i wesprzyj zawodniików wyposażając ich w sprzęt treningowy, odzież lub finansowo.",
     "sponsorship3ContentPartOne": "Promuj swoją firmę na naszej licencjonowanej odzieży klubowej.",
     "sponsorship3ContentPartTwo": "Do Państwa dyspozycji jest odzież trenerów ligowcyh oraz stroje, dresy i bluzy rogrzewkowe zawodników, na których może pojawić się logo lub nazwa Państwa firmy. To doskonała promocja nie tylko na terenie miasta, zawodnicy biorą udział we wspołzawodnictwie ogólnopolskim a także wyjazdach i meczach za granicą.",
@@ -534,7 +543,6 @@
     "contact3Title": "Koordynator grup młodzieżowych",
     "contact3PartOne": "<strong>Mail: </strong>",
     "contact3PartTwo": "<strong>Tel.</strong> 605-222-613",
-    "contact4Title": "Klub Sportowy Akademia Koszykówki oddział Wronki",
     "contact4PartOne": "<strong>Mail: </strong>",
     "contact4PartTwo": "<strong>Tel.</strong> 605-222-613 lub 723-540-589"
   },

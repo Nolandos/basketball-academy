@@ -9,8 +9,8 @@ import siekierki from '@/assets/recommendUsBar/siekierki.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import urls from '@/utils/urls';
-import Bar from '@/components/index/Bars/Bar';
-import {BarListItemType} from '@/utils/commonTypes';
+import Slider from '@/components/common/Slider/Slider';
+import {SliderListItemType} from '@/utils/commonTypes';
 
 const RecommendUsBar: FC = () => {
     const {
@@ -52,7 +52,7 @@ const RecommendUsBar: FC = () => {
         ],
     };
 
-    const recommendUsList: Array<BarListItemType> = [
+    const recommendUsList: Array<SliderListItemType> = [
         {
             id: 'agnieszkaSkobel',
             src: agnieszkaSkobel,
@@ -105,7 +105,7 @@ const RecommendUsBar: FC = () => {
         },
     ];
 
-    return <Bar itemsList={recommendUsList} settings={settings} />;
+    return <Slider itemsList={recommendUsList} settings={settings} />;
 };
 
 export default RecommendUsBar;

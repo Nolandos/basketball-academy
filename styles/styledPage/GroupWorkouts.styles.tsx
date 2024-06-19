@@ -79,14 +79,14 @@ export const GeneralInfoText = styled.p`
 
 export const AgeCategories = styled(CommonStyled.Container)`
     padding: 0 0 65px 0;
-    min-height: 1300px;
+    min-height: 1500px;
     flex-direction: column;
     align-items: center;
     position: relative;
 `;
 
 export const MeasureOfWeight = styled.div`
-    height: 1000px;
+    height: 1200px;
     width: 2px;
     background-color: #e2e3e3;
     top: 130px;
@@ -140,7 +140,7 @@ export const MeasureOfWeightBelt = styled.div<{itemNumber: number}>`
 
     &:before {
         content: '${({itemNumber}) =>
-            (itemNumber + 1) % 10 === 0 ? `${(itemNumber + 1) * 2} cm` : ''}';
+            (itemNumber + 1) % 20 === 0 ? `${(itemNumber + 1) * 2} cm` : ''}';
         position: absolute;
         left: ${({itemNumber}) =>
             (itemNumber + 1) * 2 >= 100 ? '-55px' : '-45px'};

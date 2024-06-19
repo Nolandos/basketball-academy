@@ -88,12 +88,6 @@ const SingUpForm = () => {
             label: t('forms.localizationsOptions.mosina'),
             value: 'mosina',
         },
-
-        {
-            id: 'wronki',
-            label: t('forms.localizationsOptions.wronki'),
-            value: 'wronki',
-        },
         {
             id: 'steszew',
             label: t('forms.localizationsOptions.steszew'),
